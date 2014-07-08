@@ -35,9 +35,9 @@
 							{% if person.thesis-file %}
 								<li>
 								{% if person.thesis-type == "phd" %}
-								Ph.D. thesis: 
+								<span class="current-past">Ph.D. thesis: </span>
 								{% elsif person.thesis-type == "masters" %}
-								Master's thesis: 
+								<span class="current-past">Master's thesis: </span>
 								{% else %}
 								{% endif %}
 								<a href="{{ site.url }}/theses/{{ person.thesis-file }}">"{{ person.thesis-title }}"</a></li>
