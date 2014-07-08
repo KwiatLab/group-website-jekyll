@@ -128,14 +128,13 @@ Take a look at the list of files and folders in the group-website-jekyll reposit
 
 3. Folders with ```_``` before their names. These folders are not copied to ```_site``` directly, but contain content and information that Jekyll uses to assemble the website. Examples:
 
-    * ```_layouts``` contains HTML files which define page layouts that can be reused for many pages. For example, ```_layouts/default.html``` is a layout which puts a navbar at the top of the page and a footer at the bottom, and also includes some CSS and Javascript that is used on most pages in the website.
+    * ```_layouts``` contains HTML files which define page layouts that can be reused for many pages. For example,       ```_layouts/default.html``` is a layout which puts a navbar at the top of the page and a footer at the bottom, and also includes some CSS and Javascript that is used on most pages in the website.
     
     * ```_includes``` contains pieces of content which can be inserted into pages with a special command. For example, ```{% include navbar.html %}``` will insert the code for a navbar wherever Jekyll finds it. ```{% markdown aboutus.md %}``` will process and insert the Markdown text in ```aboutus.md```, which appears under "About us" on the front page of the website. (More about Markdown later.)
     
     * ```_data``` contains YAML files with well-formatted data that Jekyll can use. For example, ```group_members.yml``` contains a list of current group members, their email addresses, and the filenames of headshot images. Jekyll uses it to generate the final People page.
     
     * ```_plugins``` contains Ruby scripts which give Jekyll extra features. For example, ```bibjekyll.rb``` handles the list of citations on the Publications page.
-    
 4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see Hosting the Site Locally, above).
     
 How to do specific tasks
