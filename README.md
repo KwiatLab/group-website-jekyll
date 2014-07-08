@@ -50,14 +50,14 @@ Jekyll is based on the programming language Ruby, which you must install in orde
 
 1. Install Ruby using [RubyInstaller](http://rubyinstaller.org/downloads/). Install the latest DevKit, available on the [RubyInstaller downloads page](http://rubyinstaller.org/downloads/).
 2. After extracting the DevKit package, use the command prompt (type `cmd` in the Windows search bar) to `cd` to the directory where you extracted it. Run the following commands:
-```
-ruby dk.rb init
-ruby dk.rb install
-```
+    ```
+    ruby dk.rb init
+    ruby dk.rb install
+    ```
 3. Install the RubyGem Jekyll by typing
-```
-gem install jekyll
-```
+    ```
+    gem install jekyll
+    ```
 4. Install the RubyGem RDiscount (a processor for Markdown, which we will use for simple text formatting):
 ```
 gem install rdiscount
