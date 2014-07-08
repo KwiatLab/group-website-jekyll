@@ -1,0 +1,22 @@
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <!-- <ul class="nav navbar-nav hidden-xs">
+		    <li><img src="bowtie_sketch_tr.png" style="display:inline; height:50px; padding-right:15px; padding-top:5px"></li>
+	      </ul> -->
+          <a class="navbar-brand" href="{{ site.url }}"><div class="hidden-xs hidden-sm">{{ site.name }}</div><div class="visible-xs visible-sm">Kwiat Group</div></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+          {% include pages_list %}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	<div style="position:absolute"></div>

@@ -1,0 +1,21 @@
+How data is organized:
+Each folder is an entire data set (one can measure a CH violation for that whole set), a data set is 300 seconds worth of data, and has 300 different measurement settings that are chosen with QRNG data.
+
+As an example, the folder 05082013 t753 a252ap38 contains an entire data set of 300 *.mat files (they are saved in such a way that opening with a for loop is easy, and can be easily opened in Matlab, or any program that can open Matlab files, such as the loadmat function in Python).
+
+The folder's name will indicate what a,a' are (a = b, a' = b').  So the example folder's case has the measurement settings listed below.	
+Alice's setting 1 => a = -3.8 deg polarization angle
+                2    a'= 25.2 deg
+Bob		1    b = 3.8 deg
+		2    b'= -25.2 deg
+The folder name also indicates the state with the t753 implying theta = 75.3 deg, where the state is given by
+ Cos(theta)|HH> +/- Sin(theta)|VV>
+
+
+The file's name indicates both the measurement settings for the measurement as well as the measurement number (first measurement, second measurement,third measurement, and so on).
+
+Each file name is of the following form: QRNG_ab_i, where i is always odd.  a,b = 1,2 referring to the above 1,2 for the measurement settings.  So the file QRNG_12_i has the settings of a = -3.6 deg, and b' = -24.7 deg.
+
+i refers to the position of the varible random that is used to generate the measurement settings.  In other words, Alice's setting is determined by the i random number (random(i)), Bob's setting is determined by the i+1 random number (random(i+1)).  So the very first measurement is i = 1 (Alice uses the first random number, Bob uses the second random number), the second measurement is i = 3 (Alice uses the third random number, Bob uses the fourth), the third measurement is i = 5, and so on.  But each data set uses the next set of random numbers.  So the second data set, will have the first measurement at i = 601, the second measurement at 603, and so on.  The third data set starts at i = 1201...
+
+Inside of each data set is are two arrays, channelab and timetagsab (where a,b are either 1 or 2, referring to the measurement settings).  The  channelab array is the channel number of the timetagger, and the timetagsab array is the timebin for the corresponding hit (e.g., channelab(j) corresponds to timetagsab(j)).  The channel number will either be a 1 (Alice's detector fired), a 2 (Bob's detector fired), or a 15 (the PC was triggered).  The PC was turned on for 2 microsecond durations (corresponding to 12,800 timebins).  Due to edge effects, it is recommended to use a coincidence window around 18,000 timebins.  As channel 15 is the trigger for a trial, every event should be in coincidence with channel 15 (i.e., a singles count for Alice is a coincidence between channels 1 and 15, and a coincidence count is a three-fold coincidence count between channels 1,2, and 15).  For technical reasons, the Pockels cell turns "on" and "off" two times per channel 15 timetag.  There is a "hidden" trigger that happens halfway between two consecutive channel 15 timetags.  For example, if channel 15 timetags are: 100, 200, 300,...; then the actual Pockels cell triggers are at 100, 150, 200, 250, 300,...

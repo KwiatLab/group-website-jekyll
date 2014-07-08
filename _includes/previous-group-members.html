@@ -1,0 +1,77 @@
+<div class="container">
+<div class="row">
+	<div class="col-md-3">
+		<h2>Postdocs</h2>
+		<ul class="student-list">
+		  {% for category in site.data.previous_group_members %}
+			{% if category.name == "Postdocs" %}
+				{% for person in category.people %}
+				<li><h4>{{ person.name }}</h4></li>
+				<ul>
+				{% if person.currently %}
+					<li><span class="current-past">Now:</span> {{ person.currently }}</li>
+				{% else %}
+				{% endif %}
+				</ul>
+				{% endfor %}
+			{% else %}
+			{% endif %}
+		  {% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<h2>Graduate Students</h2>
+		<ul class="student-list">
+		{% for category in site.data.previous_group_members %}
+			{% if category.name == "Graduate Students" %}
+				{% for person in category.people %}
+					<li><h4>
+						{{ person.name }}
+						{% if person.year %}
+							 ({{ person.year }})</h4>
+						{% else %}
+						{% endif %}
+						<ul>
+							{% if person.thesis-file %}
+								<li>
+								{% if person.thesis-type == "phd" %}
+								Ph.D. thesis: 
+								{% elsif person.thesis-type == "masters" %}
+								Master's thesis: 
+								{% else %}
+								{% endif %}
+								<a href="{{ site.url }}/theses/{{ person.thesis-file }}">"{{ person.thesis-title }}"</a></li>
+							{% else %}
+							{% endif %}
+							{% if person.currently %}
+								<li><span class="current-past">Now:</span> {{ person.currently }}</li>
+							{% else %}
+							{% endif %}
+							{% if person.past %}
+								<li><span class="current-past">Past:</span> {{ person.past }}</li>
+							{% else %}
+							{% endif %}
+						</ul>
+					</li>
+				{% endfor %}
+			{% else %}
+			{% endif %}
+		{% endfor %}
+		</ul>
+		
+	</div>
+	<div class="col-md-3">
+		<h2>Dedicated Undergrads</h2>
+		<ul class="student-list">
+		  {% for category in site.data.previous_group_members %}
+			{% if category.name == "Dedicated Undergrads" %}
+				{% for person in category.people %}
+				<li><h4>{{ person.name }}</h4></li>
+				{% endfor %}
+			{% else %}
+			{% endif %}
+		  {% endfor %}
+		</ul>
+	</div>
+</div>
+</div>

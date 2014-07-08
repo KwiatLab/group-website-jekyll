@@ -1,0 +1,99 @@
+# List of previous group members used to generate part of people.html.
+
+- name: "Postdocs"
+  people:
+    - name: "Jan Bogdanski"
+    - name: "David Branning"
+      currently: "Associate professor at Trinity College in Hartford, CT"
+    - name: "Marie Erricson"
+      currently: "Assistant professor at Uppsala University in Uppsala, Sweden"
+
+- name: "Graduate Students"
+  people:
+    - name: "Kevin Zielnicki"
+      year: "2014"
+      thesis-type: "phd"
+      thesis-file: "zielnicki-thesis.pdf"
+      thesis-title: "Pure Sources and Efficient Detectors"
+      currently: "Startup in Palo Alto, CA"
+    - name: "Kevin McCusker"
+      year: "2012"
+      thesis-type: "phd"
+      thesis-file: "mccusker-thesis.pdf"
+      thesis-title: "Efficient Quantum Optical State Engineering and Applications"
+      currently: "Postdoc with Dr. Prem Kumar at Northwestern University"
+    - name: "Radhika Dirks (Rangarajan)"
+      year: "2010"
+      thesis-type: "phd"
+      thesis-file: "rangarajan-thesis.pdf"
+      thesis-title: "Photonic Sources and Detectors for Quantum Information Processing: A Trilogy in Eight Parts" 
+      currently: "Startup in Palo Alto, CA"
+      past: "Shell Corporation in Houston, TX"
+    - name: "Onur Hosten"
+      year: "2010"
+      thesis-type: "phd"
+      thesis-file: "hosten-thesis.pdf"
+      thesis-title: "Applications of Quantum Measurement Techniques: Counterfactual Quantum Computation, Spin Hall Effect of Light, and Atomic-Vapor-Based Photon Detectors" 
+      currently: "Postdoc with Dr. Mark Kasevich, Stanford University"
+    - name: "Scott Jobling"
+      year: "2009"
+      thesis-type: "masters"
+      thesis-file: "jobling-thesis.pdf"
+      thesis-title: "Adaptive Optics for Improved Mode Coupling Efficiencies" 
+      currently: "Thorlabs Quantum Electronics in Jessup, MD"
+      past: "Infinera in Allentown, PA"
+    - name: "Julio Barreiro"
+      year: "2008"
+      thesis-type: "phd"
+      thesis-file: "barreiro-thesis.pdf"
+      thesis-title: "Hyperentanglement for Quantum Communication"
+      currently: "Assistant professor of physics, University of California San Diego"
+      past: "Postdoc with Dr. Immanuel Bloch at Max Planck Institute of Quantum Optics, Postdoc with Dr. Ranier Blatt at Universitat Innsbruck"
+    - name: "Michael Wayne"
+      thesis-type: "masters"
+      thesis-file: "wayne-thesis.pdf"
+      thesis-title: "Photon Arrival Time Quantum Random Number Generation" 
+      year: "2008"
+      currently: "NIST in Gaithersburg, MD + ECE Ph.D. student in our group"
+    - name: "Evan Jeffrey"
+      year: "2007"
+      thesis-type: "phd"
+      thesis-file: "jeffrey-thesis.pdf"
+      thesis-title: "Advanced Quantum Communication Systems"
+    - name: "Aaron VanDevender"
+      year: "2007"
+      thesis-type: "phd"
+      thesis-file: "vandevender-thesis.pdf"
+      thesis-title: "Quantum Information Applications of Frequency Upconversion"
+    - name: "Joe Altepeter"
+      year: "2006"
+      thesis-type: "phd"
+      thesis-file: "altepeter-thesis.pdf"
+      thesis-title: "Testing the Limits of Nonlocality" 
+    - name: "Nicholas Peters"
+      year: "2006"
+      thesis-type: "phd"
+      thesis-file: "peters-thesis.pdf"
+      thesis-title: "One- And Two-Photon States for Quantum Information"
+      
+- name: "Dedicated Undergrads"
+  people:
+    - name: "Daniel Kumor"
+      currently: "Master's student in computer science at Purdue University"
+    - name: "David Schmid"
+      currently: "Graduate student in physics at the University of Toronto"
+    - name: Mae Hwee Teo
+    - name: Cory Alford
+      currently: "Raytheon in Los Angeles, CA"
+    - name: Vesselin Velev
+      currently: "Graduate student in physics at Northwestern University"
+    - name: Jake Smith
+    - name: Dickson Thian
+    - name: Ting-Yu Huang
+    - name: Felicia Martinez
+    - name: Daryl Achilles
+    - name: Matthew Rakher
+    - name: Kyle Arnold
+    - name: Kevin Uskali
+    - name: Gleb Akselrod
+    - name: Rachel Hillmer

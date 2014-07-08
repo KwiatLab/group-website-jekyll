@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="{{ site.url }}/img/faviconk.gif">
+
+		<title>Kwiat Quantum Information Group: {{ page.title }}</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{{ site.url }}/css/bootstrap.css" rel="stylesheet" type="text/css">
+		
+		<!-- Custom styles for this template -->
+		<link href="{{ site.url }}/css/group.css" rel="stylesheet" type="text/css">
+		<!--Google Analytics-->
+		{% include tracking.html %}
+	</head>
+<body>
+	{% include navbar.html %}
+	
+	{{ content }}
+
+	<!--Footer-->
+	<hr>
+	
+	{% include footer.html %}
+
+	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ site.url }}/js/jquery.min.js"></script>
+    <script src="{{ site.url }}/js/bootstrap.js"></script>
+	</body>
+</html>

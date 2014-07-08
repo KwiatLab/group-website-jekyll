@@ -1,0 +1,54 @@
+﻿# List of pages to include in navbar. Links will appear in order from left to right.
+# url for each page MUST match its actual location relative to /_site, which is controlled by, among other things, the permalink setting in _config.yml.
+# In the generated navbar, child_links will go to navbar_link.url#{{ child_link.name | handleize }} unless child_link.url is specified, in which case child_links go to child_link.url. 
+# Child link titles under Research must exactly match names of markdown files to be included in research.html. If an HTML file is to be included instead, add "html: yes" under the child link. An HTML file with the same name 
+# Headers (appearing above) and dividers (appearing below) can be added to child_links:
+#     - name: "Counterfactual Quantum Computation"
+#      id: "Counterfactual-Quantum-Computation"
+#      header: "Quantum Computing"
+#      divider: ""
+
+- name: "Home"
+  url: ""
+ 
+- name: "People"
+  url: "people/"
+ 
+- name: "Research"
+  url: "research/"
+  child_links:
+    - name: "Guide to Quantum State Tomography"
+      url: "Tomography/"
+      divider: ""
+      highlight: "yes"
+    - name: "Tests of Nonlocality"
+      header: "Fundamental Studies"
+    - name: "Multipartite Entanglement"
+      divider: ""
+    - name: "Sources of Entanglement"
+      header: "Optical Quantum Information Resources"
+    - name: "Single-Photon Sources"
+    - name: "Single-Photon Detectors"
+    - name: "Quantum Random Number Generation"
+    - name: "Waveguides and Adaptive Optics"
+      divider: ""
+    - name: "State Characterization"
+      header: "Optical Quantum Information Applications"
+    - name: "Hyperentanglement-Enhanced Quantum Communication"
+      divider: ""
+    - name: "Quantum Mechanics and Human Perception"
+      header: "Other Applications"
+    - name: "Precision Optical Measurements"
+      divider: ""
+    - name: "Quantum Non-Demolition Detectors"
+      header: "Past Research"
+    - name: "Frequency Upconversion and State Transduction"
+    - name: "Counterfactual Quantum Computation"
+    - name: "Relativistic Quantum Cryptography"
+    
+- name: "Publications"
+  url: "publications/"
+  
+- name: "Fun stuff"
+  url: "fun/"
+ 

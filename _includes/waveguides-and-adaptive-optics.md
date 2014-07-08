@@ -1,0 +1,6 @@
+###Recent Publications
+* [A. D. Hill, J. Nash, M. Graham, D. Hervas, and P. G. Kwiat in Proceedings of CLEO-QELS 2014](http://dx.doi.org/10.1364/CLEO_AT.2014.JW2A.128)
+
+A typical quantum information lab is a jungle of mirrors, lenses, polarizers and fiber optic cables. In a real quantum computer, quantum logic will need to be contained in a "chip"--a micro-optic or waveguide integrated optic system.
+
+A drawback of this approach is that one can typically never transfer more than 90% of light from an optical fiber into a waveguide, because light gets lost on the way in. Even though the fiber and the waveguide may both be single-mode devices, they are not necessarily in the same mode. An adaptive optics system can help match the two modes and decrease the loss of light. Adaptive optics can also help collect more light from various types of qubits, including single ions, atoms, and quantum dots. To understand the practical limits for optimized mode-matching, we are currently using a computer-controlled deformable mirror running a genetic algorithm to optimize coupling between a simulated ion and a single-mode fiber.

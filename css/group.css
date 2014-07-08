@@ -1,0 +1,494 @@
+/* Custom CSS for the Kwiat group website. Bootstrap.css is also required. */
+
+/* Basic site-wide CSS */
+body  {
+  font-family:'Roboto', sans-serif;
+  color:#282828;
+  padding-top: 50px;
+  padding-bottom: 20px; /* Proper positioning of content below fixed navbar */
+}
+
+a {
+  color:#56218b;
+}
+
+a:hover {
+  color:#56218b;
+}
+
+a:visited {
+/*   color:#47165a; */
+  color:#56218b
+}
+
+p {
+  color: #484848;
+}
+
+em {
+  font-weight:200;
+}
+
+section {
+    padding-top: 50px; 
+    margin-top: -50px; /* For proper linking to locations on page with 50 px fixed navbar. Use .anchor where section is not appropriate. */
+}
+
+/* CSS for special font sizes */
+.topic-links h1, .people h1 {
+  font-size:30px;
+}
+
+.topic-links h2, .people h2 {
+  font-size:24px;
+}
+
+.topic-links h3, .people h3 {
+  font-size:20px;
+}
+
+.topic-links h4, .people h4 {
+  font-size:16px;
+}
+
+/* Div with dark bowtie pattern background */
+.bowtie-bold {
+  background-image:url('../img/boldbowtie.png');
+  background-size:450px;
+  background-repeat:repeat;
+  color:#ecf0f1;
+}
+
+.bowtie-bold a {
+  color:#a799e6;
+}
+
+.bowtie {
+  background-image:url('../img/accentbowtie.png');
+  background-size:450px;
+  background-repeat:repeat;
+}
+
+/* Set theme colors for buttons. Currently unused. */
+.btn-default {
+  color: #484848;
+  background-color: #fff;
+  border-color: #484848;
+  clear:both;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #ecf0f1;
+  background-color: #56218b;
+  border-color: #56218b;
+}
+
+/* CSS for "jumbotron" include in jumbotron.html */
+.jumbotron {
+  background-image:url('../img/boldbowtie.png');
+  background-size:450px;
+  background-repeat:repeat;
+  background-color:#ecf0f1;
+  background-position:20px;
+  height:350px;
+}
+
+.jumbotron .container {
+  max-width:100%;
+}
+
+.jumbotron h1 {
+  color:#ecf0f1;
+  font-weight:bold;
+  font-size:56px;
+  font-family:'Roboto', sans-serif;
+  margin-top:0px;
+  margin-bottom:15px;
+}
+
+.jumbotron p {
+  color:#ecf0f1;
+}
+
+.jumbotron .indent {
+  float:right;
+}
+
+@media (max-width: 768px) {
+  .jumbotron h1 {
+    font-size:36px;
+  }
+}
+
+.thumbnail{
+    position:relative;
+	padding:0;
+	border:0;
+}
+
+.caption {
+  text-align:center;
+}
+
+.group-photo {
+  width:450px;
+  background:white;
+  padding:10px;
+  margin-top:20px;
+}
+
+/* CSS for include "people.html" showing group members & photos */
+.people ul {
+  list-style-type: none;
+}
+
+.people .row {
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.people h1 {
+ text-align:center;
+}
+
+.people .category-title {
+  padding-bottom:20px;
+}
+
+/* .people ul ul {
+  font-family:Roboto;
+  font-style:italic; 
+  font-weight:200; /* Correct italic font weight... this shouldn't be necessary, but it is??
+} */
+
+.people h2 {
+  padding-top:0;
+}
+
+.student-list {
+  list-style:none;
+  padding-left:0;
+}
+
+.job-title {
+  text-align:center;
+}
+
+.people p {
+  padding-top:0;
+}
+
+.people .caption {
+  text-align: center;
+  padding-top:0;
+  margin-bottom:10px;
+}
+
+.people .thumbnail {
+  border:none;
+  margin-bottom:0;
+  background:none;
+}
+
+.people .thumbnail {
+  min-width: 250px; /* This is to make thumbnails with captions (names) of different lengths stack properly on different screen sizes */
+}
+
+.people .name {
+  min-width:250px;
+}
+
+.people .thumbnail .img-circle {
+  padding-bottom:0;
+  margin-bottom:0;
+  width:150px;
+  height:150px;
+}
+
+.current-past {
+  font-style:italic; 
+  font-weight:200; /* Correct italic font weight... this shouldn't be necessary, but it is?? */
+}
+
+/* This helps the automatically generated rows of pictures on about.html stack properly when the screen size is smaller than the row width */
+@media (max-width: 1000px) {
+  .people .row-centered {
+    padding-top:0px;
+	padding-bottom:0px;
+  }
+}
+
+.movie-still {
+  width:400px;
+  border:1px solid #C0C0C0;
+  margin:10px;
+}
+
+/* For proper linking to locations on page with 50 px fixed navbar. Used where "section" is not appropriate. */
+.anchor {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+/* CSS for Research page */
+
+.topic-links img {
+  padding:10px;
+}
+
+/* CSS for newsbox that contains news posts on both the main page and the news page */
+.newsbox .anchor {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+.newsbox img {
+  float:left;
+  margin: 0px 15px 5px 0px;
+  height:75px;
+  width:75px;
+}
+
+.newsbox h4 {
+  display:inline;
+}
+
+.newsbox >p {
+  clear:both;
+}
+
+.news-post .more {
+  float:right;
+}
+
+.post-date {
+  display:inline;
+}
+
+/* Dashed box to contain vision research interest survey on vision.html */
+.survey-container {
+  border-style:dashed;
+  border-width:1px;
+}
+
+/* Adds extra padding at the bottom of a text both at the top of a page, ie research.html */
+.intro-box {
+  padding-bottom:20px;
+}
+
+.publications b {
+  font-size:18px;
+  font-weight:250;
+  }
+
+/* CSS for the navbar and dropdown menus */
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* .navbar-nav {
+  float:right;
+} */
+
+li .highlight{
+  background-color:#a799e6;
+}
+
+li .highlight > a {
+  font-size:16px;
+/*   font-weight:bold; */
+}
+
+/* Makes dropdown items display on hover */
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block;
+}
+
+.navbar-default {
+	background-color: #56218b;
+	border-color: #47165a;
+}
+.navbar-default .navbar-brand {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #a799e6;
+}
+.navbar-default .navbar-text {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #a799e6;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #a799e6;
+	background-color: #47165a;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #a799e6;
+	background-color: #47165a;
+}
+.navbar-default .navbar-toggle {
+	border-color: #47165a;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #47165a;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+	color: #a799e6;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #ecf0f1;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #a799e6;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #a799e6;
+		background-color: #47165a;
+	}
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/* Needed for the Roboto font face in /_fonts */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#RobotoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Italic-webfont.eot');
+    src: url('../fonts/Roboto-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Italic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Italic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Italic-webfont.svg#RobotoItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold-webfont.eot');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold-webfont.svg#RobotoBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-BoldItalic-webfont.eot');
+    src: url('../fonts/Roboto-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-BoldItalic-webfont.svg#RobotoBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Thin-webfont.eot');
+    src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin-webfont.svg#RobotoThin') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-ThinItalic-webfont.eot');
+    src: url('../fonts/Roboto-ThinItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-ThinItalic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-ThinItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-ThinItalic-webfont.svg#RobotoThinItalic') format('svg'); (under the Apache Software License). 
+    font-weight: 200;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#RobotoLight') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-LightItalic-webfont.eot');
+    src: url('../fonts/Roboto-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-LightItalic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-LightItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-LightItalic-webfont.svg#RobotoLightItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium-webfont.eot');
+    src: url('../fonts/Roboto-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Medium-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Medium-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Medium-webfont.svg#RobotoMedium') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-MediumItalic-webfont.eot');
+    src: url('../fonts/Roboto-MediumItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-MediumItalic-webfont.woff') format('woff'),
+         url('../fonts/Roboto-MediumItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-MediumItalic-webfont.svg#RobotoMediumItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}

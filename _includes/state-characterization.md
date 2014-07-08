@@ -1,0 +1,14 @@
+###Recent Publications
+* [T. M. Graham et al., Phys. Rev. Lett. 110, 060404 (2013)](http://dx.doi.org/10.1103/PhysRevLett.110.060404)
+
+###State tomography
+* We maintain an online [guide to quantum state tomography](http://research.physics.illinois.edu/QI/Photonics/Tomography/), including theoretical background and ready-to-use MATLAB code! 
+
+Quantum information protocols and computational algorithms require certain input states, and researchers need a way to verify the input state as they investigate a particular application.
+
+In digital electronics, the input state of a logic circuit could be verified by measuring voltages at a few points. This method won't work for a quantum input state. For example, measuring one of a pair of entangled photons would reveal the state of that photon after the measurement, but would not indicate the entanglement. Such a measurement would also give different results when repeated many times. It is possible to identify the quantum state of a system by making enough of the right measurements. By looking at a given quantum state from several different "directions" (projecting into several different bases), we are able to implement a quantum tomography, and learn how that state looks from <em>every</em> direction.
+
+###Process tomography and hyperentanglement
+Quantum computing works through precise operations on qubits. These operations can be characterized using a quantum process tomography (QPT). One approach to QPT is to apply a process to many known and identical quantum states, then use quantum state tomography to identify the output states. However, the number of measurements needed for this method grows exponentially as 16<sup>N</sup>, where N is the number of qubits. Entangled photon pairs can be used to reduce the number of measurements needed for quantum process tomography, because each measurement made on an entangled photon reveals extra information about its partner. Direct Characterization of Quantum Dynamics (DCQD) uses a specific set of optimized entangled states as inputs to a process. By measuring the output, it is possible to reconstruct a process without performing a complete state tomography, reducing the number of measurements to 4<sup>N</sup>.
+
+Unfortunately, the 4<sup>N</sup> measurements needed for DCQD (a full Bell-state analysis of the output) are known to be impossible for standard optical qubits. However, the use of qubits entangled in more than one degree of freedom (hyperentangled) overcomes this limitation and allows the full implementation of DCQD. We have obtained the first experimental results using photons entangled in multiple degrees of freedom to characterize single-photon processes by DCQD. We plan to extend this experimental setup to characterize various multi-qubit processes, to demonstrate the ability to characterize certain decohering processes in a single measurement.
