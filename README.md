@@ -54,7 +54,7 @@ Jekyll is based on the programming language Ruby, which you must install in orde
 ruby dk.rb init
 ruby dk.rb install
 ```
-3. Install the RubyGem Jekyll by typing
+3. Install the RubyGem Jekyll by typing:
 ```
 gem install jekyll
 ```
@@ -74,4 +74,19 @@ bibtex2html is a program that converts BibTeX files to HTML so a list of referen
 [Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, a simple Python script, and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted pdf file if one is available. Details are in the Publications section of this guide.
 
 If you don't need to add, remove, or edit the content of citations, you don't need to install Mendeley or make any changes to ```publications_web.bib```. You can change certain formatting options (such as how the author names are abbreviated) in the ```style.bst``` file that bibtex2html uses.
+
+Running Jekyll
+------------------
+If you've just copied the website files from GitHub to a new computer and you and haven't run Jekyll yet, the ```_site``` directory in your repository should be empty. When you run Jekyll, ```_site``` is where all the assembled pieces of the website will go--the finished product. GitHub will not sync the files in ```_site```. You can always generate them again by running Jekyll.
+
+To run Jekyll and fill the empty ```_site``` directory with the assembled website, use the command prompt to ```cd``` to ```group-website-jekyll```. Then just enter the command
+
+```
+jekyll build
+```
+
+That's it! The ```_site``` directory should now be populated with the website files. The live website at http://research.physics.illinois.edu/QI/Photonics/ has not been updated, though.
+
+###Updating the live website
+After running Jekyll, just replace the contents of ```Photonics``` with the entire contents of ```_site```. You can do this in Windows Explorer if you have access to the networked folder where our webspace is, or you can use SSH. Contact help@physics.illinois.edu if you need help acccessing the webspace. 
 
