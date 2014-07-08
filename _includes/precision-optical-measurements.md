@@ -1,5 +1,5 @@
 ###Recent Publications
-* [C. Byard, T. M. Graham, A. White and P. G. Kwiat in Proceedings of CLEO-QELS 2014](http://dx.doi.org/10.1364/CLEO_QELS.2014.FF1D.8)
+* [C. Byard, T. M. Graham, A. Jordan and P. G. Kwiat in Proceedings of CLEO-QELS 2014](http://dx.doi.org/10.1364/CLEO_QELS.2014.FF1D.8)
 * [O. Hosten and P. G. Kwiat, Nature (2009)](http://dx.doi.org/10.1126/science.1152697)
 
 Unlike in classical physics, where measurements can be thought of as independent observations that do not affect the outcome of an experiment, measurements on quantum systems can change the state of the system. In a ["weak" quantum measurement](http://en.wikipedia.org/wiki/Weak_measurement), the measured system is linked to the measuring device by only a very weak connection--for example, a small amount of light may "leak" out of an experiment onto a sensor. This allows us to measure the system without disturbing it.
