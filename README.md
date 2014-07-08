@@ -122,7 +122,7 @@ If you just want to know how to update a specific part of the website (like addi
 
 Take a look at the list of files and folders in the group-website-jekyll repository. When you run Jekyll, it looks through all those files and folders, and follows certain rules to assemble the pieces they contain into a finished website in the ```_site``` directory. These are the main types of files and folders Jekyll looks at (for more details, see http://jekyllrb.com/docs/structure/):
 
-1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website. Files with no ```_``` and no YAML frontmatter (I'll explain what this is soon) will also be copied to ```_site``` verbatim.
+1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website. ```css``` contains the CSS stylesheets for the website, which can be edited just like regular CSS. Files with no ```_``` and no YAML frontmatter (I'll explain what this is soon) will also be copied to ```_site``` verbatim.
 
 2. HTML files with no ```_``` before their names, and which also contain YAML frontmatter. Example: ```people.html```, the page with information about the people in our group. Jekyll processes each of these to create an HTML file in ```_site```. With current settings, ```people.html``` ends up in ```_site/people/index.html```. (```index.html```, the home page of the website, just goes to ```_site``` with no subfolder.)
 
@@ -160,7 +160,58 @@ The YAML frontmatter gives Jekyll information and instructions when processing t
 
 Jekyll will *only* process HTML documents in the main directory if they have YAML frontmatter. In other contexts, it is optional. Read more about YAML in the Jekyll documentation: http://jekyllrb.com/docs/frontmatter/.
 
+###Markdown
+
+Markdown is a text-to-HTML tool. It allows you to write good-looking content for the web without using HTML tags. Markdown files look more like regular text files, which makes them easier to read and work with. Markdown processes ```.md``` files to insert all the ugly HTML tags that make text display properly on the web.
+
+Most of the text content for the group website is in Markdown files in the ```_includes``` directory.
+
+* This is a useful Markdown cheat sheet: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+* And here's an online Markdown editor you can use in your browser: http://dillinger.io/
+
+Markdown will also process many HTML tags, if you need to sneak some in there.
+
 How to do specific tasks
 ------------------
 
-###
+Okay, you installed this stupid Jekyll thing and now you just want to be able to add a news post or delete a recently-graduated group member. This section will hopefully cover most common maintanence tasks.
+
+###Adding a news post
+
+Create a new file. Give it some YAML frontmatter (see the previous section) and add your content below, as in this example:
+
+```
+---
+title: Students awarded NSF Graduate Research Fellowship and Goldwater Scholarship
+layout: default
+image: nsf1.gif
+---
+
+Second-year graduate student [Courtney Byard](http://physics.illinois.edu/news/story.asp?id=2470) received a 2013 Graduate Research Fellowship from the National Science Foundation. Rising senior undergraduate [David Schmid](http://physics.illinois.edu/news/story.asp?id=2417) received a 2013 Barry M. Goldwater Scholarship. Second-year graduate student Rebecca Holmes also received an NSF fellowship in 2012.
+<!--more-->
+```
+
+```title``` should be the title of your news item, ```layout``` can stay ```default```, and ```image``` should be the filename of a small image you want to place next to your news item. The ```.newsbox img``` class in ```group.css``` currently resizes images to 75x75 px.
+
+If your news post is longer than a few sentences, place the excerpt separator ```<!--more-->``` where you want the news post to break off on the home page of the website. Continue your text after the separator. In the YAML frontmatter, add the line
+
+```
+more: "yes"
+```
+
+This will tell Jekyll to add a "More" link at the end of your post excerpt on the main page, which will direct the reader to the full post on the News page.
+
+Save your file in ```_posts``` as ```YEAR-MONTH-DAY-title.md```. For the example above, the filename should be ```2013-04-02-students-awarded-nsf-graduate-research-fellowships.md```. (Only the month and year will actually be displayed, although the day will be used to order posts.)
+
+Run Jekyll, and your new post should appear on the main page and on the News page! Currently the main page is set to display only the three most recent news posts. If you want to change that limit, edit ```_includes/newsbox.html``` where it says ```{% for post in site.posts limit: 3 %}```.
+
+###Changing information about group members
+
+###Managing research topics
+
+###Adding a new page and editing the navbar
+
+###Adding content (example: adding a video to the Fun page)
+
+###Managing Publications
