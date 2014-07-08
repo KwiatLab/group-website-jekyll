@@ -134,7 +134,6 @@ Take a look at the list of files and folders in the group-website-jekyll reposit
     * ```_data``` contains YAML files with well-formatted data that Jekyll can use. For example, ```group_members.yml``` contains a list of current group members, their email addresses, and the filenames of headshot images. Jekyll uses it to generate the final People page.
     
     * ```_plugins``` contains Ruby scripts which give Jekyll extra features. For example, ```bibjekyll.rb``` handles the list of citations on the Publications page.
-    
 4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see Hosting the Site Locally, above).
     
 How to do specific tasks
