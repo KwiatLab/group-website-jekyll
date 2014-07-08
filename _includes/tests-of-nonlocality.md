@@ -15,5 +15,5 @@ Both of these loopholes have been closed independently, but no experiment has ye
 
 The data from our 2013 detection-loophole-free C-H Bell test (<a href="http://dx.doi.org/10.1103/PhysRevLett.111.130406">B. G. Christensen et al. Phys. Rev. Lett. 111, 130406 (2013)</a>) are publicly available and can be downloaded from the link below. The data organization is explained in the accompanying text file. The data file size is approximately 280 MB. Please direct any questions or comments to Bradley Christensen (bgchris2@illinois.edu).
 
-* <a href="{{ site.url }}/bell-test-data/data_organization.txt">Data organization</a>
-* <a href="{{ site.url }}/bell-test-data/CH_Bell_Data.zip">C-H Bell test data</a>
+* <a href="{{ site.url }}/../BellTest/data_organization.txt">Data organization</a>
+* <a href="{{ site.url }}/../BellTest/CH_Bell_Data.zip">C-H Bell test data</a>
