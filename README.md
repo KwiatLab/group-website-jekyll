@@ -1,10 +1,14 @@
 Maintaining the Kwiat group website with Jekyll
 ==================
 
+This guide was written by Rebecca Holmes. Contact me at rholmes@illinois.edu if you need help.
+
+*NOTE: I built this website using Jekyll on Windows 7. Jekyll and most of the other tools needed to maintain the website are also available for Mac and Linux, but I don't have any experience using them on other platforms.*
+
 Introduction
 ------------------
 
-The Kwiat group website is maintained using Jekyll and files hosted on GitHub. This guide contains an overview of how Jekyll generates the site, and instructions for specific tasks like adding news posts or editing the navbar. It does not explain every detail of how Jekyll works, or every possible feature you might want to use. For more about what Jekyll can do, read the Jekyll documentation here: http://jekyllrb.com/docs/home/
+The Kwiat group website is maintained using Jekyll and files hosted on [GitHub](https://github.com/). This guide contains an overview of how Jekyll generates the site, and instructions for specific tasks like adding news posts or editing the navbar. It does not explain every detail of how Jekyll works, or every possible feature you might want to use. For more about what Jekyll can do, read the Jekyll documentation here: http://jekyllrb.com/docs/home/
 
 ###But first, wait! Don't edit those HTML files on the server!
 
@@ -16,10 +20,10 @@ Seriously, don't do it. All will be explained! But basically, the way this works
 
 If you edit the HTML files (or any files) that are already on the server, your changes will not be visible to Jekyll or committed to the GitHub repository, and they will be lost the next time someone runs Jekyll and updates the website.
 
-And whatever you're trying to change, there's probably an easier way to do it using Jekyll. For example, you can edit most of the text on the website without ever looking at an HTML file. You can add a link to the navbar without editing five separate pages. You can add a news item that will automatically show up as an excerpt on the front page and in a longer form on the News page. So resist the urge to edit that HTML file, and read on.
+And whatever you're trying to change, there's probably an easier way to do it using Jekyll. For example, you can edit most of the text on the website without ever looking at an HTML file. So resist the urge to edit that HTML file, and read on.
 
 ###What is Jekyll?
-Jekyll is a tool that takes pieces of content like text files and HTML layouts and builds a website, taking care of tedious things you might otherwise have to do manually (like updating the navbar on each page if you want to add a new link). Another common way to accomplish this is by building a dynamic site using PHP or other server-side languages. The advantages of using Jekyll are primarily that you don't need to learn a server-side language, and the site can be hosted anywhere without worrying about whether the host server supports your dynamic content.
+Jekyll is a tool that takes pieces of content (like text files) and instructions for displaying them (like HTML layouts) and builds a website. It takes care of tedious things you might otherwise have to do manually, like updating the navbar on each page if you want to add a new link. Another common way to accomplish this is by building a dynamic site using PHP or other server-side languages. The advantages of using Jekyll are primarily that you don't need to learn a server-side language, and the site can be hosted anywhere without worrying about whether the host server supports your dynamic content.
 
 The whole process of building the website happens on your computer, and the result is a static website that can be uploaded to a server. So while using Jekyll might seem intimidating, it's a great way to build a complex website without knowing much more than basic HTML and CSS. Many tasks won't even require more than editing plain old text. You can do it!
 
@@ -29,3 +33,17 @@ Installation and Setup
 You must complete a few steps before you can maintain the website with Jekyll from your own computer. 
 
 ###Clone this GitHub repository
+
+The GitHub repository group-website-jekyll stores a "master" version of the files needed to generate the website. You can download ("clone") these files to your own computer and use them. If you make changes, you can tell GitHub to sync them to the master version so there will be a single version of the files that multiple people can access.
+
+1. If you don't already have one, you will need to make a [GitHub](https://github.com/) account. You will also need to contact one of the administrators of the lab GitHub group (KwiatQIM) and have your account added to the group.
+2. Install and set up [GitHub Desktop for Windows](https://help.github.com/articles/set-up-git#platform-windows).
+3. From GitHub Desktop, select the KwiatQIM group, find the repository group-website-jekyll, and click "Clone." This will copy the files from the repository to a folder on your computer.
+
+The [GitHub help page](https://help.github.com/) can tell you more about using GitHub, but the basic idea is as follows:
+* If someone else has made changes to the files in the group-website-jekyll repository, you can (and should) sync them to your local version by clicking "Sync" in the upper right-hand corner of GitHub Desktop. This will keep the copies of the website files on your computer up to date if several people are making changes.
+* If *you* make a change to a file in the respository (edit some text, delete an unneeded file, etc.) you can (and should) save that change to the master version by "committing" the change from GitHub Desktop, which will automatically prompt you whenever it notices that files have changed. Finally, you should click "Sync" to upload your changes to the master version and finalize the change.
+
+###Install Ruby and Jekyll
+
+
