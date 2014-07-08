@@ -46,7 +46,7 @@ The [GitHub help page](https://help.github.com/) can tell you more about using G
 
 ###Install Ruby and Jekyll
 
-Jekyll is based on the programming language Ruby, which you must install in order to run Jekyll. (Don't worry, you don't need to know how to use Ruby.) Once Ruby is installed, you can easily install Jekyll and a few other necessary programs.
+Jekyll is based on the programming language Ruby, which you must install in order to run Jekyll. (You don't need to know how to use Ruby.) Once Ruby is installed, you can easily install Jekyll and a few other necessary programs.
 
 1. Install Ruby using [RubyInstaller](http://rubyinstaller.org/downloads/). Install the latest DevKit, available on the [RubyInstaller downloads page](http://rubyinstaller.org/downloads/).
 2. After extracting the DevKit package, use the command prompt (type `cmd` in the Windows search bar) to `cd` to the directory where you extracted it. Run the following commands:
@@ -64,9 +64,12 @@ gem install rdiscount
 ```
 
 ###Install bibtex2html
-```bibtex2html``` is a program that converts BibTeX files to HTML so a list of references can be displayed on a webpage. Jekyll uses it to process the BibTeX file ```publications_web.bib``` in the ```_bibliography``` directory. If it is not installed or installed in the wrong location, Jekyll will give an error when you try to run it, and the list of publications will not be generated.
 
-1. Install ```bibtex2html``` from the [bibtex2html home page](https://www.lri.fr/~filliatr/bibtex2html/). Use the Windows 1.95 installer. Put it in ```C:/Bibtex2html/bibtex2html.exe``` or Jekyll won't be able to use it. (This can be changed by editing ```bibjekyll.rb``` in the ```_plugins``` directory under the comment "call bibtex2html", but you will probably make someone else unhappy by changing it.)
+bibtex2html is a program that converts BibTeX files to HTML so a list of references can be displayed on a webpage. Jekyll uses it to process the BibTeX file ```publications_web.bib``` in the ```_bibliography``` directory. If it is not installed or installed in the wrong location, Jekyll will give an error when you try to run it, and the list of publications will not be generated.
+
+1. Install bibtex2html from the [bibtex2html home page](https://www.lri.fr/~filliatr/bibtex2html/). Use the Windows 1.95 installer. Put it in ```C:/Bibtex2html/bibtex2html.exe``` or Jekyll won't be able to use it. (This can be changed by editing ```bibjekyll.rb``` in the ```_plugins``` directory under the comment "call bibtex2html", but you will probably make someone else unhappy by changing it.)
 
 ###Optional: Install Mendeley
+
+[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few specific steps, you can use Mendeley, a simple Python script, and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted pdf file if one is available. Details are in the Publications section of this guide.
 
