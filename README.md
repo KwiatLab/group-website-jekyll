@@ -37,7 +37,9 @@ You must complete a few steps before you can maintain the website with Jekyll fr
 The GitHub repository group-website-jekyll stores a "master" version of the files needed to generate the website. You can download ("clone") these files to your own computer and use them. If you make changes, you can tell GitHub to sync them to the master version so there will be a single version of the files that multiple people can access.
 
 1. If you don't already have one, you will need to make a [GitHub](https://github.com/) account. You will also need to contact one of the administrators of the lab GitHub group (KwiatQIM) and have your account added to the group.
+
 2. Install and set up [GitHub Desktop for Windows](https://help.github.com/articles/set-up-git#platform-windows).
+
 3. From GitHub Desktop, select the KwiatQIM group, find the repository group-website-jekyll, and click "Clone." This will copy the files from the repository to a folder on your computer.
 
 The [GitHub help page](https://help.github.com/) can tell you more about using GitHub, but the basic idea is as follows:
@@ -49,6 +51,7 @@ The [GitHub help page](https://help.github.com/) can tell you more about using G
 Jekyll is based on the programming language Ruby, which you must install in order to run Jekyll. (You don't need to know how to use Ruby.) Once Ruby is installed, you can easily install Jekyll and a few other necessary programs.
 
 1. Install Ruby using [RubyInstaller](http://rubyinstaller.org/downloads/). Install the latest DevKit, available on the [RubyInstaller downloads page](http://rubyinstaller.org/downloads/).
+
 2. After extracting the DevKit package, use the command prompt (type `cmd` in the Windows search bar) to `cd` to the directory where you extracted it. Run the following commands:
 
     ```
@@ -76,7 +79,7 @@ bibtex2html is a program that converts BibTeX files to HTML so a list of referen
 
 ###Optional: Install Mendeley
 
-[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, a simple Python script, and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted pdf file if one is available. Details are in the Publications section of this guide.
+[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, plus a simple Python script and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted .pdf file if one is available. Details are in the Publications section of this guide.
 
 If you don't need to add, remove, or edit the content of citations, you don't need to install Mendeley or make any changes to ```publications_web.bib```. You can change certain formatting options (such as how the author names are abbreviated) in the ```style.bst``` file that bibtex2html uses.
 
@@ -93,12 +96,48 @@ jekyll build
 That's it! The ```_site``` directory should now be populated with the website files. The live website at http://research.physics.illinois.edu/QI/Photonics/ has not been updated, though.
 
 ###Updating the live website
-After running Jekyll, just replace the contents of ```Photonics``` with the entire contents of ```_site```. You can do this in Windows Explorer if you have access to the networked folder where our webspace is, or you can use SSH. Contact help@physics.illinois.edu if you need help acccessing the webspace. 
+After running Jekyll, just replace the contents of ```Photonics``` with the entire contents of ```_site```. You can do this in Windows Explorer if you have access to the networked folder where our webspace is, or you can use SSH. Contact help@physics.illinois.edu if you need help acccessing the webspace.
+
+###Hosting the site locally
+
+If you're testing out changes to the website, it can be useful to host it on your own computer so you can view it in a browser exactly as it will appear when it goes live. It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do this, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```url``` to localhost:4000, like this:
+
+```
+#url: "http://research.physics.illinois.edu/QI/Photonics"
+url: "http://localhost:4000"
+```
+
+Save the file. Now when you run Jekyll, use the ```server``` command with ```--watch```:
+
+```
+jekyll server --watch
+```
+
+This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.) Change ```url``` back to the real URL of the website when you're ready to upload your changes, or all the links that use the ```{{ site.url }}``` variable will be broken.
 
 A brief description of how Jekyll works
 ------------------
 
-Take a look at the list of files and folders in the group-website-jekyll repository. When you run Jekyll, it looks through all those files and folders, and follows certain rules to assemble the pieces they contain into a finished website in the ```_site``` directory. These are the main types of files and folders Jekyll looks at:
+If you just want to know how to update a specific part of the website (like adding a news post), scroll down past this section to "How to do specific tasks." If you want an overview of what Jekyll is doing when you run it, read on.
 
-1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website.
-2. HTML files with no ```_``` which also contain YAML frontmatter. 
+Take a look at the list of files and folders in the group-website-jekyll repository. When you run Jekyll, it looks through all those files and folders, and follows certain rules to assemble the pieces they contain into a finished website in the ```_site``` directory. These are the main types of files and folders Jekyll looks at (for more details, see http://jekyllrb.com/docs/structure/):
+
+1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website. Files with no ```_``` and no YAML frontmatter (I'll explain what this is soon) will also be copied to ```_site``` verbatim.
+
+2. HTML files with no ```_``` before their names, and which also contain YAML frontmatter. Example: ```people.html```, the page with information about the people in our group. Jekyll processes each of these to create an HTML file in ```_site```. With current settings, ```people.html``` ends up in ```_site/people/index.html```. (```index.html```, the home page of the website, just goes to ```_site``` with no subfolder.)
+
+3. Folders with ```_``` before their names. These folders are not copied to ```_site``` directly, but contain content and information that Jekyll uses to assemble the website. Examples:
+
+    * ```_layouts``` contains HTML files which define page layouts that can be reused for many pages. For example, ```_layouts/default.html``` is a layout which puts a navbar at the top of the page and a footer at the bottom, and also includes some CSS and Javascript that is used on most pages in the website.
+    
+    * ```_includes``` contains pieces of content which can be inserted into pages with a special command. For example, ```{% include navbar.html %}``` will insert the code for a navbar wherever Jekyll finds it. ```{% markdown aboutus.md %}``` will process and insert the Markdown text in ```aboutus.md```, which appears under "About us" on the front page of the website. (More about Markdown later.)
+    
+    * ```_data``` contains YAML files with well-formatted data that Jekyll can use. For example, ```group_members.yml``` contains a list of current group members, their email addresses, and the filenames of headshot images. Jekyll uses it to generate the final People page.
+    
+    * ```_plugins``` contains Ruby scripts which give Jekyll extra features. For example, ```bibjekyll.rb``` handles the list of citations on the Publications page.
+    
+4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see Hosting the Site Locally, above).
+    
+How to do specific tasks
+------------------
+
