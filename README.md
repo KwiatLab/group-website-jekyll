@@ -50,18 +50,23 @@ Jekyll is based on the programming language Ruby, which you must install in orde
 
 1. Install Ruby using [RubyInstaller](http://rubyinstaller.org/downloads/). Install the latest DevKit, available on the [RubyInstaller downloads page](http://rubyinstaller.org/downloads/).
 2. After extracting the DevKit package, use the command prompt (type `cmd` in the Windows search bar) to `cd` to the directory where you extracted it. Run the following commands:
-```
-ruby dk.rb init
-ruby dk.rb install
-```
+
+    ```
+    ruby dk.rb init
+    ruby dk.rb install
+    ```
+
 3. Install the RubyGem Jekyll by typing:
-```
-gem install jekyll
-```
+
+    ```
+    gem install jekyll
+    ```
+    
 4. Install the RubyGem RDiscount (a processor for Markdown, which we will use for simple text formatting):
-```
-gem install rdiscount
-```
+
+    ```
+    gem install rdiscount
+    ```
 
 ###Install bibtex2html
 
@@ -90,3 +95,10 @@ That's it! The ```_site``` directory should now be populated with the website fi
 ###Updating the live website
 After running Jekyll, just replace the contents of ```Photonics``` with the entire contents of ```_site```. You can do this in Windows Explorer if you have access to the networked folder where our webspace is, or you can use SSH. Contact help@physics.illinois.edu if you need help acccessing the webspace. 
 
+A brief description of how Jekyll works
+------------------
+
+Take a look at the list of files and folders in the group-website-jekyll repository. When you run Jekyll, it looks through all those files and folders, and follows certain rules to assemble the pieces they contain into a finished website in the ```_site``` directory. These are the main types of files and folders Jekyll looks at:
+
+1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website.
+2. HTML files with no ```_``` which also contain YAML frontmatter. 
