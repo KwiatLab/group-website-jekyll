@@ -133,7 +133,34 @@ Take a look at the list of files and folders in the group-website-jekyll reposit
     * ```_plugins``` contains Ruby scripts which give Jekyll extra features. For example, ```bibjekyll.rb``` handles the list of citations on the Publications page.
    
 4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see Hosting the Site Locally, above).
-    
+
+###YAML frontmatter
+
+YAML frontmatter is information contained between two lines of ```---``` at the start of a file, like this example from ```people.html```:
+
+```
+---
+layout: default
+title: People
+---
+
+<h1 style="text-align:center">Our group</h1>
+<div class="people">
+
+	{% include group-members.html %}
+
+	<h1 class="category-title">Previous group members</h1>
+	
+	{% include previous-group-members.html %}
+	
+</div>
+```
+
+The YAML frontmatter gives Jekyll information and instructions when processing the file that contains it. The ```layout``` variable tells Jekyll which of the layouts in ```_layouts``` it should use for this page--in this example, the People page will use the default layout in ```_layouts/default.html```. The ```title``` variable tells Jekyll the title of the page. These variables can be accessed elsewhere on the website. For example, ```default.html``` automatically sets the title of each page to ```page.title```, and the navbar uses ```page.title``` to decide which page is the current page and highlight its link.
+
+Jekyll will *only* process HTML documents in the main directory if they have YAML frontmatter. In other contexts, it is optional. Read more about YAML in the Jekyll documentation: http://jekyllrb.com/docs/frontmatter/.
+
 How to do specific tasks
 ------------------
 
+###
