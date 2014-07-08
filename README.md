@@ -71,5 +71,7 @@ bibtex2html is a program that converts BibTeX files to HTML so a list of referen
 
 ###Optional: Install Mendeley
 
-[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few specific steps, you can use Mendeley, a simple Python script, and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted pdf file if one is available. Details are in the Publications section of this guide.
+[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, a simple Python script, and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted pdf file if one is available. Details are in the Publications section of this guide.
+
+If you don't need to add, remove, or edit the content of citations, you don't need to install Mendeley or make any changes to ```publications_web.bib```. You can change certain formatting options (such as how the author names are abbreviated) in the ```style.bst``` file that bibtex2html uses.
 
