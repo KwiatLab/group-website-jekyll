@@ -20,7 +20,7 @@ Seriously, don't do it. All will be explained! But basically, the way this works
 
 If you edit the HTML files (or any files) that are already on the server, your changes will not be visible to Jekyll or committed to the GitHub repository, and they will be lost the next time someone runs Jekyll and updates the website.
 
-And whatever you're trying to change, there's probably an easier way to do it using Jekyll. For example, you can edit most of the text on the website without ever looking at an HTML file. So resist the urge to edit that HTML file, and read on.
+And whatever you're trying to change, there's probably an easier way to do it using Jekyll. For example, you can edit most of the text on the website without ever looking at an HTML file. So resist the urge to edit that file, and read on.
 
 ###What is Jekyll?
 Jekyll is a tool that takes pieces of content (like text files) and instructions for displaying them (like HTML layouts) and builds a website. It takes care of tedious things you might otherwise have to do manually, like updating the navbar on each page if you want to add a new link. Another common way to accomplish this is by building a dynamic site using PHP or other server-side languages. The advantages of using Jekyll are primarily that you don't need to learn a server-side language, and the site can be hosted anywhere without worrying about whether the host server supports your dynamic content.
@@ -192,7 +192,7 @@ Second-year graduate student [Courtney Byard](http://physics.illinois.edu/news/s
 <!--more-->
 ```
 
-```title``` should be the title of your news item, ```layout``` can stay ```default```, and ```image``` should be the filename of a small image you want to place next to your news item. The ```.newsbox img``` class in ```group.css``` currently resizes images to 75x75 px.
+```title``` should be the title of your news item, ```layout``` can stay "default," and ```image``` should be the filename of a small image you want to place next to your news item. Put the image in ```img```. The ```.newsbox img``` class in ```group.css``` currently resizes images to 75x75 px.
 
 If your news post is longer than a few sentences, place the excerpt separator ```<!--more-->``` where you want the news post to break off on the home page of the website. Continue your text after the separator. In the YAML frontmatter, add the line
 
@@ -207,6 +207,39 @@ Save your file in ```_posts``` as ```YEAR-MONTH-DAY-title.md```. For the example
 Run Jekyll, and your new post should appear on the main page and on the News page! Currently the main page is set to display only the three most recent news posts. If you want to change that limit, edit ```_includes/newsbox.html``` where it says ```{% for post in site.posts limit: 3 %}```.
 
 ###Changing information about group members
+
+Jekyll generates the content of the People page using information from two files in the ```_data``` directory: ```group_members.yml``` and ```previous_group_members.yml```. These data files are processed in two HTML files, ```group-members.html``` and ```previous-group-members.html```, which are both included in ```people.html```. (You can see the include commands in the example in the "YAML frontmatter" subsection above.)
+
+To add, remove, or change the information about a current group member, just edit his or her entry in ```group_members.yml```. For example, adding the following under the "Graduate Students" category...
+
+```
+- name: "Graduate Students"
+  people:
+    - name: "Smarty McSmartypants"
+      image: "../img/headshot_blank.jpg"
+      email: "smarty2@illinois.edu"
+```
+
+...will add a new person under the Graduate Students heading on the People page, complete with headshot and email address. Notice that different categories of people have different options--if you add an email address for a person in the "Undergraduate Students" category, it won't show up on the People page because ```group-members.html``` doesn't display email addresses for undergrads (unless you alter it so that it does!) The current settings also automatically organize graduate and undergraduate students in rows with three columns each. You can change this in ```group-members.html```.
+
+That's basically it. Be sure to follow the existing YAML formatting exactly, because extra spaces or line breaks will cause errors. **Important: there must not be any tab characters in YAML files. Your text editor may add them automatically! Indentation is an important element of YAML syntax, and all the blank characters must be spaces, not tabs. Or things will break.**
+
+Similarly, to add, remove or change the information about a past group member, edit his or her entry in ```previous_group_members.yml```, like so:
+
+```
+- name: "Graduate Students"
+  people:
+    - name: "Best grad student ever"
+      year: "1957"
+      thesis-type: "phd"
+      thesis-file: "best-thesis.pdf"
+      thesis-title: "Really Great Thesis"
+      currently: "Retired"
+      past: "Won a Nobel prize in every field"
+```
+
+Follow the existing examples. In the "Postdocs" and "Graduate Students" categories, most of the extra information (thesis, currently, past) is optional. Thesis files should go in the ```theses``` directory and have the filename specified.
+
 
 ###Managing research topics
 
