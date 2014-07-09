@@ -75,6 +75,8 @@ Jekyll is based on the programming language Ruby, which you must install in orde
 
 bibtex2html is a program that converts BibTeX files to HTML so a list of references can be displayed on a webpage. Jekyll uses it to process the BibTeX file ```publications_web.bib``` in the ```_bibliography``` directory. If it is not installed or installed in the wrong location, Jekyll will give an error when you try to run it, and the list of publications will not be generated.
 
+*If for some reason you are unable to successfully run Jekyll with bibtex2html, it is possible to disable this feature and leave the current list of publications. See the section "Managing publications" below.*
+
 1. Install bibtex2html from the [bibtex2html home page](https://www.lri.fr/~filliatr/bibtex2html/). Use the Windows 1.95 installer. Put it in ```C:/Bibtex2html/bibtex2html.exe``` or Jekyll won't be able to use it. (This can be changed by editing ```bibjekyll.rb``` in the ```_plugins``` directory under the comment "call bibtex2html", but you will probably make someone else unhappy by changing it.)
 
 ###Optional: Install Mendeley
@@ -172,6 +174,60 @@ Most of the text content for the group website is in Markdown files in the ```_i
 
 Markdown will also process many HTML tags, if you need to sneak some in there.
 
+###Liquid
+Jekyll uses the [Liquid templating language](http://liquidmarkup.org/}) to handle variables, some logic operations, and to enable "including" files in other files. All the tags you see with ```{ }``` or ```{{ }}``` are Liquid tags. 
+
+* This is a good introduction to using Liquid: http://docs.shopify.com/themes/liquid-basics
+
+A few examples of how Liquid is used for the Kwiat group website:
+
+* In the default layout ```default.html```, the variable ```page.title``` is used to make the ```<title>``` of each page match the title specified in its YAML frontmatter:
+    ```
+    <title>Kwiat Quantum Information Group: {{ page.title }}</title>
+    ```
+
+* For almost all images on the site, the path to the image is specified using the ```site.url``` variable, which is set in ```_config.yml```. If you ever need to change the site url, all the image paths will still be correct. This way of specifying the path is also used for CSS and Javascript, and for files in the ```theses``` and ```papers``` directories
+    ```
+    <img src="{{ site.url }}/img/physrev-2013.jpg" class="movie-still">
+    ```
+* Liquid is used to do loops and logic operations in a few places on the site, including on the People page. This code renders the names and pictures of graduate students, automatically organizing them in rows of three columns each and adding new rows if needed:
+
+    ```
+<h1 class="category-title">Graduate Students</h1>
+{% for category in site.data.group_members %} <!-- Displays students with 4 students to a row, adding new rows if needed-->
+		{% if category.name == "Graduate Students" %}
+			{% assign count = 0 %} <!-- Initialize variable that counts to 4 -->
+			{% for person in category.people %}
+			
+				{% assign count = count | plus: 1 %} <!-- Increment -->
+				
+				{% if forloop.first %} <!-- If this is the first item, start a row -->
+					<div class="row row-centered">
+				{% else %}
+				{% endif %}
+				<div class="col-md-4 col-centered">
+					<div class="thumbnail">
+						<img src="{{ person.image }}" class="img-circle">
+						<div class="caption"><h2>{{ person.name }}</h2>
+						<h5 class="email">{{ person.email }}</h5>
+						</div>				
+					</div>
+				</div>
+				
+				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 4, end this row and start a new one, unless this is the last item -->
+					</div>
+					<div class="row row-centered">
+					{% assign count = 0 %} <!-- Rest the count -->
+				{% elsif forloop.last %}
+					</div> <!-- End the row if this is the last item -->
+				{% endif %}
+				
+			{% endfor %}
+		{% else %}
+		{% endif %}
+{% endfor %}
+    ```
+
 How to do specific tasks
 ------------------
 
@@ -240,11 +296,86 @@ Similarly, to add, remove or change the information about a past group member, e
 
 Follow the existing examples. In the "Postdocs" and "Graduate Students" categories, most of the extra information (thesis, currently, past) is optional. Thesis files should go in the ```theses``` directory and have the filename specified.
 
+###Adding a new page and editing the navbar
+
+To add a new page to the site, create a new HTML or Markdown file in the group-website-jekyll repository. Give it some YAML frontmatter specifying, at minimum, a title and layout. Add your content below the frontmatter. That's it--the next time you run Jekyll, it will create your page as ```_site/newpagename/index.html```. If for some reason you prefer not to process your new page with Jekyll, leave out the YAML frontmatter. The HTML file will be copied as-is to the ```_site``` directory.
+
+The navbar element is generated with ```navbar.html```, which is included in the main layouts for website pages. The navbar includes the file ```pages_list```, which looks through the data file ```navbar_links``` and adds links to the navbar in the order they appear. To add a new link, just add a new entry. For example, this entry tells the navbar to include a link called "People" which points to the directory "people" under the main site url:
+
+```
+- name: "People"
+  url: "people/"
+```
+
+It appears second in the list of links, after "Home," so it will appear in the second position on the navbar.
+
+If an item in ```navbar_links.yml``` has child links (like Research does), they are organized in a dropdown menu. Child links are basically a table of contents--they point to an tag on the parent page with the ```id``` equal to the handleized (spaces and special characters replaced with dashes) name of the child link. The exception is if the child link specifies a url, in which case its item in the dropdown menu will point to that url. For example:
+
+```
+- name: "Research"
+  url: "research/"
+  child_links:
+    - name: "Guide to Quantum State Tomography"
+      url: "Tomography/"
+      divider: ""
+      highlight: "yes"
+    - name: "Tests of Nonlocality"
+      header: "Fundamental Studies"
+    - name: "Multipartite Entanglement"
+      divider: ""
+```
+
+The first child link specifies a url, so it will point to a separate page. The second two child links do not specify urls, so they will point to the locations on the Research page identified by ```tests-of-nonlocality``` and ```multipartite-entanglement```, respectively.
 
 ###Managing research topics
 
-###Adding a new page and editing the navbar
+To reduce the number of things you need to change when adding or removing a research topic, or changing the order of existing topics, several elements of the website are linked together. The data file ```navbar_links.yml``` (see the previous section) contains a list of child links under the "Research" element. ```research.html``` includes the file ```topics_list```, which goes through these child links, looks for a Markdown document for each of them, and renders the content on the final Research page.
 
-###Adding content (example: adding a video to the Fun page)
+####Editing the content of an existing topic
+The content (text and images) for each topic on the Research page is contained in a separate Markdown file in the ```_includes``` directory. To edit the content of a topic, just edit its Markdown file.
+
+####Changing the order of existing topics
+To change the order of existing topics, rearrange them in ```navbar_links.yml```. You can change the locations of headers and dividers to organize the topics--follow the existing examples. The Research page and the dropdown menu in the navbar will both reflect your changes.
+
+####Removing a topic
+To remove a topic, delete its child link from ```navbar_links.yml```. It will no longer appear on the Research page or in the navbar dropdown menu. You can also delete the Markdown file for that topic if you want to remove it permanently.
+
+####Adding a new topic
+To add a new topic, add a new child link in the location where you want the topic to appear, and create a Markdown file with content. The next time you run Jekyll, the new topic will appear on the Research page and in the dropdown menu. For this to work properly, you must follow a specific naming convention in ```navbar_links.yml``` and in the Markdown file:
+
+* The name of the child link in ```navbar_links.yml``` must be the title of the topic, exactly as you want it to appear in the dropdown menu and on the Research page
+* The Markdown file for that topic must be in the ```_includes``` directory and have the filename equal to the handleized name of the child link
+
+For example, the child link with the name "Quantum Random Number Generation" corresponds to a Markdown file called ```quantum-random-number-generation.md```.
 
 ###Managing Publications
+
+Jekyll generates the list of citation on the Publications page with the help of a Ruby program in the ```_plugins``` directory called ```bibjekyll.rb```. This plugin is invoked with a special tag in ```publications.html```: ```{% bibtex _plugins/style _bibliography/publications_web.bib %}```. This tells ```bibjekyll.rb``` to process the BibTex file ```_bibliography/publications_web.bib``` using the BibTeX style in ```_plugins/style.bst``` and render the result as HTML. The actual BibTeX to HTML conversion is done with the program bibtex2html, which must be installed on your computer (see "Installation and setup").
+
+To begin managing the list of citations that appears on the Publications page, I recommend you install [Mendeley](http://www.mendeley.com/). Contact me (Rebecca Holmes, rholmes4@illinois.edu) and I will give you my Mendeley login information so you can access the folder "Group website." This folder contains all the citations which appear on the website. Download all the .pdf files that are available.
+
+Below is the basic outline of what you should do to update the list of citations. It's a little complicated, but it's designed to automate the process of linking to .pdf files, if they are available, and copying those .pdf files to the group-website-jekyll repository so they will be available on the website. 
+
+1. Make sure all the citations you want to include are in the "Group website" folder in Mendeley, and that all their information is correct. Make sure all the existing document files are renamed to Title.pdf with the hyphen-separated option. (You can do this in Mendeley by going to File --> Rename Document Files.)
+
+2. Select all the citations in "Group website" and go to File --> Export. Export as Endnote XML to the ```papers``` directory in the group-website-jekyll respository. This will copy all the .pdf files for the citations to ```papers/My Collection.Data/PDF```.
+
+3. Select all the citations again and go to File --> Export. This time export as a BibTex file called ```publications.bib``` in the ```_bibliography``` directory.
+
+4. The way Mendeley exports the filename of .pdf documents in each citation is not ideal. To fix it, run the Python script ```bibfile.py``` in the ```_bibliography``` directory. It requires installing the package bibtexparser. If you have Python 3 and pip installed on your computer, all you need to do is run the command:
+    ```
+    pip bibtexparser
+    ```
+And then, in the ```_bibliography``` directory:
+    ```
+    python bibfile.py
+    ```
+The script will create a new file called ```publications_web.bib```.
+
+5. Run Jekyll. Your changes should show up on the Publications page.
+
+
+####Bypassing publications management
+If you can't or don't want to manage the list of citations this way, you don't have to, but it will be difficult to go back once you start editing ```publications_web.bib``` manually. To make manual changes, edit ```publications_web.bib``` directly, making sure that "file" elements have the correct path for .pdfs you want to link to.
+
+You can also complete disable Jekyll's processing of publications, and make the website simply use a static HTML file containing the citations. To do this, look in the ```_site``` directory for the file ```publications_web.html```. Copy this file to the ```_includes``` directory. In ```publications.html```, replace the tag ``````{% bibtex _plugins/style _bibliography/publications_web.bib %}``` with ```{% include publications_web.html %}```. Jekyll will no longer call ```bibjekyll.rb```. You will need to reverse this change if you ever want to enable dynamic generation of the citations list.
