@@ -1,7 +1,7 @@
 Maintaining the Kwiat group website with Jekyll
 ==================
 
-This guide was written by Rebecca Holmes. Contact me at rholmes@illinois.edu if you need help.
+This guide was written by Rebecca Holmes. Contact me at rholmes4@illinois.edu if you need help.
 
 *NOTE: I built this website using Jekyll on Windows 7. Jekyll and most of the other tools needed to maintain the website are also available for Mac and Linux, but I don't have any experience using them on other platforms.*
 
