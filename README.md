@@ -329,7 +329,7 @@ Follow the existing examples. In the "Postdocs" and "Graduate Students" categori
 
 To add a new page to the site, create a new HTML or [Markdown](#markdown) file in the group-website-jekyll repository. Give it some [YAML Frontmatter](#yaml-frontmatter) specifying, at minimum, a title and layout. Add your content below the frontmatter. That's it--the next time you run Jekyll, it will create your page as ```_site/newpagename/index.html```. If for some reason you prefer not to process your new page with Jekyll, leave out the YAML frontmatter. The HTML file will be copied as-is to the ```_site``` directory.
 
-The navbar element is generated with ```navbar.html```, which is included in the main layouts for website pages. The navbar includes the file ```pages_list```, which looks through the data file ```navbar_links``` and adds links to the navbar in the order they appear. To add a new link, just add a new entry. For example, this entry tells the navbar to include a link called "People" which points to the directory "people" under the main site url:
+The navbar element is generated with ```navbar.html```, which is included in the main layouts for website pages. The navbar includes the file ```pages_list```, which looks through the data file ```navbar_links``` and adds links to the navbar in the order they appear. To add a new link, just add a new entry in ```navbar_links.yml```. For example, this entry tells the navbar to include a link called "People" which points to the directory "people" under the main site url:
 
 ```
 - name: "People"
