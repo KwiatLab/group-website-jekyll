@@ -49,7 +49,7 @@ Seriously, don't do it. All will be explained! But basically, the way this works
 
 If you edit the HTML files (or any files) that are already on the server, your changes will not be visible to Jekyll or committed to the GitHub repository, and they will be lost the next time someone runs Jekyll and updates the website.
 
-And whatever you're trying to change, there's probably an easier way to do it using Jekyll. For example, you can edit most of the text on the website without ever looking at an HTML file. So resist the urge to edit that file, and read on.
+And whatever you're trying to change, there's probably an easier way to do it using Jekyll. I know--everyone who writes a guide to some complicated-sounding program insists that everything will be so easy once you learn to use it. But I'm going to tell you that too. For example, once you set up Jekyll you can edit most of the text on the website without ever looking at an HTML file. So resist the urge to edit that file, and read on.
 
 ###What is Jekyll?
 Jekyll is a tool that takes pieces of content (like text files) and instructions for displaying them (like HTML layouts) and builds a website. It takes care of tedious things you might otherwise have to do manually, like updating the navbar on each page if you want to add a new link. Another common way to accomplish this is by building a dynamic site using PHP or other server-side languages. The advantages of using Jekyll are primarily that you don't need to learn a server-side language, and the site can be hosted anywhere without worrying about whether the host server supports your dynamic content.
