@@ -5,6 +5,35 @@ This guide was written by Rebecca Holmes. Contact me at rholmes@illinois.edu if 
 
 *NOTE: I built this website using Jekyll on Windows 7. Jekyll and most of the other tools needed to maintain the website are also available for Mac and Linux, but I don't have any experience using them on other platforms.*
 
+## Table of Contents
+
+* [Introduction](#introduction)
+  * [But first, wait! Don't edit those HTML files on the server!](#but-first-wait-dont-edit-those-html-files-on-the-server)
+  * [What is Jekyll?](#what-is-jekyll)
+* [Installation and setup](#installation-and-setup)
+  * [Clone this GitHub repository](#clone-this-github-repository)
+  * [Install Ruby and Jekyll](#install-ruby-and-jekyll)
+  * [Install bibtex2html](#install-bibtex2html)
+  * [Optional: Install Mendeley](#optional-install-mendeley)
+* [Running Jekyll](#runing-jekyll)
+  * [Updating the live website](#updating-the-live-website)
+  * [Hosting the site locally](#hosting-the-site-locally)
+* [A brief description of how Jekyll works](#a-brief-description-of-how-jekyll-works)
+  * [YMAL frontmatter](#yaml-frontmatter)
+  * [Markdown](#markdown)
+  * [Liquid](#liquid)
+* [How to do specific tasks](#how-to-do-specific-tasks)
+  * [Adding a news post](#adding-a-news-post)
+  * [Changing information about group members](#changing-information-about-group-members)
+  * [Adding a new page and editing the navbar](#adding-a-new-page-and-editing-the-navbar)
+  * [Managing research topics](#managing-research-topics)
+    * [Editing the content of an existing topic](#editing-the-content-of-an-existing-topic)
+	* [Changing the order of existing topics](#changing-the-order-of-existing-topics)
+	* [Removing a topic](#removing-a-topic)
+	* [Adding a new topic](#adding-a-new-topic)
+  * [Managing Publications](#managing-publications)
+    * [Bypassing publication management](#bypassing-publication-management)
+
 Introduction
 ------------------
 
@@ -27,7 +56,7 @@ Jekyll is a tool that takes pieces of content (like text files) and instructions
 
 The whole process of building the website happens on your computer, and the result is a static website that can be uploaded to a server. So while using Jekyll might seem intimidating, it's a great way to build a complex website without knowing much more than basic HTML and CSS. Many tasks won't even require more than editing plain old text. You can do it!
 
-Installation and Setup
+Installation and setup
 ------------------
 
 You must complete a few steps before you can maintain the website with Jekyll from your own computer. 
@@ -75,13 +104,13 @@ Jekyll is based on the programming language Ruby, which you must install in orde
 
 bibtex2html is a program that converts BibTeX files to HTML so a list of references can be displayed on a webpage. Jekyll uses it to process the BibTeX file ```publications_web.bib``` in the ```_bibliography``` directory. If it is not installed or installed in the wrong location, Jekyll will give an error when you try to run it, and the list of publications will not be generated.
 
-*If for some reason you are unable to successfully run Jekyll with bibtex2html, it is possible to disable this feature and leave the current list of publications. See the section "Managing publications" below.*
+*If for some reason you are unable to successfully run Jekyll with bibtex2html, it is possible to disable this feature and leave the current list of publications. See [Managing publications](#managing-publications).*
 
 1. Install bibtex2html from the [bibtex2html home page](https://www.lri.fr/~filliatr/bibtex2html/). Use the Windows 1.95 installer. Put it in ```C:/Bibtex2html/bibtex2html.exe``` or Jekyll won't be able to use it. (This can be changed by editing ```bibjekyll.rb``` in the ```_plugins``` directory under the comment "call bibtex2html", but you will probably make someone else unhappy by changing it.)
 
 ###Optional: Install Mendeley
 
-[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, plus a simple Python script and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted .pdf file if one is available. Details are in the Publications section of this guide.
+[Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, plus a simple Python script and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted .pdf file if one is available. Details are in [Managing publications](#managing-publications).
 
 If you don't need to add, remove, or edit the content of citations, you don't need to install Mendeley or make any changes to ```publications_web.bib```. You can change certain formatting options (such as how the author names are abbreviated) in the ```style.bst``` file that bibtex2html uses.
 
@@ -120,13 +149,13 @@ This tells Jekyll to build the website, to host the contents of ```_site``` loca
 A brief description of how Jekyll works
 ------------------
 
-If you just want to know how to update a specific part of the website (like adding a news post), scroll down past this section to "How to do specific tasks." If you want an overview of what Jekyll is doing when you run it, read on.
+If you just want to know how to update a specific part of the website (like adding a news post), scroll down past this section to [How to do specific tasks](#how-to-do-specific-tasks). If you want an overview of what Jekyll is doing when you run it, read on.
 
 Take a look at the list of files and folders in the group-website-jekyll repository. When you run Jekyll, it looks through all those files and folders, and follows certain rules to assemble the pieces they contain into a finished website in the ```_site``` directory. These are the main types of files and folders Jekyll looks at (for more details, see http://jekyllrb.com/docs/structure/):
 
-1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website. ```css``` contains the CSS stylesheets for the website, which can be edited just like regular CSS. Files with no ```_``` and no YAML frontmatter (I'll explain what this is soon) will also be copied to ```_site``` verbatim.
+1. Folders with no ```_``` (underscore) before their names. Jekyll just copies these directly to ```_site``` without changing anything. Example: ```img```, which contains all the images used on the website. ```css``` contains the CSS stylesheets for the website, which can be edited just like regular CSS. Files with no ```_``` and no [YAML frontmatter](#yaml-frontmatter) (I'll explain what this is soon) will also be copied to ```_site``` verbatim.
 
-2. HTML files with no ```_``` before their names, and which also contain YAML frontmatter. Example: ```people.html```, the page with information about the people in our group. Jekyll processes each of these to create an HTML file in ```_site```. With current settings, ```people.html``` ends up in ```_site/people/index.html```. (```index.html```, the home page of the website, just goes to ```_site``` with no subfolder.)
+2. HTML files with no ```_``` before their names that also contain [YAML frontmatter](#yaml-frontmatter). Example: ```people.html```, the page with information about the people in our group. Jekyll processes each of these to create an HTML file in ```_site```. With current settings, ```people.html``` ends up in ```_site/people/index.html```. (```index.html```, the home page of the website, just goes to ```_site``` with no subfolder.)
 
 3. Folders with ```_``` before their names. These folders are not copied to ```_site``` directly, but contain content and information that Jekyll uses to assemble the website. Examples:
     * ```_layouts``` contains HTML files which define page layouts that can be reused for many pages. For example,       ```_layouts/default.html``` is a layout which puts a navbar at the top of the page and a footer at the bottom, and also includes some CSS and Javascript that is used on most pages in the website.
@@ -134,7 +163,7 @@ Take a look at the list of files and folders in the group-website-jekyll reposit
     * ```_data``` contains YAML files with well-formatted data that Jekyll can use. For example, ```group_members.yml``` contains a list of current group members, their email addresses, and the filenames of headshot images. Jekyll uses it to generate the final People page.
     * ```_plugins``` contains Ruby scripts which give Jekyll extra features. For example, ```bibjekyll.rb``` handles the list of citations on the Publications page.
    
-4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see Hosting the Site Locally, above).
+4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see [Hosting the Site Locally](#hosting-the-site-locally), above).
 
 ###YAML frontmatter
 
@@ -235,7 +264,7 @@ Okay, you installed this stupid Jekyll thing and now you just want to be able to
 
 ###Adding a news post
 
-Create a new file. Give it some YAML frontmatter (see the previous section) and add your content below, as in this example:
+Create a new [Markdown](#markdown) file. Give it some [YAML frontmatter](#yaml-frontmatter) (see the previous section) and add your content below, as in this example:
 
 ```
 ---
@@ -264,7 +293,7 @@ Run Jekyll, and your new post should appear on the main page and on the News pag
 
 ###Changing information about group members
 
-Jekyll generates the content of the People page using information from two files in the ```_data``` directory: ```group_members.yml``` and ```previous_group_members.yml```. These data files are processed in two HTML files, ```group-members.html``` and ```previous-group-members.html```, which are both included in ```people.html```. (You can see the include commands in the example in the "YAML frontmatter" subsection above.)
+Jekyll generates the content of the People page using information from two files in the ```_data``` directory: ```group_members.yml``` and ```previous_group_members.yml```. These data files are processed in two HTML files, ```group-members.html``` and ```previous-group-members.html```, which are both included in ```people.html```. (You can see the include commands in the example in the [YAML frontmatter](#yaml-frontmatter) subsection above.)
 
 To add, remove, or change the information about a current group member, just edit his or her entry in ```group_members.yml```. For example, adding the following under the "Graduate Students" category...
 
@@ -298,7 +327,7 @@ Follow the existing examples. In the "Postdocs" and "Graduate Students" categori
 
 ###Adding a new page and editing the navbar
 
-To add a new page to the site, create a new HTML or Markdown file in the group-website-jekyll repository. Give it some YAML frontmatter specifying, at minimum, a title and layout. Add your content below the frontmatter. That's it--the next time you run Jekyll, it will create your page as ```_site/newpagename/index.html```. If for some reason you prefer not to process your new page with Jekyll, leave out the YAML frontmatter. The HTML file will be copied as-is to the ```_site``` directory.
+To add a new page to the site, create a new HTML or [Markdown](#markdown) file in the group-website-jekyll repository. Give it some [YAML Frontmatter](#yaml-frontmatter) specifying, at minimum, a title and layout. Add your content below the frontmatter. That's it--the next time you run Jekyll, it will create your page as ```_site/newpagename/index.html```. If for some reason you prefer not to process your new page with Jekyll, leave out the YAML frontmatter. The HTML file will be copied as-is to the ```_site``` directory.
 
 The navbar element is generated with ```navbar.html```, which is included in the main layouts for website pages. The navbar includes the file ```pages_list```, which looks through the data file ```navbar_links``` and adds links to the navbar in the order they appear. To add a new link, just add a new entry. For example, this entry tells the navbar to include a link called "People" which points to the directory "people" under the main site url:
 
@@ -329,7 +358,7 @@ The first child link specifies a url, so it will point to a separate page. The s
 
 ###Managing research topics
 
-To reduce the number of things you need to change when adding or removing a research topic, or changing the order of existing topics, several elements of the website are linked together. The data file ```navbar_links.yml``` (see the previous section) contains a list of child links under the "Research" element. ```research.html``` includes the file ```topics_list```, which goes through these child links, looks for a Markdown document for each of them, and renders the content on the final Research page.
+To reduce the number of things you need to change when adding or removing a research topic, or changing the order of existing topics, several elements of the website are linked together. The data file ```navbar_links.yml``` (see the [previous section](#adding-a-new-page-and-editing-the-navbar)) contains a list of child links under the "Research" element. ```research.html``` includes the file ```topics_list```, which goes through these child links, looks for a Markdown document for each of them, and renders the content on the final Research page.
 
 ####Editing the content of an existing topic
 The content (text and images) for each topic on the Research page is contained in a separate Markdown file in the ```_includes``` directory. To edit the content of a topic, just edit its Markdown file.
@@ -341,7 +370,7 @@ To change the order of existing topics, rearrange them in ```navbar_links.yml```
 To remove a topic, delete its child link from ```navbar_links.yml```. It will no longer appear on the Research page or in the navbar dropdown menu. You can also delete the Markdown file for that topic if you want to remove it permanently.
 
 ####Adding a new topic
-To add a new topic, add a new child link in the location where you want the topic to appear, and create a Markdown file with content. The next time you run Jekyll, the new topic will appear on the Research page and in the dropdown menu. For this to work properly, you must follow a specific naming convention in ```navbar_links.yml``` and in the Markdown file:
+To add a new topic, add a new child link in the location where you want the topic to appear, and create a [Markdown](#markdown) file with content. The next time you run Jekyll, the new topic will appear on the Research page and in the dropdown menu. For this to work properly, you must follow a specific naming convention in ```navbar_links.yml``` and in the Markdown file:
 
 * The name of the child link in ```navbar_links.yml``` must be the title of the topic, exactly as you want it to appear in the dropdown menu and on the Research page
 * The Markdown file for that topic must be in the ```_includes``` directory and have the filename equal to the handleized name of the child link
@@ -350,7 +379,7 @@ For example, the child link with the name "Quantum Random Number Generation" cor
 
 ###Managing Publications
 
-Jekyll generates the list of citation on the Publications page with the help of a Ruby program in the ```_plugins``` directory called ```bibjekyll.rb```. This plugin is invoked with a special tag in ```publications.html```: ```{% bibtex _plugins/style _bibliography/publications_web.bib %}```. This tells ```bibjekyll.rb``` to process the BibTex file ```_bibliography/publications_web.bib``` using the BibTeX style in ```_plugins/style.bst``` and render the result as HTML. The actual BibTeX to HTML conversion is done with the program bibtex2html, which must be installed on your computer (see "Installation and setup").
+Jekyll generates the list of citation on the Publications page with the help of a Ruby program in the ```_plugins``` directory called ```bibjekyll.rb```. This plugin is invoked with a special tag in ```publications.html```: ```{% bibtex _plugins/style _bibliography/publications_web.bib %}```. This tells ```bibjekyll.rb``` to process the BibTex file ```_bibliography/publications_web.bib``` using the BibTeX style in ```_plugins/style.bst``` and render the result as HTML. The actual BibTeX to HTML conversion is done with the program bibtex2html, which must be installed on your computer (see [Installation and setup](#installation-and-setup)).
 
 To begin managing the list of citations that appears on the Publications page, I recommend you install [Mendeley](http://www.mendeley.com/). Contact me (Rebecca Holmes, rholmes4@illinois.edu) and I will give you my Mendeley login information so you can access the folder "Group website." This folder contains all the citations which appear on the website. Download all the .pdf files that are available.
 
