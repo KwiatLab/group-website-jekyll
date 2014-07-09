@@ -15,11 +15,11 @@ This guide was written by Rebecca Holmes. Contact me at rholmes@illinois.edu if 
   * [Install Ruby and Jekyll](#install-ruby-and-jekyll)
   * [Install bibtex2html](#install-bibtex2html)
   * [Optional: Install Mendeley](#optional-install-mendeley)
-* [Running Jekyll](#runing-jekyll)
+* [Running Jekyll](#running-jekyll)
   * [Updating the live website](#updating-the-live-website)
   * [Hosting the site locally](#hosting-the-site-locally)
 * [A brief description of how Jekyll works](#a-brief-description-of-how-jekyll-works)
-  * [YMAL frontmatter](#yaml-frontmatter)
+  * [YAML frontmatter](#yaml-frontmatter)
   * [Markdown](#markdown)
   * [Liquid](#liquid)
 * [How to do specific tasks](#how-to-do-specific-tasks)
@@ -32,7 +32,7 @@ This guide was written by Rebecca Holmes. Contact me at rholmes@illinois.edu if 
 	* [Removing a topic](#removing-a-topic)
 	* [Adding a new topic](#adding-a-new-topic)
   * [Managing Publications](#managing-publications)
-    * [Bypassing publication management](#bypassing-publication-management)
+    * [Bypassing publications management](#bypassing-publications-management)
 
 Introduction
 ------------------
