@@ -34,6 +34,15 @@ section {
     margin-top: -50px; /* For proper linking to locations on page with 50 px fixed navbar. Use .anchor where section is not appropriate. */
 }
 
+.footer {
+  font-size:12px;
+}
+
+.imark {
+	float:right;
+	margin-top:-100px;	
+}
+
 /* CSS for special font sizes */
 .topic-links h1, .people h1 {
   font-size:30px;
