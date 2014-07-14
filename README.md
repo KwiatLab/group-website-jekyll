@@ -132,9 +132,9 @@ After running Jekyll, just replace the contents of ```Photonics``` with the enti
 
 ###Hosting the site locally
 
-If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way--in fact, if you don't, weird stuff can happen with the way css stylesheets and other files are referenced with the ```site.url``` variable (see [Troubleshooting](#troubleshooting).
+If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way--in fact, if you don't, weird stuff can happen with the way CSS stylesheets and other files are referenced with the ```site.url``` variable (see [Troubleshooting](#troubleshooting)).
 
-It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do this, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```url``` to localhost:4000, like this:
+It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do both of these things, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```url``` to localhost:4000, like this:
 
 ```
 #url: "http://research.physics.illinois.edu/QI/Photonics"
