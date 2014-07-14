@@ -39,8 +39,9 @@ section {
 }
 
 .imark {
-	float:right;
-	margin-top:-100px;	
+  margin-top:-100px;
+  clear:both;
+  display:block;
 }
 
 /* CSS for special font sizes */
@@ -116,10 +117,14 @@ section {
   font-family:'Roboto', sans-serif;
   margin-top:0px;
   margin-bottom:15px;
+  display:block;
+  clear:both;
 }
 
 .jumbotron p {
   color:#ecf0f1;
+  display:block;
+  clear:both;
 }
 
 .jumbotron .indent {
