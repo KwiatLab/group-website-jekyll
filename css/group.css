@@ -38,11 +38,6 @@ section {
   font-size:12px;
 }
 
-.imark {
-	float:right;
-	margin-top:-100px;	
-}
-
 /* CSS for special font sizes */
 .topic-links h1, .people h1 {
   font-size:30px;
@@ -122,17 +117,19 @@ section {
   color:#ecf0f1;
 }
 
-.jumbotron .indent {
-  float:right;
-}
-
 @media (max-width: 768px) {
   .jumbotron h1 {
     font-size:36px;
   }
 }
 
-.thumbnail{
+.imark {
+  margin-top:50px;
+  float:right;
+  clear:both;
+}
+
+.thumbnail {
     position:relative;
 	padding:0;
 	border:0;
