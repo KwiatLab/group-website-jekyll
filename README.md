@@ -147,7 +147,7 @@ Save the file. Now when you run Jekyll, use the ```server``` command with ```--w
 jekyll server --watch
 ```
 
-This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.) Change ```url``` back to the real URL of the website when you're ready to upload your changes, or all the links that use the ```{{ site.url }}``` variable will be broken.
+This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.) Change ```url``` back to the real URL of the website and run ```jekyll build``` one more time when you're ready to upload your changes, or all the links that use the ```{{ site.url }}``` variable will be broken.
 
 A brief description of how Jekyll works
 ------------------
