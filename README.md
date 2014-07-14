@@ -33,6 +33,7 @@ This guide was written by Rebecca Holmes. Contact me at rholmes4@illinois.edu if
 	* [Adding a new topic](#adding-a-new-topic)
   * [Managing Publications](#managing-publications)
     * [Bypassing publications management](#bypassing-publications-management)
+* [Troubleshooting](#troubleshooting)
 
 Introduction
 ------------------
@@ -131,7 +132,9 @@ After running Jekyll, just replace the contents of ```Photonics``` with the enti
 
 ###Hosting the site locally
 
-If you're testing out changes to the website, it can be useful to host it on your own computer so you can view it in a browser exactly as it will appear when it goes live. It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do this, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```url``` to localhost:4000, like this:
+If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way--in fact, if you don't, weird stuff can happen with the way css stylesheets and other files are referenced with the ```site.url``` variable (see [Troubleshooting](#troubleshooting).
+
+It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do this, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```url``` to localhost:4000, like this:
 
 ```
 #url: "http://research.physics.illinois.edu/QI/Photonics"
@@ -408,3 +411,12 @@ The script will create a new file called ```publications_web.bib```.
 If you can't or don't want to manage the list of citations this way, you don't have to, but it will be difficult to go back once you start editing ```publications_web.bib``` manually. To make manual changes, edit ```publications_web.bib``` directly, making sure that "file" elements have the correct path for .pdfs you want to link to.
 
 You can also completely disable Jekyll's processing of publications, and make the website simply use a static HTML file containing the citations. To do this, look in the ```_site``` directory for the file ```publications_web.html```. Copy this file to the ```_includes``` directory. In ```publications.html```, replace the tag ```{% bibtex _plugins/style _bibliography/publications_web.bib %}``` with ```{% include publications_web.html %}```. Jekyll will no longer call ```bibjekyll.rb```. You will need to reverse this change if you ever want to enable dynamic generation of the citations list.
+
+Troubleshooting
+-----------------
+
+###Jekyll ran successfully, but pages in ```_site``` don't seem to update
+
+If you run Jekyll without an error, then open an HTML file in ```_site``` and don't see your changes in a browser, it might be caused by the page loading the wrong CSS stylesheet. If you run Jekyll when ```url``` in ```_config.yml``` is set to the actual address of the live website, all the pages in ```_site``` will look at the CSS stylesheets on the server instead of the ones in the group-website-jekyll repository. (If you copy everything in ```_site``` to make an update to the live website, your changes will appear on the live site.)
+
+The solution to this is to [host the website locally](#hosting-the-site-locally) to preview changes.
