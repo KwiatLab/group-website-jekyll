@@ -1,8 +1,8 @@
 ﻿name: "Kwiat Quantum Information Group"
 description: "Our group website"
 
-#url: "http://research.physics.illinois.edu/QI/Photonics"
-url: "http://localhost:4000"
+url: "http://research.physics.illinois.edu/QI/Photonics"
+#url: "http://localhost:4000"
 paper-path: "papers/My Collection.Data/PDF"
 
 markdown: rdiscount
