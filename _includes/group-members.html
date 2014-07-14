@@ -1,3 +1,4 @@
+<div class="group-members">
 <div class="bowtie">
 	<div class="container">
 		<div class="row">
@@ -16,14 +17,16 @@
 					{% for category in site.data.group_members %}
 						{% if category.name == "Our Fearless Leader" %}
 							{% for person in category.people %}
+							<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
 							<div class="thumbnail">
 								<img src="{{ person.image }}" class="img-circle">
 								<div class="caption">
 									<h1>{{ person.name }}</h1>
 									<h3 class="job-title">Our fearless leader</h3>
-									<h5 class="email">{{ person.email }}</h4>
+									<h5 class="email">{{ person.netid }}@illinois.edu</h4>
 								</div>						
 							</div>
+							</a>
 							{% endfor %}
 						{% else %}
 						{% endif %}
@@ -35,14 +38,16 @@
 						{% if category.name == "Postdocs" %}
 							{% for person in category.people %}
 						<div class="col-md-6 col-centered">
+						<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
 							<div class="thumbnail">
 								<img src="{{ person.image }}" class="img-circle">
 								<div class="caption">
 									<h2>{{ person.name }}</h2>
 									<h3 class="job-title">Postdoc</h3>
-									<h5 class="email">{{ person.email }}</h5>
+									<h5 class="email">{{ person.netid }}@illinois.edu</h5>
 								</div>						
 							</div>
+							</a>
 						</div>
 							{% endfor %}
 						{% else %}
@@ -71,12 +76,14 @@
 				{% endif %}
 
 				<div class="col-md-4 col-centered">
+					<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
 					<div class="thumbnail">
 						<img src="{{ person.image }}" class="img-circle">
 						<div class="caption"><h2>{{ person.name }}</h2>
-						<h5 class="email">{{ person.email }}</h5>
+						<h5 class="email">{{ person.netid }}@illinois.edu</h5>
 						</div>				
 					</div>
+					</a>
 				</div>
 				
 				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 4, end this row and start a new one, unless this is the last item -->
@@ -126,5 +133,6 @@
 		{% endif %}
 {% endfor %}
 	
+</div>
 </div>
 </div>

@@ -160,6 +160,22 @@ section {
  text-align:center;
 }
 
+.group-members a:hover {
+  text-decoration:none;
+}
+
+.group-members a:hover .img-circle {
+/*   box-shadow: 0px 0px 0px 4px #a799e6; */
+  opacity:.7;
+}
+
+.people .thumbnail .img-circle {
+  padding-bottom:0;
+  margin-bottom:0;
+  width:150px;
+  height:150px;
+}
+
 .people .category-title {
   padding-bottom:20px;
 }
@@ -205,13 +221,6 @@ section {
 
 .people .name {
   min-width:250px;
-}
-
-.people .thumbnail .img-circle {
-  padding-bottom:0;
-  margin-bottom:0;
-  width:150px;
-  height:150px;
 }
 
 .current-past {
