@@ -6,9 +6,9 @@
 				<div class="thumbnail">
 					<img src="{{ site.url }}/img/group-photo-2011.jpg" class="group-photo">
 					<div class="caption">
-									<h3>Alma Mater, 2011</h3>
-									<h4>Older group photos: <a href="{{ site.url }}/tracks/">[1]</a> <a href="{{ site.url }}/img/group-photo-simpsons.jpg">[2]</a> <a href="{{ site.url }}/img/group-photo-alma-mater.jpg">[3]</a></h4>
-								</div>
+						<h3>Alma Mater, 2011</h3>
+						<h4>Older group photos: <a href="{{ site.url }}/tracks/">[1]</a> <a href="{{ site.url }}/img/group-photo-simpsons.jpg">[2]</a> <a href="{{ site.url }}/img/group-photo-alma-mater.jpg">[3]</a></h4>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
@@ -63,9 +63,9 @@
 <div class="container">
 <!-- List of graduate students -->
 <h1 class="category-title">Graduate Students</h1>
-{% for category in site.data.group_members %} <!-- Displays students with 4 students to a row, adding new rows if needed-->
+{% for category in site.data.group_members %} <!-- Displays students with 3 students to a row, adding new rows if needed-->
 		{% if category.name == "Graduate Students" %}
-			{% assign count = 0 %} <!-- Initialize variable that counts to 4 -->
+			{% assign count = 0 %} <!-- Initialize variable that counts to 3 -->
 			{% for person in category.people %}
 			
 				{% assign count = count | plus: 1 %} <!-- Increment -->
@@ -86,7 +86,7 @@
 					</a>
 				</div>
 				
-				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 4, end this row and start a new one, unless this is the last item -->
+				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
 					</div>
 					<div class="row row-centered">
 					{% assign count = 0 %} <!-- Rest the count -->
@@ -99,14 +99,14 @@
 		{% endif %}
 {% endfor %}
 </div>
-
+<!-- List of undergraduate students -->
 <h1 class="category-title">Undergraduate Students</h1>
 <div class="bowtie">
 <div class="container">
 	
-	{% for category in site.data.group_members %} <!-- Displays students with 4 students to a row, adding new rows if needed-->
+	{% for category in site.data.group_members %} <!-- Displays students with 3 students to a row, adding new rows if needed-->
 		{% if category.name == "Undergraduate Students" %}
-			{% assign count = 0 %} <!-- Initialize variable that counts to 4 -->
+			{% assign count = 0 %} <!-- Initialize variable that counts to 3 -->
 			{% for person in category.people %}
 			
 				{% assign count = count | plus: 1 %} <!-- Increment -->
@@ -120,7 +120,7 @@
 					<div class="name"><center><h2>{{ person.name }}</h2></center></div>
 				</div>
 				
-				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 4, end this row and start a new one, unless this is the last item -->
+				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
 					</div>
 					<div class="row row-centered">
 					{% assign count = 0 %} <!-- Rest the count -->
