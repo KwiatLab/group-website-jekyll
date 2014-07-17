@@ -1,5 +1,5 @@
 ---
 layout: redirect
 permalink: "human.html"
-redirect: "vision/"
+redirect: "research/#quantum-mechanics-and-human-perception"
 ---
