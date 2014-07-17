@@ -10,9 +10,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<META HTTP-EQUIV="Refresh" CONTENT="{{ site.url }}/{{ page.redirect }}">
+		
 		<link rel="shortcut icon" href="{{ site.url }}/img/favicon.ico">
 
-		<title>Kwiat Quantum Information Group: {{ page.title }}</title>
+		<title>Kwiat Quantum Information Group: This page has moved</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="{{ site.url }}/css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -26,7 +29,19 @@
 <body>
 	{% include navbar.html %}
 	
-	{{ content }}
+	<div class="container">
+		<h2>This page has moved!</h2>
+		
+		<p>
+		Please note the new address: 
+		<a href="{{ site.url }}/{{ page.redirect }}">{{ site.url }}/{{ page.redirect }}</a>
+		</p>
+		
+		<p>
+		If you are not automatically redirected, click the link above.
+		<p>
+
+	</div>
 	
 	{% include footer.html %}
 
