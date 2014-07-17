@@ -26,7 +26,7 @@ p {
 }
 
 em {
-  font-weight:200;
+  font-weight:normal;
 }
 
 section {
@@ -104,6 +104,10 @@ section {
   max-width:100%;
 }
 
+.jumbotron a {
+  color:#a799e6;
+}
+
 .jumbotron h1 {
   color:#ecf0f1;
   font-weight:bold;
@@ -115,6 +119,7 @@ section {
 
 .jumbotron p {
   color:#ecf0f1;
+  font-weight:normal;
 }
 
 @media (max-width: 768px) {
