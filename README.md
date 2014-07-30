@@ -132,13 +132,13 @@ After running Jekyll, just replace the contents of ```Photonics``` with the enti
 
 ###Hosting the site locally
 
-If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way--in fact, if you don't, weird stuff can happen with the way CSS stylesheets and other files are referenced with the ```site.url``` variable (see [Troubleshooting](#troubleshooting)).
+If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way.
 
-It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do both of these things, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```url``` to localhost:4000, like this:
+It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do both of these things, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```baseurl``` to "", like this:
 
 ```
-#url: "http://research.physics.illinois.edu/QI/Photonics"
-url: "http://localhost:4000"
+url: "http://research.physics.illinois.edu/QI/Photonics"
+baseurl: ""
 ```
 
 Save the file. Now when you run Jekyll, use the ```server``` command with ```--watch```:
@@ -147,7 +147,9 @@ Save the file. Now when you run Jekyll, use the ```server``` command with ```--w
 jekyll server --watch
 ```
 
-This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.) Change ```url``` back to the real URL of the website and run ```jekyll build``` one more time when you're ready to upload your changes, or all the links that use the ```{{ site.url }}``` variable will be broken.
+This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.) 
+
+Change ```baseurl``` back to ```/QI/Photonics``` and run ```jekyll build``` one more time when you're ready to upload your changes, or all the links that use the ```{{ site.baseurl }}``` variable will be broken. (The purpose of ```baseurl``` is to account for the ```/QI/Photonics``` in the URL of the live website. Those folders aren't there when you host locally, so you need to tell Jekyll not to insert them in internal URLs.)
 
 A brief description of how Jekyll works
 ------------------
@@ -226,9 +228,9 @@ A few examples of how Liquid is used for the Kwiat group website:
 
     ```
 <h1 class="category-title">Graduate Students</h1>
-{% for category in site.data.group_members %} <!-- Displays students with 4 students to a row, adding new rows if needed-->
+{% for category in site.data.group_members %} <!-- Displays students with 3 students to a row, adding new rows if needed-->
 		{% if category.name == "Graduate Students" %}
-			{% assign count = 0 %} <!-- Initialize variable that counts to 4 -->
+			{% assign count = 0 %} <!-- Initialize variable that counts to 3 -->
 			{% for person in category.people %}
 			
 				{% assign count = count | plus: 1 %} <!-- Increment -->
@@ -237,23 +239,26 @@ A few examples of how Liquid is used for the Kwiat group website:
 					<div class="row row-centered">
 				{% else %}
 				{% endif %}
+
 				<div class="col-md-4 col-centered">
+					<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
 					<div class="thumbnail">
 						<img src="{{ person.image }}" class="img-circle">
 						<div class="caption"><h2>{{ person.name }}</h2>
-						<h5 class="email">{{ person.email }}</h5>
+						<h5 class="email">{{ person.netid }}@illinois.edu</h5>
 						</div>				
 					</div>
+					</a>
 				</div>
 				
-				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 4, end this row and start a new one, unless this is the last item -->
+				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
 					</div>
 					<div class="row row-centered">
 					{% assign count = 0 %} <!-- Rest the count -->
 				{% elsif forloop.last %}
 					</div> <!-- End the row if this is the last item -->
 				{% endif %}
-				
+
 			{% endfor %}
 		{% else %}
 		{% endif %}
