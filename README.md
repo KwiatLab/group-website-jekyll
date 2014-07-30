@@ -420,8 +420,4 @@ You can also completely disable Jekyll's processing of publications, and make th
 Troubleshooting
 -----------------
 
-###Jekyll ran successfully, but pages in ```_site``` don't seem to update
-
-If you run Jekyll without an error, then open an HTML file in ```_site``` and don't see your changes in a browser, it might be caused by the page loading the wrong CSS stylesheet. If you run Jekyll when ```url``` in ```_config.yml``` is set to the actual address of the live website, all the pages in ```_site``` will look at the CSS stylesheets on the server instead of the ones in the group-website-jekyll repository. (If you copy everything in ```_site``` to make an update to the live website, your changes will appear on the live site.)
-
-The solution to this is to [host the website locally](#hosting-the-site-locally) to preview changes.
+###Coming soon?
