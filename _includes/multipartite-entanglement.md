@@ -1,4 +1,4 @@
-<img src="{{ site.url }}/img/Hermite-gaussian.png" class="img-responsive pull-right">
+<img src="{{ site.baseurl }}/img/Hermite-gaussian.png" class="img-responsive pull-right">
 
 ###Recent Publications
 * [A. N. Sharma, K. T. McCusker, J. T. Barreiro, and P. G. Kwiat in Proceedings of QIM 2013](http://dx.doi.org/10.1364/QIM.2013.W6.49)

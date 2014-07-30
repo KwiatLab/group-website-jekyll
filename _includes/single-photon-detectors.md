@@ -1,7 +1,7 @@
-<img src="{{ site.url }}/img/vlpc.jpg" class="img-responsive pull-left">
+<img src="{{ site.baseurl }}/img/vlpc.jpg" class="img-responsive pull-left">
 
 ###Recent Publications
-* Kevin Zielnicki Ph.D. thesis: ["Pure Sources and Efficient Detectors" (2013)]({{ site.url }}/theses/zielnicki-thesis.pdf)
+* Kevin Zielnicki Ph.D. thesis: ["Pure Sources and Efficient Detectors" (2013)]({{ site.baseurl }}/theses/zielnicki-thesis.pdf)
 
 Photon detectors with high efficiencies and low error probabilities are essential for optical quantum computing, scalable quantum information protocols, and fundamental physical studies such as [loophole-free Bell tests](#tests-of-nonlocality). Conventional single-photon detectors, such as avalanche photodiodes (APDs) and photomultiplier tubes (PMTs), only have quantum efficiencies of up to 75% and 10-20%, respectively. 
 

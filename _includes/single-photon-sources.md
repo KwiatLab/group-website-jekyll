@@ -1,8 +1,8 @@
-<a href="{{ site.url }}/movies/photongun.swf"><img src="{{ site.url }}/img/photongun.jpg" class="img-responsive pull-right movie-still" title="Click for movie"></a>
+<a href="{{ site.baseurl }}/movies/photongun.swf"><img src="{{ site.baseurl }}/img/photongun.jpg" class="img-responsive pull-right movie-still" title="Click for movie"></a>
 
 ###Recent Publications
-* Kevin McCusker Ph.D. thesis: ["Efficient Quantum Optical State Engineering and Applications" (2012)]({{ site.url }}/theses/mccusker-thesis.pdf)
-* [K. T. McCusker and P. G. Kwiat, Phys. Rev. Lett. 103, 163602 (2009)]({{ site.url }}/{{ site.paper-path }}/Efficient Optical Quantum State Engineering.pdf)
+* Kevin McCusker Ph.D. thesis: ["Efficient Quantum Optical State Engineering and Applications" (2012)]({{ site.baseurl }}/theses/mccusker-thesis.pdf)
+* [K. T. McCusker and P. G. Kwiat, Phys. Rev. Lett. 103, 163602 (2009)]({{ site.baseurl }}/{{ site.paper-path }}/Efficient Optical Quantum State Engineering.pdf)
 
 There are [about a hundred billion photons in a well-lit room](http://scienceblogs.com/builtonfacts/2009/03/05/counting-photons/). To get just one photon, you might imagine dimming a light source until the photons come out one at a time. But light sources such as bulbs, LEDs, lasers, and the sun all have something in common: they emit photons randomly. If you want to predict exactly how many photons will be emitted in one second, the best you can do is to calculate a probability distribution. Even if the source is very dim, it's impossible to guarantee that only one photon will be emitted at a time. In many quantum information experiments, a "photon gun"--a source that really only emits [one photon](http://en.wikipedia.org/wiki/Fock_state) at a time--would be more useful. Even better, and more challenging to build, is a photon gun that can be fired at will. We are engineering a high-efficiency source of single photons that can be used for quantum information applications including quantum cryptography and optical quantum computing.
 

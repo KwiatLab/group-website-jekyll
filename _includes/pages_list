@@ -13,7 +13,7 @@ Generates the list items for a Bootstrap navbar based on the contents of navbar_
       {% else %}
         <li class="dropdown">
       {% endif %}
-      <a href="{{ site.url }}/{{ navbar_link.url }}">{{ navbar_link.name }} <b class="caret"></b></a>
+      <a href="{{ site.baseurl }}/{{ navbar_link.url }}">{{ navbar_link.name }} <b class="caret"></b></a>
       <ul class="dropdown-menu">
         {% for child_link in navbar_link.child_links %}
 		  {% if child_link.header %}
@@ -22,9 +22,9 @@ Generates the list items for a Bootstrap navbar based on the contents of navbar_
 		  {% endif %}
 		  {% if child_link.highlight %}
 		  	  {% if child_link.url %}
-				<li class="highlight"><a href="{{ site.url }}/{{ child_link.url }}">&raquo; {{ child_link.name }} &laquo;</a></li>
+				<li class="highlight"><a href="{{ site.baseurl }}/{{ child_link.url }}">&raquo; {{ child_link.name }} &laquo;</a></li>
 				{% else %}
-				<li class="highlight"><a href="{{ site.url }}/{{ navbar_link.url }}#{{ child_link.name | handleize }}">{{ child_link.name }}</a></li>
+				<li class="highlight"><a href="{{ site.baseurl }}/{{ navbar_link.url }}#{{ child_link.name | handleize }}">{{ child_link.name }}</a></li>
 			  {% endif %}  
 			  {% if child_link.divider %}
 				  <li class="divider"></li>
@@ -32,9 +32,9 @@ Generates the list items for a Bootstrap navbar based on the contents of navbar_
 			  {% endif %}
 		  {% else %}
 			  {% if child_link.url %}
-				<li><a href="{{ site.url }}/{{ child_link.url }}">{{ child_link.name }}</a></li>
+				<li><a href="{{ site.baseurl }}/{{ child_link.url }}">{{ child_link.name }}</a></li>
 				{% else %}
-				<li><a href="{{ site.url }}/{{ navbar_link.url }}#{{ child_link.name | handleize }}">{{ child_link.name }}</a></li>
+				<li><a href="{{ site.baseurl }}/{{ navbar_link.url }}#{{ child_link.name | handleize }}">{{ child_link.name }}</a></li>
 			  {% endif %}
 			  {% if child_link.divider %}
 				  <li class="divider"></li>
@@ -45,8 +45,8 @@ Generates the list items for a Bootstrap navbar based on the contents of navbar_
       </ul>
     </li>
     {% elsif navbar_link.name == page.title %}
-      <li class="active"><a href="{{ site.url }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a></li>
+      <li class="active"><a href="{{ site.baseurl }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a></li>
     {% else %}
-      <li><a href="{{ site.url }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a></li>
+      <li><a href="{{ site.baseurl }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a></li>
     {% endif %}
 {% endfor %}

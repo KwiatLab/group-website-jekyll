@@ -1,7 +1,7 @@
 <div class="newsbox">
 {% for post in site.posts limit: 3 %}
 <p>
-	<img src="{{ site.url }}/img/{{ post.image }}">
+	<img src="{{ site.baseurl }}/img/{{ post.image }}">
 	<div class="news-post">
 		<div class="post-header">
 			<h4>
@@ -12,7 +12,7 @@
 		{{ post.excerpt | remove: '</p>'}}
 		<!--Posts with more text after the excerpt will display a "more" link if they have more: "yes" in their YAML frontmatter-->
 		{% if post.more == "yes" %}
-		<a class="more" href="{{ site.url }}/news/#{{ post.title | handleize }}">More &raquo;</a>
+		<a class="more" href="{{ site.baseurl }}/news/#{{ post.title | handleize }}">More &raquo;</a>
 		{% endif %}
 		</p>
 	</div>

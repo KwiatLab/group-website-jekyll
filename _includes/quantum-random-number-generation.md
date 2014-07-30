@@ -1,4 +1,4 @@
-<img src="{{ site.url }}/img/quantum-random-number.jpg" class="img-responsive pull-right">
+<img src="{{ site.baseurl }}/img/quantum-random-number.jpg" class="img-responsive pull-right">
 
 ###Recent Publications
 * [M. A. Wayne and P. G. Kwiat, Optics Express (2010)](http://dx.doi.org/10.1364/OE.18.009351)
