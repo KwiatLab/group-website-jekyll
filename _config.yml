@@ -2,7 +2,7 @@
 description: "Our group website"
 
 url: "http://research.physics.illinois.edu/QI/Photonics"
-baseurl: ""
+baseurl: "/QI/Photonics"
 paper-path: "papers/My Collection.Data/PDF"
 
 markdown: rdiscount
