@@ -39,6 +39,11 @@ h6,
   font-weight: normal;
 }
 
+.large {
+  font-size:150%;
+  font-weight:300;
+}
+
 section {
     padding-top: 50px; 
     margin-top: -50px; /* For proper linking to locations on page with 50 px fixed navbar. Use .anchor where section is not appropriate. */
@@ -131,7 +136,7 @@ section {
 
 .jumbotron h1 {
   color:#ecf0f1;
-  font-weight:bold;
+  font-weight:300;
   font-size:56px;
   font-family:'Roboto', sans-serif;
   margin-top:0px;
@@ -141,11 +146,15 @@ section {
 .jumbotron p {
   color:#ecf0f1;
   font-weight:normal;
+  font-size:26px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 620px) {
   .jumbotron h1 {
     font-size:36px; /* Resize jumbotron heading to fit on smaller screens */
+  }
+  .jumbotron p {
+    font-size:20px;
   }
 }
 
@@ -367,6 +376,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #a799e6;
 	background-color: #47165a;
+	font-weight:normal;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	color: #a799e6;

@@ -11,9 +11,6 @@
     - name: "Fumihiro Kaneda"
       image: "../img/headshot_blank.jpg"
       netid: "fkaneda"
-    - name: "Jian Yang"
-      image: "../img/headshot_jyang.jpg"
-      netid: "jian9613"
 
 - name: "Graduate Students"
   people:
@@ -49,6 +46,5 @@
   people:
     - name: "Joseph Chapman"
     - name: "Austin Graf"
-    - name: "Shangjie Guo"
-    - name: "David Hervas"
-    - name: "Amy Zou"
+    - name: "Leon (Shangjie) Guo"
+    - name: "Amy (Yangyuxin) Zou"
