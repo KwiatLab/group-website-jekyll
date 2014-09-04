@@ -63,9 +63,9 @@
 <div class="container">
 <!-- List of graduate students -->
 <h1 class="category-title">Graduate Students</h1>
-{% for category in site.data.group_members %} <!-- Displays students with 3 students to a row, adding new rows if needed-->
+{% for category in site.data.group_members %} <!-- Displays students with 4 students to a row, adding new rows if needed-->
 		{% if category.name == "Graduate Students" %}
-			{% assign count = 0 %} <!-- Initialize variable that counts to 3 -->
+			{% assign count = 0 %} <!-- Initialize variable that counts to 4 -->
 			{% for person in category.people %}
 			
 				{% assign count = count | plus: 1 %} <!-- Increment -->
@@ -75,7 +75,7 @@
 				{% else %}
 				{% endif %}
 
-				<div class="col-md-4 col-centered">
+				<div class="col-md-3 col-centered">
 					<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
 					<div class="thumbnail">
 						<img src="{{ person.image }}" class="img-circle">
@@ -86,7 +86,7 @@
 					</a>
 				</div>
 				
-				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
+				{% if count >= 4 and forloop.last == false %} <!-- If we've reached a multiple of 4, end this row and start a new one, unless this is the last item -->
 					</div>
 					<div class="row row-centered">
 					{% assign count = 0 %} <!-- Rest the count -->

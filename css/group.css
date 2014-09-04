@@ -189,6 +189,12 @@ section {
   margin-top:20px;
 }
 
+.page-header {
+  padding-bottom:20px;
+  text-align:center;
+  border-bottom: none;
+}
+
 .people ul {
   list-style-type: none; /* Don't show bullets on unordered lists */
 }
