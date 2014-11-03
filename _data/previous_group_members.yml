@@ -74,13 +74,13 @@
       thesis-type: "phd"
       thesis-file: "altepeter-thesis.pdf"
       thesis-title: "Testing the Limits of Nonlocality"
-      currently: "Berberian & Co. in Washington, DC"
       past: "Research professor at Northwestern University; Postdoc with Dr. Andrew White at the University of Queensland in Brisbane, Australia"
     - name: "Nicholas Peters"
       year: "2006"
       thesis-type: "phd"
       thesis-file: "peters-thesis.pdf"
       thesis-title: "One- And Two-Photon States for Quantum Information"
+      currently: "Applied Communication Sciences"
       
 - name: "Dedicated Undergrads"
   people:
