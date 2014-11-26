@@ -119,7 +119,7 @@ section {
 /* CSS for "jumbotron" include in jumbotron.html */
 .jumbotron {
   background-image:url('../img/boldbowtie.png');
-  background-size:450px;
+  background-size:440px;
   background-repeat:repeat;
   background-color:#ecf0f1;
   background-position:20px;
