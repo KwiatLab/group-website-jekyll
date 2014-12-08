@@ -73,7 +73,7 @@ section {
 /* Divs with bowtie pattern backgrounds */
 .bowtie-bold {
   background-image:url('../img/boldbowtie.png');
-  background-size:450px;
+  background-size:440px;
   background-repeat:repeat;
   color:#ecf0f1;
 }
@@ -84,7 +84,7 @@ section {
 
 .bowtie {
   background-image:url('../img/accentbowtie.png');
-  background-size:450px;
+  background-size:440px;
   background-repeat:repeat;
 }
 
