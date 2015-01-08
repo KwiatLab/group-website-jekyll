@@ -50,8 +50,9 @@
       
 - name: "Undergraduate Students"
   people:
-    - name: "David Hervas Aguilar"
     - name: "Joseph Chapman"
+    - name: "Kent Gang"
     - name: "Austin Graf"
     - name: "Leon (Shangjie) Guo"
+    - name: "Adam Schunk"
     - name: "Amy (Yangyuxin) Zou"

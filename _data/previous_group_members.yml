@@ -84,8 +84,9 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "David Hervas Aguilar"
     - name: "Daniel Kumor"
-      currently: "Master's student in computer science at Purdue University"
+      currently: "Masters student in computer science at Purdue University"
     - name: "David Schmid"
       currently: "Graduate student in physics at the University of Toronto"
     - name: Mae Hwee Teo
