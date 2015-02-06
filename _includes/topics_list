@@ -3,9 +3,10 @@
 		{% for child_link in navbar_link.child_links %}
 			{% if child_link.name == 'Research home' or child_link.name == 'Guide to Quantum State Tomography' %}
 			{% else %}
-			
 				{% if child_link.header %}
+				    <hr class="dashed">
 					<h1>{{ child_link.header }}</h1>
+					<hr class="dashed">
 				{% else %}
 				{% endif %}
 				
@@ -16,12 +17,7 @@
 				{% else %}
 					{% markdown_var child_link.name %}
 				{% endif %}
-				</section>
-				{% if child_link.divider %}
-					<hr>
-				{% else %}
-				{% endif %}
-				
+				</section>				
 			{% endif %}
 		{% endfor %}
 	{% else %}

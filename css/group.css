@@ -167,6 +167,11 @@ li .dropdown-header {
   }
 }
 
+hr.dashed {
+  border: 0;
+  border-bottom: 1px dashed #888;
+}
+
 /* CSS for Illinois logo */
 .imark {
   margin-top:50px;
@@ -177,6 +182,7 @@ li .dropdown-header {
 /* Adds extra padding at the bottom of a text both at the top of a page, ie research.html */
 .intro-box {
   padding-bottom:20px;
+  font-size:17px;
 }
 
 /* CSS for include "people.html" showing group members & photos */

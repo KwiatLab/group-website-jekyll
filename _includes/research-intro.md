@@ -1,6 +1,6 @@
-#What is quantum information?
+##What is quantum information?
 
-Quantum information is the physics of knowledge. 
+Quantum information is the "physics of knowledge."
 
 Quantum mechanics tells us that how and when something is measured can change the outcome of an experiment. Even stranger, the physical reality of an experiment is affected by the knowledge of the experimenter--or more precisely, by what can in principle be known. 
 
