@@ -4,7 +4,7 @@ Because measurement of a quantum state typically *changes* the state being measu
 
 This page is intended to be useful to a variety of visitors, from experimental research groups setting up quantum tomography systems, to students learning about the theory of characterizing quantum states. 
 
-We have a collection of background material, as well as a real-time tomography interface which can process experimental data!
+We have a collection of background material, as well as a **real-time tomography interface** which can process experimental data!
 
 
 
