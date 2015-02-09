@@ -21,10 +21,82 @@ title: Tomography
 	<hr class="dashed">
     <h2>Real-time tomography interface</h2>
     <hr class="dashed">
+	
+	<p>In order to implement the tomography techniques discussed above, we have written a group of MATLAB and (more recently) Python programs which perform the analysis necessary to reconstruct a quantum state from experimental data. You can download and run our code yourself, or use the web interface below.</p>
+	
+	<p>The web interface currently uses the Python code. We are still verifying the interface functionality.</p> 
+	
 	<h3>READ ME: <a href="{{ site.baseurl }}/tomography-files/tutorial_for_tomography.pdf">Tutorial for the tomography interface</a></h3>
 	
 <button onclick="myFunction()">Open tomography interface</button>
 
+<h3>Python code for download</h3>
+<blockquote class="table"><table>
+	<tbody><tr>
+		<td class="top"> 
+			<a href="http://tomography.web.engr.illinois.edu/State_tomography_4.0.py">
+			State_tomography_4.0.py
+			</a>
+		</td>
+		<td width="40px"></td>
+		<td class="top">
+		Python code as a single file.
+		</td> 
+		</tr>
+	</tbody></table></blockquote>
+		
+<h3>MATLAB code for download</h3>		
+<blockquote>
+<table>
+	<tbody><tr>
+		<td> 
+			<a href="http://research.physics.illinois.edu/QI/Photonics/Tomography/tomography_code/state_tomography.tar.gz">
+			state_tomography.tar.gz
+			</a>
+		</td>
+		<td width="40px"></td>
+		<td>
+		All of the MATLAB code, in tarred and gzipped.  In linux/Unix, the command <code>tar -xzf state_tomography.tar.gz</code> should unzip the files into their own directory. File Size: 20 KB.
+		</td> 
+	</tr>
+	<tr height="10px"></tr>
+	<tr>
+		<td> 
+			<a href="http://research.physics.illinois.edu/QI/Photonics/Tomography/tomography_code/state_tomography.zip">
+			state_tomography.zip
+			</a>
+		</td>
+		<td width="40px"></td>
+		<td>
+		All of the MATLAB code in zip format.  Windows should be able to automatically unzip these files. File Size: 36 KB.
+		</td> 
+	</tr>
+
+		</tbody></table></blockquote>
+
+<h3>Introduction to the MATLAB code</h3>
+
+<p>
+The MATLAB code is contained within the following directories:
+</p>
+<ul>
+	<li><code>./state_tomography</code></li>
+	<li><code>./state_tomography/private</code></li>
+	<li><code>./quantum_logic</code></li>
+	<li><code>./quantum_logic/measures</code></li>
+	<li><code>./basic_math</code></li>
+	<li><code>./util</code></li>
+</ul>
+The function <code>state_tomography.m</code> is the top level tomography program, and the place you should start when looking through this code. Its function call looks like this:
+<blockquote>
+<code>[rho, intensity, fval]=state_tomography(raw_counts, intensities, conf)</code>
+</blockquote>
+<p>
+Most functions included in the code contain commented documentation,
+but in case you have any further questions, you should direct them
+to <a href="mailto://bgchris2@uiuc.edu">Brad Christensen</a>.
+</p>
+		
 <script>
 function myFunction() {
     window.open("http://tomography.web.engr.illinois.edu/TomographyDemo2.php");
