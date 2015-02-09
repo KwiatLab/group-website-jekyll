@@ -134,22 +134,13 @@ After running Jekyll, just replace the contents of ```Photonics``` with the enti
 
 If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way.
 
-It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do both of these things, you need to make a small change to the ```_config.yml``` file, and type an extra option when you run Jekyll. First, open ```_config.yml``` and change ```baseurl``` to "", like this:
-
-```
-url: "http://research.physics.illinois.edu/QI/Photonics"
-baseurl: ""
-```
-
-Save the file. Now when you run Jekyll, use the ```server``` command with ```--watch```:
+It can also be nice to set Jekyll to automatically rebuild the site when you make changes. To do both of these things, use the ```server``` command with ```--watch```:
 
 ```
 jekyll server --watch
 ```
 
-This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.) 
-
-Change ```baseurl``` back to ```/QI/Photonics``` and run ```jekyll build``` one more time when you're ready to upload your changes, or all the links that use the ```{{ site.baseurl }}``` variable will be broken. (The purpose of ```baseurl``` is to account for the ```/QI/Photonics``` in the URL of the live website. Those folders aren't there when you host locally, so you need to tell Jekyll not to insert them in internal URLs.)
+This tells Jekyll to build the website, to host the contents of ```_site``` locally, and to automatically rebuild if you change anything. Now you should see the website if you point your browser to http://localhost:4000/QI/Photonics/. (Reminder: what you see are still just files on your computer--you need to copy them to our webspace to make any changes live.)
 
 A brief description of how Jekyll works
 ------------------
