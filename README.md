@@ -211,9 +211,9 @@ A few examples of how Liquid is used for the Kwiat group website:
     <title>Kwiat Quantum Information Group: {{ page.title }}</title>
     ```
 
-* For almost all images on the site, the path to the image is specified using the ```site.url``` variable, which is set in ```_config.yml```. If you ever need to change the site url, all the image paths will still be correct. This way of specifying the path is also used for CSS and Javascript, and for files in the ```theses``` and ```papers``` directories
+* For almost all images on the site, the path to the image is specified using the ```site.baseurl``` variable, which is set in ```_config.yml```. If you ever need to change the site url, all the image paths will still be correct. This way of specifying the path is also used for CSS and Javascript, and for files in the ```theses``` and ```papers``` directories
     ```
-    <img src="{{ site.url }}/img/physrev-2013.jpg" class="movie-still">
+    <img src="{{ site.baseurl }}/img/physrev-2013.jpg" class="movie-still">
     ```
 * Liquid is used to do loops and logic operations in a few places on the site, including on the People page. This code renders the names and pictures of graduate students, automatically organizing them in rows of three columns each and adding new rows if needed:
 
