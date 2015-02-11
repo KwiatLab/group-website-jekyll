@@ -13,3 +13,5 @@ For this study to succeed, participants must give each trial their full attentio
 **Participants who wear contacts may wear them during the experiment. Participants who normally wear glasses must be able to focus on text 25 cm away without glasses. This corresponds to near-sightedness no more severe than approximately -3.0 dioptres. Far-sighted participants will likely not be eligible.**
 
 **Participants must have no history of scotophobia or vulnerability to darkness-related conditions.**
+
+**Participants must be able to understand spoken instructions in English, including instructions given via an intercom during the experiment.**
