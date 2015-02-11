@@ -4,13 +4,17 @@
 body  {
   font-family:'Roboto', sans-serif;
   font-size:15px;
-  color:#282828;
+  color:#484848;
   padding-top: 50px;
   padding-bottom: 20px; /* Proper positioning of content below fixed navbar */
 }
 
 a {
   color:#56218b;
+}
+
+.underline {
+  text-decoration:underline;
 }
 
 a:hover {
@@ -340,7 +344,7 @@ hr.dashed {
 
 /* Dashed box to contain vision research interest survey on vision.html */
 .survey-container {
-  border-style:dashed;
+  border-style:none;
   border-width:1px;
 }
 
