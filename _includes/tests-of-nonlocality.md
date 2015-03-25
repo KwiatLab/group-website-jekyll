@@ -13,6 +13,7 @@ The catch is that some assumptions go into this experiment, leaving loopholes fo
 
 Both of these loopholes have been closed independently, but no experiment has yet been able to close both loopholes at the same time. Groups around the world, including ours, are currently working towards a loophole-free Bell test which would demonstrate quantum non-locality once and for all.
 
+###Download our Data
 The data from our 2013 detection-loophole-free C-H Bell test (<a href="http://dx.doi.org/10.1103/PhysRevLett.111.130406">B. G. Christensen et al. Phys. Rev. Lett. 111, 130406 (2013)</a>) are publicly available and can be downloaded from the link below. The data organization is explained in the accompanying text file. The data file size is approximately 280 MB. Please direct any questions or comments to Bradley Christensen (bgchris2@illinois.edu).
 
 * <a href="{{ site.baseurl }}/../BellTest/data_organization.txt">Data organization</a>

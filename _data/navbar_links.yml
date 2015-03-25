@@ -17,10 +17,6 @@
 - name: "Research"
   url: "research/"
   child_links:
-    - name: "Guide to Quantum State Tomography"
-      url: "Tomography/"
-      divider: ""
-      highlight: "yes"
     - name: "Tests of Nonlocality"
       header: "Fundamental Studies"
     - name: "Multipartite Entanglement"
