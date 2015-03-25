@@ -1,7 +1,8 @@
 <img src="{{ site.baseurl }}/img/spdc.png" class="img-responsive pull-left">
 
 ###Recent Publications
-* Kevin Zielnicki Ph.D. thesis: ["Pure Sources and Efficient Detectors" (2013)]({{ site.baseurl }}/theses/zielnicki-thesis.pdf)
+* [K. Zielnicki, K. Garay-Palmett, R. Dirks, A. B. U’Ren, and P. G. Kwiat, Optics Express (2015)]({{ site.baseurl }}/papers/My%20Collection.Data/PDF/Engineering%20of%20near-IR%20photon%20pairs%20to%20be%20factorable%20in%20space-time%20and%20entangled%20in%20polarization.pdf)
+* Kevin Zielnicki Ph.D. thesis: ["Pure Sources and Efficient Detectors" (2014)]({{ site.baseurl }}/theses/zielnicki-thesis.pdf)
 
 ###Optimizing downconversion sources
 [Entanglement](http://en.wikipedia.org/wiki/Quantum_entanglement), the non-classical, non-local "connection" that can exist between particles, is the foundation of many quantum information applications. We have built and continue to improve one of the world's purest and brightest sources of entangled photons, using the process of spontaneous parametric downconversion in a nonlinear optical crystal.
@@ -16,6 +17,6 @@ Our paper on optimizing type-I polarization-entangled photons (<a href="{{ site.
 We have also expanded the scope of how photons can be entangled. By focusing a pump laser on nonlinear crystals, we demonstrated the first example of hyperentanglement--photons entangled in every degree of freedom. These photons are entangled in polarization, orbital angular momentum and emission time.
 
 ###A pure source
-More entanglement isn't always better for quantum information applications. A downconversion source is typically used to produce photons entangled in polarization, but it may also create unwanted correlations in energy and spatial mode. These correlations can cause heralded single photons to be in a mixed state, preventing the interference between photons from different sources that quantum information applications rely on. 
+More entanglement isn't always better for quantum information applications. A downconversion source is typically used to produce photons entangled in polarization, but it may also create unwanted correlations in energy and spatial mode. These unwanted correlations degrade the purity of entangled pairs, and also cause heralded single photons to be in a mixed state, preventing the interference between photons from different sources that quantum information applications rely on.
 
 Using group velocity matching and a broad bandwidth pump, we have developed an "engineered" pure source that is brighter than sources that fight unwanted entanglement with spectral filtering. The plot to the right shows an example measured joint spectrum of the photon pairs from an engineered source, which exhibit weak spectral correlations.

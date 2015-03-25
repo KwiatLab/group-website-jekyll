@@ -390,9 +390,9 @@ Below is the basic outline of what you should do to update the list of citations
 
 3. Select all the citations again and go to File --> Export. This time export as a BibTex file called ```publications.bib``` in the ```_bibliography``` directory.
 
-4. The way Mendeley exports the filename of .pdf documents in each citation is not ideal. To fix it, run the Python script ```bibfile.py``` in the ```_bibliography``` directory. It requires installing the package bibtexparser. If you have Python 3 and pip installed on your computer, all you need to do is run the command:
+4. The way Mendeley exports the filename of .pdf documents in each citation is not ideal. To fix it, run the Python script ```bibfile.py``` in the ```_bibliography``` directory. It requires installing the package bibtexparser. If you have Python and pip installed on your computer, all you need to do is run the command:
     ```
-    pip bibtexparser
+    pip install bibtexparser
     ```
 And then, in the ```_bibliography``` directory:
     ```
