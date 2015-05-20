@@ -1,6 +1,8 @@
 Maintaining the Kwiat group website with Jekyll
 ==================
 
+This is a guide to maintaining the [Kwiat group website](http://research.physics.illinois.edu/QI/Photonics/) using Jekyll and other tools.
+
 This guide was written by Rebecca Holmes. Contact me at rholmes4@illinois.edu if you need help.
 
 *NOTE: I built this website using Jekyll on Windows 7. Jekyll and most of the other tools needed to maintain the website are also available for Mac and Linux, but I don't have any experience using them on other platforms.*
@@ -38,7 +40,7 @@ This guide was written by Rebecca Holmes. Contact me at rholmes4@illinois.edu if
 Introduction
 ------------------
 
-The Kwiat group website is maintained using Jekyll and files hosted on [GitHub](https://github.com/). This guide contains an overview of how Jekyll generates the site, and instructions for specific tasks like adding news posts or editing the navbar. It does not explain every detail of how Jekyll works, or every possible feature you might want to use. For more about what Jekyll can do, read the Jekyll documentation here: http://jekyllrb.com/docs/home/
+The [Kwiat group website](http://research.physics.illinois.edu/QI/Photonics/) is maintained using Jekyll and files hosted on [GitHub](https://github.com/). This guide contains an overview of how Jekyll generates the site, and instructions for specific tasks like adding news posts or editing the navbar. It does not explain every detail of how Jekyll works, or every possible feature you might want to use. For more about what Jekyll can do, read the Jekyll documentation here: http://jekyllrb.com/docs/home/
 
 ###But first, wait! Don't edit those HTML files on the server!
 
