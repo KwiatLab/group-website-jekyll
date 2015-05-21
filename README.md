@@ -34,8 +34,9 @@ This guide was written by Rebecca Holmes. Contact me at rholmes4@illinois.edu if
 	* [Removing a topic](#removing-a-topic)
 	* [Adding a new topic](#adding-a-new-topic)
   * [Managing Publications](#managing-publications)
+    * [Troubleshooting publications](#troubleshooting-publications)
     * [Bypassing publications management](#bypassing-publications-management)
-* [Troubleshooting](#troubleshooting)
+
 
 Introduction
 ------------------
@@ -404,13 +405,13 @@ The script will create a new file called ```publications_web.bib```.
 
 5. Run Jekyll. Your changes should show up on the Publications page.
 
+####Troubleshooting publications
+If publications aren't showing up as expected on the website, there are a few things you should check.
+
+1. Do all the publciations have unique citation keys (i.e. Kwiat1995, Kwiat1995a) in Mendeley? Sometimes Mendeley doesn't assign these properly for publications in the same year, and it can cause trouble for bibtex2html. You can also check this in ```publications_web.bib```.
+2. Do all the publications have the type "Journal article" in Mendeley? If the type is "Generic" that publication won't display properly. Again, you can also check this in ```publications_web.bib```.
 
 ####Bypassing publications management
 If you can't or don't want to manage the list of citations this way, you don't have to, but it will be difficult to go back once you start editing ```publications_web.bib``` manually. To make manual changes, edit ```publications_web.bib``` directly, making sure that "file" elements have the correct path for .pdfs you want to link to.
 
 You can also completely disable Jekyll's processing of publications, and make the website simply use a static HTML file containing the citations. To do this, look in the ```_site``` directory for the file ```publications_web.html```. Copy this file to the ```_includes``` directory. In ```publications.html```, replace the tag ```{% bibtex _plugins/style _bibliography/publications_web.bib %}``` with ```{% include publications_web.html %}```. Jekyll will no longer call ```bibjekyll.rb```. You will need to reverse this change if you ever want to enable dynamic generation of the citations list.
-
-Troubleshooting
------------------
-
-###Coming soon?
