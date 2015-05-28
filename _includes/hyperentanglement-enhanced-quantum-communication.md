@@ -1,5 +1,6 @@
 ###Recent Publications
 * [T. M. Graham, H. J. Bernstein, T. Wei, M. Junge, and P. G. Kwiat, Nature Communications (2015)](http://dx.doi.org/10.1038/ncomms8185)
+* [Physics Illinois press release](http://physics.illinois.edu/news/story.asp?id=11160)
 * [B. G. Christensen, K. T. McCusker, D. Gauthier, D. Kumor, V. Chandar, and P. G. Kwiat in Proceedings of QIM 2014](http://dx.doi.org/10.1364/QIM.2014.QW4A.7)
 
 <img src="{{ site.baseurl }}/img/superdense.png" class="img-responsive pull-left" width="400px">
