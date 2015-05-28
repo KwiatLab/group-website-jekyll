@@ -1,8 +1,8 @@
 ###Recent Publications
-* [T. M. Graham, H. J. Bernstein, T.-C. Wei, and P. G. Kwiat in Proceedings of QIM 2014](http://dx.doi.org/10.1364/QIM.2014.QTh3A.3)
+* [T. M. Graham, H. J. Bernstein, T. Wei, M. Junge, and P. G. Kwiat, Nature Communications (2015)](http://dx.doi.org/10.1038/ncomms8185)
 * [B. G. Christensen, K. T. McCusker, D. Gauthier, D. Kumor, V. Chandar, and P. G. Kwiat in Proceedings of QIM 2014](http://dx.doi.org/10.1364/QIM.2014.QW4A.7)
 
-<img src="{{ site.baseurl }}/img/Clifford-torus.gif" class="img-responsive pull-right" width="200px">
+<img src="{{ site.baseurl }}/img/superdense.png" class="img-responsive pull-left" width="400px">
 
 ###Superdense Teleportation
 
@@ -10,16 +10,14 @@
 
 Standard quantum teleportation can only be used reliably to transmit quantum states with two parameters. For more than two, the process becomes probabalistic and only works on a fraction of attempts. Other strategies, such as [remote state preparation](http://arxiv.org/abs/quantph/0307100), can be used to reliably transmit more than two parameters, but they quickly require a large number (growing with the square of the number of parameters) of expensive single-photon detectors and complex measurement techniques.
 
-Superdense teleportation is a scheme that can accomplish reliable transmission of quantum information with fewer resources than remote state preparation. It works by encoding the parameters one wishes to transmit on a special class of quantum states called equimodular states. These states are analagous to points on the surface of a hypertorus. The animation to the right shows a representation of a hypertorus, although it is impossible to visualize fully in only two dimensions.
+Superdense teleportation is a scheme that can accomplish reliable transmission of quantum information with fewer resources than remote state preparation. It works by encoding the parameters one wishes to transmit on a special class of quantum states called equimodular states. These states are analagous to points on the surface of a hypertorus.
 
 We have experimentally demonstrated superdense teleportation of a four-parameter state using photons hyperentangled in polarization and spatial mode. (See [sources of entanglement](#sources-of-entanglement) and [multipartite entanglement](#multipartite-entanglement) for more about hyperentangled states.)
-
-
 
 ###Superdense Coding
 We have also used hyperentanglement to encode a record amount of information on a binary property of a single photon, [beating the channel capacity limit for linear photonic superdense coding](http://dx.doi.org/10.1038/nphys919).
 
-<a href="{{ site.baseurl }}/movies/bb84.swf"><img src="{{ site.baseurl }}/img/bb84.jpg" class="img-responsive pull-left movie-still" title="Click for movie"></a>
+<a href="{{ site.baseurl }}/movies/bb84.swf"><img src="{{ site.baseurl }}/img/bb84.jpg" class="img-responsive pull-right movie-still" title="Click for movie"></a>
 
 ###Quantum cryptography
 Quantum cryptography uses entanglement to enable secure communication that immediately alerts its users to eavesdropping. Click on the figure to the right for an animation showing an example quantum cryptography protocol called BB84. 
