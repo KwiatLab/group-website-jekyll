@@ -7,7 +7,7 @@
 			<h4>
 			{{ post.title }}
 			</h4>
-			<div class="post-date">{{ post.date | date: '%B %Y' }}</div>
+			<div class="post-date">{{ post.date | date: '%B %-d, %Y' }}</div>
 		</div>
 		{{ post.excerpt | remove: '</p>'}}
 		<!--Posts with more text after the excerpt will display a "more" link if they have more: "yes" in their YAML frontmatter-->
