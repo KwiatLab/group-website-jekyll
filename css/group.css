@@ -324,6 +324,7 @@ hr.dashed {
   margin: 0px 15px 5px 0px;
   height:75px;
   width:75px;
+  border-radius:5px;
 }
 
 .newsbox h4 {

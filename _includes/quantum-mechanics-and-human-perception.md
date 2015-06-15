@@ -1,4 +1,5 @@
-###Recent Publications
+###Recent Publications and News
+* ["Quantum technology probes ultimate limits of vision"](http://www.nature.com/news/quantum-technology-probes-ultimate-limits-of-vision-1.17731) in Nature News & Comment
 * [R. Holmes et al. in Proceedings of QIM 2014](http://dx.doi.org/10.1364/QIM.2014.QTu2A.2)
 
 <img src="{{ site.baseurl }}/img/rod-cell.jpg" class="img-responsive pull-right">
