@@ -7,6 +7,7 @@
 ###Can you see a single photon? 
 At the lower limit of vision, the eye needs just a few photons. No one knows exactly how few--psychological and physiological research have suggested that single-photon vision may be possible, but the question has never been directly tested. Rod cells in the human retina (see figure on right) respond to single photons, but it is not known whether these signals continue through the visual pathway and lead to the perception of light. All previous studies have used attenuated classical light sources, and have estimated the detection threshold with model-fitting methods.
 
+###Physics and psychology unite!
 Working with [University of Illinois psychology professor Dr. Frances Wang](http://www.psychology.illinois.edu/people/wang18), we are conducting several experiments to characterize the lower limit of human vision using a true source of single photons. **If you are interested in participating as a volunteer observer, you can find more information and an interest form <a class="underline" href="{{ site.baseurl }}/vision/">here</a>.**
 
 ###Human perception of quantum effects
