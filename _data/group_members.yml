@@ -14,9 +14,6 @@
 
 - name: "Graduate Students"
   people:
-    - name: "Courtney Byard"
-      image: "../img/headshot_cbyard.jpg"
-      netid: "byard2"
     - name: "Bradley Christensen"
       image: "../img/headshot_bchristensen.jpg"
       netid: "bgchris2"
@@ -29,6 +26,9 @@
     - name: "Rebecca Holmes"
       image: "../img/headshot_rholmes.jpg"
       netid: "rholmes4"
+    - name: "Courtney Krafczyk (Byard)"
+      image: "../img/headshot_cbyard.jpg"
+      netid: "byard2"
     - name: "Nicholas LaRacuente"
       netid: "laracue2"
       image: "../img/headshot_nlaracuente.jpg"

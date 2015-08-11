@@ -220,7 +220,7 @@ hr.dashed {
 
 .people .row {
   padding-top:20px;
-  padding-bottom:20px;
+/*   padding-bottom:20px; */
 }
 
 .people h1 {
@@ -281,6 +281,7 @@ hr.dashed {
 
 .people .name {
   min-width:250px;
+  min-height:50px;
 }
 
 .current-past {
