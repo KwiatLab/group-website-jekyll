@@ -1,8 +1,10 @@
 <img src="{{ site.baseurl }}/img/quantum-cakes.jpg" class="img-responsive pull-left">
 
-###Recent Publications
-* <a href="{{ site.baseurl }}/{{ site.paper-path }}/Detection-Loophole-Free Test of Quantum Nonlocality, and Applications.pdf">B. G. Christensen et al., Phys. Rev. Lett. 111, 130406 (2013)</a>
-* [*Physics* synopsis](http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.111.130406)
+###Recent Publications & News
+* ["A strong loophole-free test of local realism"](http://arxiv.org/abs/1511.03189) in submission to Physical Review letters
+* ["NIST Team Proves 'Spooky Action at a Distance' is Really Real"](http://www.nist.gov/pml/div686/20151105loophole.cfm) via [NIST](http://www.nist.gov/)
+* <a href="{{ site.baseurl }}/{{ site.paper-path }}/Detection-Loophole-Free Test of Quantum Nonlocality, and Applications.pdf">"Detection-Loophole-Free Test of Quantum Nonlocality, and Applications." B. G. Christensen et al., Phys. Rev. Lett. 111, 130406 (2013)</a>
+* [*Physics* synopsis of detection-loophole-free test](http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.111.130406)
 
 Quantum mechanics predicts many phenomena at odds with our everyday experience. Entanglement is a remarkable example--each particle in an entangled pair contains information that is totally random, yet perfectly correlated with that of its partner. Entanglement violates local realism--the combined assumptions that objects far apart can't interact instantaneously, and that we can come up with a description of the universe which predicts the outcome of any experiment.
 
@@ -11,7 +13,7 @@ In our lab, we can make a series of measurements on a [source of entangled photo
 ###Loopholes
 The catch is that some assumptions go into this experiment, leaving loopholes for local-realistic theories. The two main loopholes are "detection" and "timing." Single-photon detectors are not perfect, and even the best current technology will miss some fraction of incoming photons. To close the detection loophole, this fraction must be small enough to ensure that the photons we didn't detect can't change the outcome. To close the timing loophole, the measurement devices that analyze each photon in an entangled pair must be far enough apart that a signal travelling between them at the speed of light--the fastest that any information can travel--could not change the outcome.
 
-Both of these loopholes have been closed independently, but no experiment has yet been able to close both loopholes at the same time. Groups around the world, including ours, are currently working towards a loophole-free Bell test which would demonstrate quantum non-locality once and for all.
+Both of these loopholes had been closed independently. Several experiments, including one by a collaboration between NIST, our group, and several other instritutions, first closed both loopholes at the same time in 2015. (See Recent Publications & News, above.)
 
 ###Download our Data
 The data from our 2013 detection-loophole-free C-H Bell test (<a href="http://dx.doi.org/10.1103/PhysRevLett.111.130406">B. G. Christensen et al. Phys. Rev. Lett. 111, 130406 (2013)</a>) are publicly available and can be downloaded from the link below. The data organization is explained in the accompanying text file. The data file size is approximately 280 MB. Please direct any questions or comments to Bradley Christensen (bgchris2@illinois.edu).
