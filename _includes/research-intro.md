@@ -1,4 +1,4 @@
-##What is quantum information?
+#What is quantum information?
 
 Quantum information is the "physics of knowledge."
 

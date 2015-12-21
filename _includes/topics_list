@@ -4,19 +4,23 @@
 			{% if child_link.name == 'Research home' or child_link.name == 'Guide to Quantum State Tomography' %}
 			{% else %}
 				{% if child_link.header %}
-				    <hr class="dashed">
-					<h1>{{ child_link.header }}</h1>
-					<hr class="dashed">
+				<div class="jumbotron {{ child_link.name | handleize }}">
+					<div class="container">
+						<h1>{{ child_link.header }}</h1>
+					</div>
+				</div>
 				{% else %}
 				{% endif %}
 				
 				<section id="{{ child_link.name | handleize }}">
+				<div class="container">
 				<h2>{{ child_link.name }}</h2>
 				{% if child_link.html == "yes" %}
 					{% include_var child_link.name %}
 				{% else %}
 					{% markdown_var child_link.name %}
 				{% endif %}
+				</div>
 				</section>				
 			{% endif %}
 		{% endfor %}
