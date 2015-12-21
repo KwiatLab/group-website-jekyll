@@ -198,6 +198,48 @@ li .dropdown-header {
   text-shadow: 2px 2px 4px #000000;
 }
 
+.topic-links .jumbotron {
+  background-repeat:repeat;
+  padding:0;
+  margin-bottom:30px;
+  position:relative;
+  background-position:top center;
+}
+
+.topic-links h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.topic-links section {
+	padding-bottom:50px
+}
+
+.fundamental-studies {
+  background-image:url('../img/fundamental-studies.png');
+  background-size: contain;
+}
+
+.optical-quantum-information-resources {
+  background-image:url('../img/optical-quantum-information-resources.jpg');
+  background-size: cover;
+}
+
+.optical-quantum-information-applications {
+  background-image:url('../img/optical-quantum-information-applications.jpg');
+  background-size: cover;
+}
+
+.other-applications {
+  background-image:url('../img/other-applications.jpg');
+  background-size: cover;
+}
+
+
 hr.dashed {
   border: 0;
   border-bottom: 1px dashed #888;

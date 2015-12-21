@@ -4,7 +4,7 @@
 			{% if child_link.name == 'Research home' or child_link.name == 'Guide to Quantum State Tomography' %}
 			{% else %}
 				{% if child_link.header %}
-				<div class="jumbotron {{ child_link.name | handleize }}">
+				<div class="jumbotron {{ child_link.header | handleize }}">
 					<div class="container">
 						<h1>{{ child_link.header }}</h1>
 					</div>
