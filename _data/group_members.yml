@@ -11,7 +11,9 @@
     - name: "Fumihiro Kaneda"
       image: "../img/headshot_blank.jpg"
       netid: "fkaneda"
-
+    - name: "So-Young Baek"
+      image: "../img/headshot_blank.jpg"
+  
 - name: "Graduate Students"
   people:
     - name: "Bradley Christensen"

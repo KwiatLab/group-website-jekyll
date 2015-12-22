@@ -39,7 +39,11 @@
 			<div class="caption">
 				<h2>{{ person.name }}</h2>
 				<h3 class="job-title">Postdoc</h3>
+				{% if person.netid %}
 				<h5 class="email">{{ person.netid }}@illinois.edu</h5>
+				{% else %}
+				<h5 class="email">&nbsp</h5>
+				{% endif %}
 			</div>						
 		</div>
 		</a>
