@@ -143,6 +143,7 @@ li .dropdown-header {
   background-position:20px;
   height:350px;
   background-attachment: fixed;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .jumbotron .container {
@@ -195,7 +196,6 @@ li .dropdown-header {
   position:absolute;
   text-align:center;
   width:100%;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .topic-links .jumbotron {
@@ -237,6 +237,46 @@ li .dropdown-header {
 .other-applications {
   background-image:url('../img/other-applications.jpg');
   background-size: cover;
+}
+
+.tomography {
+  background-image:url('../img/tomography.jpg');
+  background-size: contain;
+  position: relative;
+}
+
+.tomography h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+  color:#484848;
+  text-shadow: none;
+}
+
+.publications-jumbotron {
+	position: relative;
+}
+
+.publications-jumbotron  h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+}
+
+.fun {
+	position: relative;
+}
+
+.fun  h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
 }
 
 

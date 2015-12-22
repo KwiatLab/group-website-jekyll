@@ -2,13 +2,18 @@
 layout: default
 title: Publications
 ---
+<div class="jumbotron publications-jumbotron">
+	<div class="container">
+		<h1>Selected Publications</h1>
+	</div>
+</div>
+
 <div class="container">
-<div class="publications">
-<h1>Selected Publications</h1>
-<div class="row">
-<div class="col-md-8">
-{% bibtex _plugins/style _bibliography/publications_web.bib %}
-</div>
-</div>
-</div>
+	<div class="publications">
+		<div class="row">
+			<div class="col-md-8">
+				{% bibtex _plugins/style _bibliography/publications_web.bib %}
+			</div>
+		</div>
+	</div>
 </div>
