@@ -9,10 +9,11 @@
 - name: "Postdocs"
   people:
     - name: "Fumihiro Kaneda"
-      image: "../img/headshot_blank.jpg"
+      image: "../img/headshot_fkaneda.jpg"
       netid: "fkaneda"
-    - name: "So-Young Baek"
-      image: "../img/headshot_blank.jpg"
+    - name: "Soyoung Baek"
+      image: "../img/headshot_sybaek.jpg"
+      netid: "syb"
   
 - name: "Graduate Students"
   people:
