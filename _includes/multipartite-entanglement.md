@@ -1,6 +1,7 @@
 <img src="{{ site.baseurl }}/img/qubits.png" class="img-responsive pull-right">
 
 ###Recent Publications
+* [A. N. Sharma et al. at Frontiers in Optics 2015](https://www.osapublishing.org/abstract.cfm?uri=fio-2015-FTh3D.5)
 * [A. N. Sharma, K. T. McCusker, J. T. Barreiro, and P. G. Kwiat in Proceedings of QIM 2013](http://dx.doi.org/10.1364/QIM.2013.W6.49)
 
 Many quantum information protocols require two communicating parties (Alice and Bob) to share entanglement, often in the form of pure, maximally entangled pairs. In a future quantum communication network, these entangled pairs might be produced at a central location and distributed to users. The quality of this shared entanglement might be degraded by transmission through noisy channels, which would affect the performance of the system. Before using the resulting noisy entanglement for quantum information tasks, Alice and Bob will want to *distill* it: recover as many maximally entangled pairs as possible using only local operations (they can perform any operations on their respective qubits) and classical communication (they can communicate with each other about operations they perform and measurement outcomes). If they can extract any maximal entanglement this way, the noisy state is said to be distillable.

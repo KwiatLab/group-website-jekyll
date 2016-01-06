@@ -1,7 +1,8 @@
-<img src="{{ site.baseurl }}/img/quantum-cakes.jpg" class="img-responsive pull-left">
+<img src="{{ site.baseurl }}/img/quantum-cakes.jpg" width="50%" class="img-responsive pull-right">
 
 ###Recent Publications & News
-["A strong loophole-free test of local realism,"](http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.250402) Lynden K. Shalm et al. in Physical Review Letters. Selected for Editor's Suggestions and a [Viewpoint](http://physics.aps.org/articles/v8/123) in *Physics*.
+* ["Exploring the Limits of Quantum Nonlocality with Entangled Photons,"](https://journals.aps.org/prx/abstract/10.1103/PhysRevX.5.041052) B. G. Christensen et al. in Physical Review X (2015).
+* ["A strong loophole-free test of local realism,"](http://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.250402) L. K. Shalm et al. in Physical Review Letters (2015). Selected for Editor's Suggestions and a [Viewpoint](http://physics.aps.org/articles/v8/123) in *Physics*.
 * ["NIST Team Proves 'Spooky Action at a Distance' is Really Real"](http://www.nist.gov/pml/div686/20151105loophole.cfm) via [NIST](http://www.nist.gov/)
 * <a href="{{ site.baseurl }}/{{ site.paper-path }}/Detection-Loophole-Free Test of Quantum Nonlocality, and Applications.pdf">"Detection-Loophole-Free Test of Quantum Nonlocality, and Applications." B. G. Christensen et al., Phys. Rev. Lett. 111, 130406 (2013)</a>
 * [*Physics* synopsis of detection-loophole-free test](http://physics.aps.org/synopsis-for/10.1103/PhysRevLett.111.130406)

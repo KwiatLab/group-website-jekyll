@@ -1,6 +1,8 @@
 ###Recent Publications and News
-* ["Quantum technology probes ultimate limits of vision"](http://www.nature.com/news/quantum-technology-probes-ultimate-limits-of-vision-1.17731) in Nature News & Comment
-* [R. Holmes et al. in Proceedings of QIM 2014](http://dx.doi.org/10.1364/QIM.2014.QTu2A.2)
+* ["Squinting to see a single photon"](http://www.aps.org/publications/apsnews/201512/photon.cfm) via APS News (2015)
+* ["Quantum technology probes ultimate limits of vision"](http://www.nature.com/news/quantum-technology-probes-ultimate-limits-of-vision-1.17731) in Nature News & Comment (2015)
+* [R. Holmes et al. at Frontiers in Optics 2015](https://www.osapublishing.org/abstract.cfm?uri=fio-2015-FTu5B.5)
+* [R. Holmes et al. at Quantum Information and Measurement 2014](http://dx.doi.org/10.1364/QIM.2014.QTu2A.2)
 
 <img src="{{ site.baseurl }}/img/rod-cell.jpg" class="img-responsive pull-right">
 

@@ -1,4 +1,6 @@
 ###Recent Publications
+* [C. Byard et al. at Frontiers in Optics 2015](https://www.osapublishing.org/abstract.cfm?uri=fio-2015-JW2A.69)
+* [C. Byard et al. at Quantum Information and Measurement 2014](https://www.osapublishing.org/abstract.cfm?uri=qim-2014-QTh4A.3)
 * [C. Byard, T. M. Graham, A. Jordan and P. G. Kwiat in Proceedings of CLEO-QELS 2014](http://dx.doi.org/10.1364/CLEO_QELS.2014.FF1D.8)
 * [O. Hosten and P. G. Kwiat, Nature (2009)](http://dx.doi.org/10.1126/science.1152697)
 
