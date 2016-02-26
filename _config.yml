@@ -6,7 +6,7 @@ baseurl: "/QI/Photonics"
 #baseurl: ""
 paper-path: "papers/My Collection.Data/PDF"
 
-markdown: rdiscount
+markdown: kramdown
 permalink: pretty
 highlighter: null
 excerpt_separator: <!--more-->
