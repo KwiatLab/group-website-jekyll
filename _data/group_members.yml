@@ -44,9 +44,6 @@
     - name: "Michael Wayne"
       image: "../img/headshot_mwayne.jpg"
       netid: "mwayne"
-    - name: "JJ Wong"
-      image: "../img/headshot_jwong.jpg"
-      netid: "jwong14"
     - name: "Christopher Zeitler"
       image: "../img/headshot_czeitler.jpg"
       netid: "czeitle2"
@@ -54,9 +51,7 @@
 - name: "Undergraduate Students"
   people:
     - name: "Joseph Chapman"
-    - name: "Kent Gang"
     - name: "Austin Graf"
-    - name: "Leon (Shangjie) Guo"
     - name: "Malhar Jere"
     - name: "Sheldon Schlie"
     - name: "Adam Schunk"
@@ -66,4 +61,3 @@
 - name: "Honored Guests"
   people:
     - name: "Fedor Bergmann"
-    - name: "Sebastian Kalista" 
