@@ -10,7 +10,7 @@
 				<li><h4>{{ person.name }}</h4></li>
 				<ul>
 				{% if person.currently %}
-					<li><span class="current-past">As of 2014:</span> {{ person.currently }}</li>
+					<li><span class="current-past">Now:</span> {{ person.currently }}</li>
 				{% else %}
 				{% endif %}
 				</ul>
@@ -45,7 +45,7 @@
 							{% else %}
 							{% endif %}
 							{% if person.currently %}
-								<li><span class="current-past">As of 2014:</span> {{ person.currently }}</li>
+								<li><span class="current-past">Now:</span> {{ person.currently }}</li>
 							{% else %}
 							{% endif %}
 							{% if person.past %}
