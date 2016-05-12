@@ -11,6 +11,18 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Bradley Christensen"
+      year: "2016"
+      thesis-type: "phd"
+      thesis-file: "christensen-thesis.pdf"
+      thesis-title: "Advanced Tests of Nonlocality with Entangled Photons"
+      currently: "Postdoc with Dr. Robert McDermott at The University of Wisconsin-Madison"
+    - name: "Trent Graham"
+      year: "2016"
+      thesis-type: "phd"
+      thesis-file: "graham-thesis.pdf"
+      thesis-title: "Using Hyperentanglement for Advanced Quantum Communication"
+      currently: "Postdoc with Dr. Mark Saffman at The University of Wisconsin-Madison"
     - name: "J.J. Wong"
       year: "2016"
       thesis-type: "masters"

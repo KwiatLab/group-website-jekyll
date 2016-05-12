@@ -17,12 +17,6 @@
   
 - name: "Graduate Students"
   people:
-    - name: "Bradley Christensen"
-      image: "../img/headshot_bchristensen.jpg"
-      netid: "bgchris2"
-    - name: "Trent Graham"
-      image: "../img/headshot_tgraham.jpg"
-      netid: "tgraham2"
     - name: "Alex Hill"
       image: "../img/headshot_ahill.jpg"
       netid: "adhill4"
