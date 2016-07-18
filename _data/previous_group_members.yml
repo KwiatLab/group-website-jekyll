@@ -11,6 +11,11 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Aditya Sharma"
+      year: "2016"
+      thesis-type: "phd"
+      thesis-title: "In Search of Photonic Bound Entanglement: Using Hyperentanglement to Study Mixed Entangled States"
+      thesis-file: "sharma-thesis.pdf"
     - name: "Bradley Christensen"
       year: "2016"
       thesis-type: "phd"
