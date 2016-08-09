@@ -107,6 +107,8 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Adam Schunk"
+    - name: "Austin Graf"
     - name: "David Hervas Aguilar"
     - name: "Daniel Kumor"
       currently: "Masters student in computer science at Purdue University"

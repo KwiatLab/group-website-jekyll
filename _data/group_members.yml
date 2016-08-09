@@ -41,11 +41,8 @@
       
 - name: "Undergraduate Students"
   people:
-    - name: "Joseph Chapman"
-    - name: "Austin Graf"
     - name: "Malhar Jere"
     - name: "Sheldon Schlie"
-    - name: "Adam Schunk"
     - name: "Julia Spina"
     - name: "Laurynas Tamulevičius"
     - name: "Amy (Yangyuxin) Zou"
