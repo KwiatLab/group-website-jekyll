@@ -253,7 +253,7 @@ li .dropdown-header {
   text-align:left;
   width:100%;
   color:#484848;
-  text-shadow: none;
+  text-shadow: 2px 2px 4px #fff;
 }
 
 .publications-jumbotron {
