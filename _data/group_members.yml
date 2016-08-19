@@ -17,6 +17,9 @@
   
 - name: "Graduate Students"
   people:
+    - name: "Joseph Chapman"
+      image: "../img/headshot_jchapman.jpg"
+      netid: "jchapmn2"
     - name: "Alex Hill"
       image: "../img/headshot_ahill.jpg"
       netid: "adhill4"
