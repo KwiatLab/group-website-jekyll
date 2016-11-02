@@ -16,6 +16,7 @@
       thesis-type: "phd"
       thesis-title: "In Search of Photonic Bound Entanglement: Using Hyperentanglement to Study Mixed Entangled States"
       thesis-file: "sharma-thesis.pdf"
+      currently: "Postdoc with Dr. Philip Walther at Universität Wien in Vienna, Austria"
     - name: "Bradley Christensen"
       year: "2016"
       thesis-type: "phd"
@@ -107,6 +108,7 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Laurynas Tamulevičius"
     - name: "Adam Schunk"
     - name: "Austin Graf"
     - name: "David Hervas Aguilar"
