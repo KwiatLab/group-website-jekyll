@@ -11,6 +11,15 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Michael Wayne"
+      year: "2017"
+      thesis-type: "phd"
+    - name: "Rebecca Holmes"
+      year: "2017"
+      thesis-type: "phd"
+      thesis-title: "Testing the Limits of Human Vision with Quantum States of Light"
+      thesis-file: "holmes-thesis-e.pdf"
+      currently: "Postdoc at Los Alamos National Laboratory"
     - name: "Aditya Sharma"
       year: "2016"
       thesis-type: "phd"
@@ -78,7 +87,7 @@
       thesis-file: "wayne-thesis.pdf"
       thesis-title: "Photon Arrival Time Quantum Random Number Generation" 
       year: "2008"
-      currently: "NIST in Gaithersburg, MD; ECE Ph.D. student in our group"
+      currently: "(See Ph.D. thesis in this list above)"
     - name: "Evan Jeffrey"
       year: "2007"
       thesis-type: "phd"
@@ -108,6 +117,7 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Sheldon Schlie"
     - name: "Laurynas Tamulevičius"
     - name: "Adam Schunk"
     - name: "Austin Graf"
