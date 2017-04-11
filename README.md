@@ -43,7 +43,7 @@ Introduction
 
 The [Kwiat group website](http://research.physics.illinois.edu/QI/Photonics/) is maintained using Jekyll and files hosted on [GitHub](https://github.com/). This guide contains an overview of how Jekyll generates the site, and instructions for specific tasks like adding news posts or editing the navbar. It does not explain every detail of how Jekyll works, or every possible feature you might want to use. For more about what Jekyll can do, read the Jekyll documentation here: http://jekyllrb.com/docs/home/
 
-###But first, wait! Don't edit those HTML files on the server!
+### But first, wait! Don't edit those HTML files on the server!
 
 Seriously, don't do it. All will be explained! But basically, the way this works is that if you want to change something on the website, you're going to do the following:
 
@@ -55,7 +55,7 @@ If you edit the HTML files (or any files) that are already on the server, your c
 
 And whatever you're trying to change, there's probably an easier way to do it using Jekyll. I know--everyone who writes a guide to some complicated-sounding program insists that everything will be so easy once you learn to use it. But I'm going to tell you that too. For example, once you set up Jekyll you can edit most of the text on the website without ever looking at an HTML file. So resist the urge to edit that file, and read on.
 
-###What is Jekyll?
+### What is Jekyll?
 Jekyll is a tool that takes pieces of content (like text files) and instructions for displaying them (like HTML layouts) and builds a website. It takes care of tedious things you might otherwise have to do manually, like updating the navbar on each page if you want to add a new link. Another common way to accomplish this is by building a dynamic site using PHP or other server-side languages. The advantages of using Jekyll are primarily that you don't need to learn a server-side language, and the site can be hosted anywhere without worrying about whether the host server supports your dynamic content.
 
 The whole process of building the website happens on your computer, and the result is a static website that can be uploaded to a server. So while using Jekyll might seem intimidating, it's a great way to build a complex website without knowing much more than basic HTML and CSS. Many tasks won't even require more than editing plain old text. You can do it!
@@ -65,7 +65,7 @@ Installation and setup
 
 You must complete a few steps before you can maintain the website with Jekyll from your own computer. 
 
-###Clone this GitHub repository
+### Clone this GitHub repository
 
 The GitHub repository group-website-jekyll stores a "master" version of the files needed to generate the website. You can download ("clone") these files to your own computer and use them. If you make changes, you can tell GitHub to sync them to the master version so there will be a single version of the files that multiple people can access.
 
@@ -79,7 +79,7 @@ The [GitHub help page](https://help.github.com/) can tell you more about using G
 * If someone else has made changes to the files in the group-website-jekyll repository, you can (and should) sync them to your local version by clicking "Sync" in the upper right-hand corner of GitHub Desktop. This will keep the copies of the website files on your computer up to date if several people are making changes.
 * If *you* make a change to a file in the respository (edit some text, delete an unneeded file, etc.) you can (and should) save that change to the master version by "committing" the change from GitHub Desktop, which will automatically prompt you whenever it notices that files have changed. Finally, you should click "Sync" to upload your changes to the master version and finalize the change.
 
-###Install Ruby and Jekyll
+### Install Ruby and Jekyll
 
 Jekyll is based on the programming language Ruby, which you must install in order to run Jekyll. (You don't need to know how to use Ruby.) Once Ruby is installed, you can easily install Jekyll and a few other necessary programs.
 
@@ -104,7 +104,7 @@ Jekyll is based on the programming language Ruby, which you must install in orde
     gem install rdiscount
     ```
 
-###Install bibtex2html
+### Install bibtex2html
 
 bibtex2html is a program that converts BibTeX files to HTML so a list of references can be displayed on a webpage. Jekyll uses it to process the BibTeX file ```publications_web.bib``` in the ```_bibliography``` directory. If it is not installed or installed in the wrong location, Jekyll will give an error when you try to run it, and the list of publications will not be generated.
 
@@ -112,7 +112,7 @@ bibtex2html is a program that converts BibTeX files to HTML so a list of referen
 
 1. Install bibtex2html from the [bibtex2html home page](https://www.lri.fr/~filliatr/bibtex2html/). Use the Windows 1.95 installer. Put it in ```C:/Bibtex2html/bibtex2html.exe``` or Jekyll won't be able to use it. (This can be changed by editing ```bibjekyll.rb``` in the ```_plugins``` directory under the comment "call bibtex2html", but you will probably make someone else unhappy by changing it.)
 
-###Optional: Install Mendeley
+### Optional: Install Mendeley
 
 [Mendeley](http://www.mendeley.com/) is an academic reference manager. I use it to organize the citations that appear on the Publications page of the website. If you follow a few steps, you can use Mendeley, plus a simple Python script and Jekyll's interface with bibtex2html to maintain the list of citations, including automatically linking to the DOI and to a hosted .pdf file if one is available. Details are in [Managing publications](#managing-publications).
 
@@ -133,7 +133,7 @@ That's it! The ```_site``` directory should now be populated with the website fi
 ###Updating the live website
 After running Jekyll, just replace the contents of ```Photonics``` with the entire contents of ```_site```. You can do this in Windows Explorer if you have access to the networked folder where our webspace is, or you can use SSH. Contact help@physics.illinois.edu if you need help acccessing the webspace.
 
-###Hosting the site locally
+### Hosting the site locally
 
 If you're testing out changes, it can be useful to tell Jekyll host the website on your own computer so you can view it in a browser exactly as it will appear when it goes live. I recommend previewing all changes this way.
 
@@ -164,7 +164,7 @@ Take a look at the list of files and folders in the group-website-jekyll reposit
    
 4. ```_config.yml``` is a special file which contains Jekyll's configuration information. You probably don't need to edit it unless you want to host the site locally (see [Hosting the Site Locally](#hosting-the-site-locally), above).
 
-###YAML frontmatter
+### YAML frontmatter
 
 YAML frontmatter is information contained between two lines of ```---``` at the start of a file, like this example from ```people.html```:
 
@@ -190,7 +190,7 @@ The YAML frontmatter gives Jekyll information and instructions when processing t
 
 Jekyll will *only* process HTML documents in the main directory if they have YAML frontmatter. In other contexts, it is optional. Read more about YAML in the Jekyll documentation: http://jekyllrb.com/docs/frontmatter/.
 
-###Markdown
+### Markdown
 
 Markdown is a text-to-HTML tool. It allows you to write good-looking content for the web without using HTML tags. Markdown files look more like regular text files, which makes them easier to read and work with. Markdown processes ```.md``` files to insert all the ugly HTML tags that make text display properly on the web.
 
@@ -202,7 +202,7 @@ Most of the text content for the group website is in Markdown files in the ```_i
 
 Markdown will also process many HTML tags, if you need to sneak some in there.
 
-###Liquid
+### Liquid
 Jekyll uses the [Liquid templating language](http://liquidmarkup.org/}) to handle variables, some logic operations, and to enable "including" files in other files. All the tags you see with ```{ }``` or ```{{ }}``` are Liquid tags. 
 
 * This is a good introduction to using Liquid: http://docs.shopify.com/themes/liquid-basics
@@ -264,7 +264,7 @@ How to do specific tasks
 
 Okay, you installed this stupid Jekyll thing and now you just want to be able to add a news post or delete a recently-graduated group member. This section will hopefully cover most common maintanence tasks.
 
-###Adding a news post
+### Adding a news post
 
 Create a new [Markdown](#markdown) file. Give it some [YAML frontmatter](#yaml-frontmatter) (see the previous section) and add your content below, as in this example:
 
@@ -293,7 +293,7 @@ Save your file in ```_posts``` as ```YEAR-MONTH-DAY-title.md```. For the example
 
 Run Jekyll, and your new post should appear on the main page and on the News page! Currently the main page is set to display only the three most recent news posts. If you want to change that limit, edit ```_includes/newsbox.html``` where it says ```{% for post in site.posts limit: 3 %}```.
 
-###Changing information about group members
+### Changing information about group members
 
 Jekyll generates the content of the People page using information from two files in the ```_data``` directory: ```group_members.yml``` and ```previous_group_members.yml```. These data files are processed in two HTML files, ```group-members.html``` and ```previous-group-members.html```, which are both included in ```people.html```. (You can see the include commands in the example in the [YAML frontmatter](#yaml-frontmatter) subsection above.)
 
@@ -327,7 +327,7 @@ Similarly, to add, remove or change the information about a past group member, e
 
 Follow the existing examples. In the "Postdocs" and "Graduate Students" categories, most of the extra information (thesis, currently, past) is optional. Thesis files should go in the ```theses``` directory and have the filename specified.
 
-###Adding a new page and editing the navbar
+### Adding a new page and editing the navbar
 
 To add a new page to the site, create a new HTML or [Markdown](#markdown) file in the group-website-jekyll repository. Give it some [YAML Frontmatter](#yaml-frontmatter) specifying, at minimum, a title and layout. Add your content below the frontmatter. That's it--the next time you run Jekyll, it will create your page as ```_site/newpagename/index.html```. If for some reason you prefer not to process your new page with Jekyll, leave out the YAML frontmatter. The HTML file will be copied as-is to the ```_site``` directory.
 
@@ -358,20 +358,20 @@ If an item in ```navbar_links.yml``` has child links (like Research does), they 
 
 The first child link specifies a url, so it will point to a separate page. The second two child links do not specify urls, so they will point to the locations on the Research page identified by ```tests-of-nonlocality``` and ```multipartite-entanglement```, respectively.
 
-###Managing research topics
+### Managing research topics
 
 To reduce the number of things you need to change when adding or removing a research topic, or changing the order of existing topics, several elements of the website are linked together. The data file ```navbar_links.yml``` (see the [previous section](#adding-a-new-page-and-editing-the-navbar)) contains a list of child links under the "Research" element. ```research.html``` includes the file ```topics_list```, which goes through these child links, looks for a Markdown document for each of them, and renders the content on the final Research page.
 
-####Editing the content of an existing topic
+#### Editing the content of an existing topic
 The content (text and images) for each topic on the Research page is contained in a separate Markdown file in the ```_includes``` directory. To edit the content of a topic, just edit its Markdown file.
 
-####Changing the order of existing topics
+#### Changing the order of existing topics
 To change the order of existing topics, rearrange them in ```navbar_links.yml```. You can change the locations of headers and dividers to organize the topics--follow the existing examples. The Research page and the dropdown menu in the navbar will both reflect your changes.
 
-####Removing a topic
+#### Removing a topic
 To remove a topic, delete its child link from ```navbar_links.yml```. It will no longer appear on the Research page or in the navbar dropdown menu. You can also delete the Markdown file for that topic if you want to remove it permanently.
 
-####Adding a new topic
+#### Adding a new topic
 To add a new topic, add a new child link in the location where you want the topic to appear, and create a [Markdown](#markdown) file with content. The next time you run Jekyll, the new topic will appear on the Research page and in the dropdown menu. For this to work properly, you must follow a specific naming convention in ```navbar_links.yml``` and in the Markdown file:
 
 * The name of the child link in ```navbar_links.yml``` must be the title of the topic, exactly as you want it to appear in the dropdown menu and on the Research page
@@ -379,7 +379,7 @@ To add a new topic, add a new child link in the location where you want the topi
 
 For example, the child link with the name "Quantum Random Number Generation" corresponds to a Markdown file called ```quantum-random-number-generation.md```.
 
-###Managing Publications
+### Managing Publications
 
 Jekyll generates the list of citation on the Publications page with the help of a Ruby program in the ```_plugins``` directory called ```bibjekyll.rb```. This plugin is invoked with a special tag in ```publications.html```: ```{% bibtex _plugins/style _bibliography/publications_web.bib %}```. This tells ```bibjekyll.rb``` to process the BibTex file ```_bibliography/publications_web.bib``` using the BibTeX style in ```_plugins/style.bst``` and render the result as HTML. The actual BibTeX to HTML conversion is done with the program bibtex2html, which must be installed on your computer (see [Installation and setup](#installation-and-setup)).
 
