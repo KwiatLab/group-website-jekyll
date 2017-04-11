@@ -219,42 +219,42 @@ A few examples of how Liquid is used for the Kwiat group website:
 * Liquid is used to do loops and logic operations in a few places on the site, including on the People page. This code renders the names and pictures of graduate students, automatically organizing them in rows of three columns each and adding new rows if needed:
 
     ```
-<h1 class="category-title">Graduate Students</h1>
-{% for category in site.data.group_members %} <!-- Displays students with 3 students to a row, adding new rows if needed-->
-		{% if category.name == "Graduate Students" %}
-			{% assign count = 0 %} <!-- Initialize variable that counts to 3 -->
-			{% for person in category.people %}
-			
-				{% assign count = count | plus: 1 %} <!-- Increment -->
-				
-				{% if forloop.first %} <!-- If this is the first item, start a row -->
-					<div class="row row-centered">
-				{% else %}
-				{% endif %}
+	<h1 class="category-title">Graduate Students</h1>
+	{% for category in site.data.group_members %} <!-- Displays students with 3 students to a row, adding new rows if needed-->
+			{% if category.name == "Graduate Students" %}
+				{% assign count = 0 %} <!-- Initialize variable that counts to 3 -->
+				{% for person in category.people %}
 
-				<div class="col-md-4 col-centered">
-					<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
-					<div class="thumbnail">
-						<img src="{{ person.image }}" class="img-circle">
-						<div class="caption"><h2>{{ person.name }}</h2>
-						<h5 class="email">{{ person.netid }}@illinois.edu</h5>
-						</div>				
-					</div>
-					</a>
-				</div>
-				
-				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
-					</div>
-					<div class="row row-centered">
-					{% assign count = 0 %} <!-- Rest the count -->
-				{% elsif forloop.last %}
-					</div> <!-- End the row if this is the last item -->
-				{% endif %}
+					{% assign count = count | plus: 1 %} <!-- Increment -->
 
-			{% endfor %}
-		{% else %}
-		{% endif %}
-{% endfor %}
+					{% if forloop.first %} <!-- If this is the first item, start a row -->
+						<div class="row row-centered">
+					{% else %}
+					{% endif %}
+
+					<div class="col-md-4 col-centered">
+						<a href="http://physics.illinois.edu/people/profile.asp?{{ person.netid }}">
+						<div class="thumbnail">
+							<img src="{{ person.image }}" class="img-circle">
+							<div class="caption"><h2>{{ person.name }}</h2>
+							<h5 class="email">{{ person.netid }}@illinois.edu</h5>
+							</div>				
+						</div>
+						</a>
+					</div>
+
+					{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
+						</div>
+						<div class="row row-centered">
+						{% assign count = 0 %} <!-- Rest the count -->
+					{% elsif forloop.last %}
+						</div> <!-- End the row if this is the last item -->
+					{% endif %}
+
+				{% endfor %}
+			{% else %}
+			{% endif %}
+	{% endfor %}
     ```
 
 How to do specific tasks
