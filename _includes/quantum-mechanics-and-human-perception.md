@@ -1,4 +1,5 @@
 ###Recent Publications and News
+* <a href="{{ site.baseurl }}/pdf/PWDec16Holmes.pdf">"Seeing Single Photons"</a> in Physics World (2016)
 * ["Squinting to see a single photon"](http://www.aps.org/publications/apsnews/201512/photon.cfm) via APS News (2015)
 * ["Quantum technology probes ultimate limits of vision"](http://www.nature.com/news/quantum-technology-probes-ultimate-limits-of-vision-1.17731) in Nature News & Comment (2015)
 * [R. Holmes et al. at Frontiers in Optics 2015](https://www.osapublishing.org/abstract.cfm?uri=fio-2015-FTu5B.5)

@@ -47,7 +47,7 @@
       year: "2014"
       thesis-type: "phd"
       thesis-file: "zielnicki-thesis.pdf"
-      thesis-title: "Pure Sources and Efficient Detectors"
+      thesis-title: "Pure Sources and Efficient Detectors for Optical Quantum Information Processing"
       currently: "Stitch Fix in San Francisco, CA"
       past: "Silicon Valley Data Science in Mountain View, CA"
     - name: "Kevin McCusker"
@@ -119,6 +119,8 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Amy Zou"  
+    - name: "Malhar Jere"
     - name: "Sheldon Schlie"
     - name: "Laurynas Tamulevičius"
     - name: "Adam Schunk"
