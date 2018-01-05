@@ -1,0 +1,557 @@
+/* Custom CSS for the Kwiat group website. Bootstrap.css is also required. */
+
+/* Basic site-wide CSS */
+body  {
+  font-family:'Roboto', sans-serif;
+  font-size:15px;
+  color:#484848;
+  padding-top: 50px;
+  padding-bottom: 20px; /* Proper positioning of content below fixed navbar */
+}
+
+a {
+  color:#56218b;
+}
+
+.underline {
+  text-decoration:underline;
+}
+
+a:hover {
+  color:#56218b;
+}
+
+a:visited {
+  color:#56218b
+}
+
+p {
+  color: #484848;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: normal;
+}
+
+.large {
+  font-size:150%;
+  font-weight:300;
+}
+
+section {
+    padding-top: 50px; 
+    margin-top: -50px; /* For proper linking to locations on page with 50 px fixed navbar. Use .anchor where section is not appropriate. */
+}
+
+/* CSS for special font sizes */
+.footer {
+  font-size:12px;
+}
+
+.topic-links h1, .people h1 {
+  font-size:30px;
+}
+
+.topic-links h2, .people h2 {
+  font-size:24px;
+}
+
+.topic-links h3, .people h3 {
+  font-size:20px;
+}
+
+.topic-links h4, .people h4 {
+  font-size:16px;
+}
+
+.dropdown-menu {
+  font-size:15px;
+}
+
+li .dropdown-header {
+  font-size:15px;
+}
+
+/* Divs with bowtie pattern backgrounds */
+.bowtie-bold {
+  background-image:url('../img/boldbowtie.png');
+  background-size:440px;
+  background-repeat:repeat;
+  color:#ecf0f1;
+}
+
+.bowtie-bold p {
+  color:#ecf0f1;
+}
+
+.bowtie-bold a {
+  color:#a799e6;
+}
+
+.bowtie {
+  background-image:url('../img/accentbowtie.png');
+  background-size:440px;
+  background-repeat:repeat;
+  background-attachment: fixed;
+}
+
+/* centered columns styles */
+.row-centered {
+  text-align:center;
+}
+.col-centered {
+  display:inline-block;
+  float:none;
+  text-align:left; /* reset the text-align */
+  margin-right:-4px; /* inline-block space fix */
+}
+
+/* Set theme colors for buttons. Currently unused. */
+.btn-default {
+  color: #484848;
+  background-color: #fff;
+  border-color: #484848;
+  clear:both;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #ecf0f1;
+  background-color: #56218b;
+  border-color: #56218b;
+}
+
+/* CSS for "jumbotron" include in jumbotron.html */
+.jumbotron {
+  background-image:url('../img/boldbowtie.png');
+  background-size:440px;
+  background-repeat:repeat;
+  background-color:#ecf0f1;
+  background-position:20px;
+  height:350px;
+  background-attachment: fixed;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.jumbotron .container {
+  max-width:100%;
+}
+
+.jumbotron a {
+  color:#a799e6;
+}
+
+.jumbotron h1 {
+  color:#ecf0f1;
+  font-weight:300;
+  font-size:56px;
+  font-family:'Roboto', sans-serif;
+  margin-top:0px;
+  margin-bottom:15px;
+}
+
+.jumbotron p {
+  color:#ecf0f1;
+  font-weight:normal;
+  font-size:26px;
+}
+
+@media (max-width: 620px) {
+  .jumbotron h1 {
+    font-size:36px; /* Resize jumbotron heading to fit on smaller screens */
+  }
+  .jumbotron p {
+    font-size:20px;
+  }
+}
+
+.people .jumbotron {
+  background-image:url('../img/group-photo-large.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-color:#ecf0f1;
+  background-position:center;
+  height:75%;
+  padding-top:0;
+  margin-bottom:0;
+  position:relative;
+}
+
+.people .jumbotron h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:center;
+  width:100%;
+}
+
+.topic-links .jumbotron {
+  background-repeat:repeat;
+  padding:0;
+  margin-bottom:30px;
+  position:relative;
+  background-position:top center;
+}
+
+.topic-links h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.topic-links section {
+	padding-bottom:50px
+}
+
+.fundamental-studies {
+  background-image:url('../img/fundamental-studies.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.optical-quantum-information-resources {
+  background-image:url('../img/optical-quantum-information-resources.jpg');
+  background-size: cover;
+}
+
+.optical-quantum-information-applications {
+  background-image:url('../img/optical-quantum-information-applications.jpg');
+  background-size: cover;
+}
+
+.other-applications {
+  background-image:url('../img/other-applications.jpg');
+  background-size: cover;
+}
+
+.tomography {
+  background-image:url('../img/tomography.jpg');
+  background-size: contain;
+  position: relative;
+}
+
+.tomography h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+  color:#484848;
+  text-shadow: 2px 2px 4px #fff;
+}
+
+.publications-jumbotron {
+	position: relative;
+}
+
+.publications-jumbotron  h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+}
+
+.fun {
+	position: relative;
+}
+
+.fun  h1 {
+  top:auto;
+  bottom:60px;
+  position:absolute;
+  text-align:left;
+  width:100%;
+}
+
+
+hr.dashed {
+  border: 0;
+  border-bottom: 1px dashed #888;
+}
+
+/* CSS for Illinois logo */
+.imark {
+  margin-top:50px;
+  float:right;
+  clear:both;
+}
+
+/* Adds extra padding at the bottom of a text both at the top of a page, ie research.html */
+.intro-box {
+  padding-bottom:20px;
+  font-size:17px;
+}
+
+/* CSS for include "people.html" showing group members & photos */
+
+.thumbnail {
+    position:relative;
+	padding:0;
+	border:0;
+}
+
+.caption {
+  text-align:center;
+}
+
+.group-photo {
+  width:800px;
+  background:white;
+  padding:10px;
+  margin-top:20px;
+}
+
+.page-header {
+  padding-bottom:20px;
+  text-align:center;
+  border-bottom: none;
+}
+
+.people ul {
+  list-style-type: none; /* Don't show bullets on unordered lists */
+}
+
+.people .row {
+  padding-top:20px;
+/*   padding-bottom:20px; */
+}
+
+.people h1 {
+ text-align:center;
+}
+
+.group-members a:hover {
+  text-decoration:none;
+}
+
+.group-members a:hover .img-circle {
+  opacity:.7;
+}
+
+.people .thumbnail .img-circle {
+  padding-bottom:0;
+  margin-bottom:0;
+  width:175px;
+  height:175px;
+}
+
+.people .category-title {
+  padding-bottom:20px;
+}
+
+.people h2 {
+  padding-top:0;
+}
+
+.people h3 {
+  text-align:center;
+}
+
+.student-list {
+  list-style:none;
+  padding-left:0;
+}
+
+.job-title {
+  text-align:center;
+}
+
+.people p {
+  padding-top:0;
+}
+
+.people .caption {
+  text-align: center;
+  padding-top:0;
+  margin-bottom:10px;
+}
+
+.people .thumbnail {
+  border:none;
+  margin-bottom:0;
+  background:none;
+}
+
+.people .thumbnail {
+  min-width: 250px; /* Makes thumbnails with captions (names) of different lengths stack properly on different screen sizes */
+}
+
+.people .name {
+  min-width:250px;
+  min-height:50px;
+}
+
+.current-past {
+  font-style:italic; 
+}
+
+/* This helps the automatically generated rows of pictures on about.html stack properly when the screen size is smaller than the row width */
+@media (max-width: 1000px) {
+  .people .row-centered {
+    padding-top:0px;
+	padding-bottom:0px;
+  }
+}
+
+/* For proper linking to locations on page with 50 px fixed navbar. Used where "section" is not appropriate. */
+.anchor {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+/* CSS for Research page */
+
+.topic-links img {
+  padding:10px;
+}
+
+.movie-still {
+  width:400px;
+  border:1px solid #C0C0C0;
+  margin:10px;
+}
+
+/* CSS for newsbox that contains news posts on both the main page and the news page */
+.newsbox .anchor {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+.newsbox img {
+  float:left;
+  margin: 0px 15px 5px 0px;
+  height:75px;
+  width:75px;
+  border-radius:5px;
+}
+
+.newsbox h4 {
+  display:inline;
+}
+
+.newsbox >p {
+  clear:both;
+}
+
+.news-post .more {
+  float:right;
+}
+
+/* .post-date {
+  display:inline;
+} */
+
+/* Dashed box to contain vision research interest survey on vision.html */
+.survey-container {
+  border-style:none;
+  border-width:1px;
+}
+
+/* CSS for Publications page */
+.publications b {
+  font-size:18px;
+  font-weight:250;
+  }
+
+/* CSS for the navbar and dropdown menus */
+
+.navbar .nav {
+  float:right;
+  font-size:16px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+li .highlight {
+  background-color:#a799e6;
+}
+
+li .highlight > a {
+  font-size:16px;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu {
+    display: block; /* Makes dropdown items display on hover */
+}
+
+.navbar-default {
+	background-color: #56218b;
+	border-color: #47165a;
+}
+.navbar-default .navbar-brand {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: #a799e6;
+}
+.navbar-default .navbar-text {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #a799e6;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #a799e6;
+	background-color: #47165a;
+	font-weight:normal;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #a799e6;
+	background-color: #47165a;
+}
+.navbar-default .navbar-toggle {
+	border-color: #47165a;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #47165a;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+	color: #a799e6;
+}
+
+@media (max-width: 767px) {
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+		color: #ecf0f1;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #a799e6;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+		color: #a799e6;
+		background-color: #47165a;
+	}
+}
