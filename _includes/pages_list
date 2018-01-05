@@ -46,6 +46,8 @@ Generates the list items for a Bootstrap navbar based on the contents of navbar_
     </li>
     {% elsif navbar_link.name == page.title %}
       <li class="active"><a href="{{ site.baseurl }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a></li>
+    {% elsif navbar_link.ext_url %}
+      <li><a href="{{ navbar_link.ext_url }}">{{ navbar_link.name }}</a></li>
     {% else %}
       <li><a href="{{ site.baseurl }}/{{ navbar_link.url }}">{{ navbar_link.name }}</a></li>
     {% endif %}
