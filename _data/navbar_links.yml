@@ -50,4 +50,7 @@
   
 - name: "Fun stuff"
   url: "fun/"
+  
+- name: "LabEscape"
+  url: "http://labescape.org/"
  
