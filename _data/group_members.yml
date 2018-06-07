@@ -8,13 +8,10 @@
 
 - name: "Postdocs"
   people:
-    - name: "Fumihiro Kaneda"
-      image: "../img/headshot_fkaneda.jpg"
-      netid: "fkaneda"
-    - name: "Soyoung Baek"
-      image: "../img/headshot_sybaek.jpg"
-      netid: "syb"
-  
+    - name: "Bowtie Person"
+      image: "../img/bowtie_person.jpg"
+      netid: "bowtie"
+
 - name: "Graduate Students"
   people:
     - name: "Courtney Krafczyk"
@@ -40,15 +37,24 @@
       netid: "daltonc2"     
     - name: "Colin Lualdi"
       image: "../img/headshot_clualdi.jpg"
-      netid: "clualdi2"        
+      netid: "clualdi2"   
+    - name: "Spencer Johnson"
+      image: "../img/bowtie_person.jpg"
+      netid: "sjj3" 
+    - name: "Julia Spina"
+      image: "../img/bowtie_person.jpg"
+      netid: "jspina2"       
       
 - name: "Undergraduate Students"
   people:
-    - name: "Ian Call"
-    - name: "Kyle Herndon"
-    - name: "Julia Spina"
     - name: "Annika Dugad"
+    - name: "Brian Wilens"
+    - name: "Henry Ando"
+    - name: "Ian Call"
+    - name: "Imran Sultan"
+    - name: "Kyle Herndon"
+    - name: "Sohm Apte"
 
 - name: "Honored Guests"
   people:
-    - name: "Fedor Bergmann"
+    - name: "Mike Goggin"
