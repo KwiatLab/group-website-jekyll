@@ -8,7 +8,7 @@
 
 - name: "Postdocs"
   people:
-    - name: "Bowtie Person"
+    - name: "Bowtie Scientist"
       image: "../img/bowtie_person.jpg"
       netid: "bowtie"
 
@@ -28,7 +28,7 @@
       netid: "victora2"
     - name: "Kristina Meier"
       netid: "kadunga2"
-      image: "../img/headshot_kmeier1.jpg"
+      image: "../img/headshot_kmeier.jpg"
     - name: "Joseph Chapman"
       image: "../img/headshot_jchapman.jpg"
       netid: "jchapmn2"
