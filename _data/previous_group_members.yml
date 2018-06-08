@@ -1,7 +1,9 @@
-# List of previous group members used to generate part of people.html.
+﻿# List of previous group members used to generate part of people.html.
 
 - name: "Postdocs"
   people:
+    - name: "Fumihiro Kaneda"
+    - name: "Soyoung Baek"
     - name: "Jian Yang"
     - name: "Jan Bogdanski"
     - name: "David Branning"
@@ -119,6 +121,7 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Bruce Crabtree"
     - name: "Chris Chopp"
     - name: "Amy Zou"  
     - name: "Malhar Jere"
