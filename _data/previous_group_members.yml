@@ -3,6 +3,7 @@
 - name: "Postdocs"
   people:
     - name: "Fumihiro Kaneda"
+      currently: "Assistant professor at Frontier Research Institute for Interdisciplinary Sciences in Tohoku University, Japan"
     - name: "Soyoung Baek"
     - name: "Jian Yang"
     - name: "Jan Bogdanski"
@@ -13,6 +14,11 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Alex Hill"
+      year: "2018"
+      thesis-type: "phd"
+      thesis-file: "hill-thesis-phd.pdf"
+      thesis-title: "Spatial Mode Control and Advanced Methods for Multi-Platform Quantum Communication"
     - name: "Michael Wayne"
       year: "2017"
       thesis-type: "phd"
