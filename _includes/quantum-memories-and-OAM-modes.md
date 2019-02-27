@@ -1,7 +1,7 @@
 ###Recent Publications and News
 * [M. Victora et al. at Division of Atomic, Molecular, and Optical Physics 2015](http://meetings.aps.org/Meeting/DAMOP15/Session/D1.49)
 
-<img src="{{ site.baseurl }}/img/delay-line.jpg" class="img-responsive pull-right" width="400"/>
+<img src="{{ site.baseurl }}/img/delay-line.jpg" class="img-responsive pull-right" width="450"/>
 
 Many quantum information applications have need for a low-loss, state-preserving photon storage device. For example, quantum memory is a fundamental component of the [Quantum Repeater](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.81.5932), which makes quantum communication robust against imperfect transmission channels over arbitrary distances. A memory can also be used as a component of single-photon sources (such as the ones we build in our laboratory).
 

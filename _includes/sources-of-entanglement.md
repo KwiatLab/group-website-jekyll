@@ -1,8 +1,12 @@
+﻿
 ###Recent Publications
+
+* [K. Meier et al. at SPIE Commercial and Scientific Sensing and Imaging 2018](https://doi.org/10.1117/12.2306532)
 * [K. Zielnicki, K. Garay-Palmett, R. Dirks, A. B. U’Ren, and P. G. Kwiat, Optics Express (2015)]({{ site.baseurl }}/papers/My%20Collection.Data/PDF/Engineering%20of%20near-IR%20photon%20pairs%20to%20be%20factorable%20in%20space-time%20and%20entangled%20in%20polarization.pdf)
 * Kevin Zielnicki Ph.D. thesis: ["Pure Sources and Efficient Detectors" (2014)]({{ site.baseurl }}/theses/zielnicki-thesis.pdf)
 
-<img src="{{ site.baseurl }}/img/typeI.png" class="img-responsive pull-left">
+<img src="{{ site.baseurl }}/img/typeI.png" class="img-responsive pull-right" width="400">
+
 
 ###Optimizing downconversion sources
 [Entanglement](http://en.wikipedia.org/wiki/Quantum_entanglement), the non-classical, non-local "connection" that can exist between particles, is the foundation of many quantum information applications. We have built and continue to improve one of the world's purest and brightest sources of entangled photons, using the process of spontaneous parametric downconversion in a nonlinear optical crystal.

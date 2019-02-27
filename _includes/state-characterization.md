@@ -2,7 +2,7 @@
 * [T. M. Graham et al., Phys. Rev. Lett. 110, 060404 (2013)](http://dx.doi.org/10.1103/PhysRevLett.110.060404)
 
 ###State tomography
-* We maintain an online [guide to quantum state tomography](http://research.physics.illinois.edu/QI/Photonics/Tomography/), including theoretical background and ready-to-use MATLAB and Python code! 
+* We maintain an online [guide to quantum state tomography](http://research.physics.illinois.edu/QI/Photonics/Tomography/), including theoretical background and ready-to-use MATLAB and Python code <b>(currently under development)</b>! 
 
 Quantum information protocols and computational algorithms require certain input states, and researchers need a way to verify the input state as they investigate a particular application.
 
