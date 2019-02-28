@@ -1,4 +1,6 @@
 ###Recent Publications and News
+* [J. C. Chapman, T. M. Graham, C. K. Zeitler, P. G. Kwiat, arXiv:1901.07181 (2019)](https://arxiv.org/abs/1901.07181)
+* [J. C. Chapman, H. Bernstein, K. Meier, C. Zeitler, and P. G. Kwiat at Photonics West 2018](https://doi.org/10.1117/12.2295042)
 * [T. M. Graham, H. J. Bernstein, T. Wei, M. Junge, and P. G. Kwiat, Nature Communications (2015)](http://dx.doi.org/10.1038/ncomms8185)
 * ["Donuts, math, and superdense teleportation of quantum information"](http://physics.illinois.edu/news/story.asp?id=11160) via Physics Illinois
 * ["Quantum info 'beamed up' via donut teleportation"](http://www.futurity.org/quantum-teleportation-donut-936632/) via Futurity

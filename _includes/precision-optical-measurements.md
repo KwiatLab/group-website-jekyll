@@ -14,3 +14,6 @@ Measuring this weak value can also amplify small effects so we can measure them 
 ###Measuring the spin Hall effect of light
 In the past, we have also used weak values to [make the first measurement](http://dx.doi.org/10.1126/science.1152697) of the [spin Hall effect](http://en.wikipedia.org/wiki/Spin_Hall_effect) of light, in which oppositely circularly polarized light beams experience opposite (but tiny) transverse spatial shifts when passing through an air-glass interface at an angle (see animation on left). With our weak-measurement amplification scheme, we achieved displacement resolutions on the order of 1 nm.
 
+###Precision Measurements with Spatially Entangled Photons
+section currently under development
+
