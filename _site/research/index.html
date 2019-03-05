@@ -175,7 +175,17 @@
 		  
 		  
 			  
-				<li><a href="/QI/Photonics/research/#quantum-communication">Quantum Communication</a></li>
+				<li><a href="/QI/Photonics/research/#superdense-teleportation">Superdense Teleportation</a></li>
+			  
+			  
+			  
+		  
+        
+		  
+		  
+		  
+			  
+				<li><a href="/QI/Photonics/research/#quantum-cryptography">Quantum Cryptography</a></li>
 			  
 			  
 			  
@@ -420,19 +430,38 @@
 				<div class="container">
 				<h2>Single-Photon Sources</h2>
 				
-					<p><a href="/QI/Photonics/movies/photongun.swf"><img src="/QI/Photonics/img/photongun.jpg" class="img-responsive pull-right movie-still" title="Click for movie" /></a></p>
-
-<h3 id="recent-publications">Recent Publications</h3>
+					<h3 id="recent-publications">Recent Publications</h3>
 <ul>
+  <li><a href="https://arxiv.org/abs/1803.04803">F. Kaneda and P.G. Kwiat, High-efficiency single-photon generation via large-scale active time multiplexing. arXiv:1803.04803 [quant-ph] (2018)</a></li>
+  <li><a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-4-9-1034">F. Kaneda, F. Xu, J. Chapman, and P. G. Kwiat, &#8220;Quantum-memory-assisted multi-photon generation for efficient quantum information processing&#8221;, Optica 4 (9), 1034-1037 (2017)</a></li>
+  <li><a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-24-10-10733">F. Kaneda, K. Garay-Palmett, A.B. U&#8217;Ren, and P.G. Kwiat, Heralded single-photon source utilizing highly nondegenerate, spectrally factorable spontaneous parametric downconversion. Optics Express 24, 10733 (2016)</a></li>
+  <li><a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-2-12-1010">F. Kaneda et al. Time-multiplexed heralded single-photon source. Optica, OPTICA 2, 1010-1013 (2015)</a></li>
   <li>Kevin McCusker Ph.D. thesis: <a href="/QI/Photonics/theses/mccusker-thesis.pdf">&#8220;Efficient Quantum Optical State Engineering and Applications&#8221; (2012)</a></li>
-  <li><a href="/QI/Photonics/papers/My Collection.Data/PDF/Efficient Optical Quantum State Engineering.pdf">K. T. McCusker and P. G. Kwiat, Phys. Rev. Lett. 103, 163602 (2009)</a></li>
+  <li><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.103.163602">K. T. McCusker and P. G. Kwiat, Efficient Optical Quantum State Engineering. Phys. Rev. Lett. 103, 163602 (2009)</a></li>
 </ul>
 
-<p>There are <a href="http://scienceblogs.com/builtonfacts/2009/03/05/counting-photons/">about a hundred billion photons in a well-lit room</a>. To get just one photon, you might imagine dimming a light source until the photons come out one at a time. But light sources such as bulbs, LEDs, lasers, and the sun all have something in common: they emit photons randomly. If you want to predict exactly how many photons will be emitted in one second, the best you can do is to calculate a probability distribution. Even if the source is very dim, it&#8217;s impossible to guarantee that only one photon will be emitted at a time. In many quantum information experiments, a &#8220;photon gun&#8221;&#8211;a source that really only emits <a href="http://en.wikipedia.org/wiki/Fock_state">one photon</a> at a time&#8211;would be more useful. Even better, and more challenging to build, is a photon gun that can be fired at will. We are engineering a high-efficiency source of single photons that can be used for quantum information applications including quantum cryptography and optical quantum computing.</p>
+<p>There are <a href="https://scienceblogs.com/builtonfacts/2009/03/05/counting-photons">about a hundred billion photons in a well-lit room</a>. To get just one photon, you might imagine dimming a light source until the photons come out one at a time. But light sources such as bulbs, LEDs, lasers, and the sun all have something in common: they emit photons randomly. If you want to predict exactly how many photons will be emitted in one second, the best you can do is to calculate a probability distribution. Even if the source is very dim, it&#8217;s impossible to guarantee that only one photon will be emitted at a time. In many quantum information experiments, a &#8220;photon gun&#8221;- a source that only emits one photon at a time - would be more useful.</p>
 
-<p>Our source is based on spontaneous parametric downconversion of a 355-nm pulsed pump laser (see <a href="#sources-of-entanglement">Sources of Entanglement</a>). Click the figure on the right to open an animation showing how it works. The UV pump is cycled through a nonlinear (<a href="http://en.wikipedia.org/wiki/Barium_borate">BBO</a>) crystal, creating pairs of daughter photons at 702 nm and 718 nm. The energy of each pump pulse is low, so the average number of photon pairs produced in a pass through the crystal is less than one. We cycle the pump through the crystal several times (&#8220;temporal multiplexing&#8221;), so despite the low probability of producing a pair on each cycle, there is a high probability that at least one pass has produced a pair.</p>
+<p>Even better, and more challenging to build, is a photon gun that can be fired at will. We are engineering a high-efficiency source of single photons that can be used for quantum information applications including quantum cryptography and optical quantum computing.</p>
 
-<p>The daughter photons are always produced in pairs, so when we detect the presence of a one daughter photon, we know with near certainty that its partner has also been created. Once we detect one photon, we trap its partner in a variable delay storage cavity, where it bounces between mirrors until we let it out. After we finish cycling the pump though the crystal, we release the stored single photon. This yields a high probability of producing a single photon at a predetermined time while simultaneously minimizing the probability of producing more than one photon&#8211;a photon gun that can be fired at will.</p>
+<p><a href="/QI/Photonics/movies/photongun.swf"><img src="/QI/Photonics/img/hsps.png" class="img-responsive pull-right" width="450" /></a></p>
+
+<h3 id="heralded-single-photon-sources">Heralded Single-Photon Sources</h3>
+
+<p>A common technique for creating single photons is to utilize <a href="https://en.wikipedia.org/wiki/Spontaneous_parametric_down-conversion">spontaneous parametric downconversion (SPDC)</a>. In the case of SPDC, when one pumps a nonlinear crystal with a laser, a nonlinear process converts a higher energy pump photon into two lower energy daughter photons (&#8220;signal&#8221; and &#8220;idler&#8221;). Conservation laws require the daughter photons to be always produced in pairs, so if we detect the presence of one, we know with near certainty that its partner has also been created. So, while the signal photon is destroyed upon detection, the idler photon is now &#8220;heralded&#8221; and available for use in quantum information applications. This source is an example of a &#8220;heralded single-photon source&#8221; (HSPS).</p>
+
+<p>However, this technique has significant drawbacks that prevent its adoption for large scale optical quantum information processing.  Photon-pair creation via downconversion is a probabilistic process so only a certain fraction of pump pulses will give rise to photon pairs, meaning this technique cannot be used to create on-demand single photons.</p>
+
+<p>This is further compounded by the fact that the probability of photon-pair generation is dependent on the pumping power. The harder one pumps a SPDC source, the more likely a photon pair is generated. However, this also increases the probability of creating multiple photon pairs at once. Since we only want single pairs, we suppress the multi-pair probability by pumping the crystal at lower powers. This limits the single photon generation rate which prevents this technique from being deployed at large scales.</p>
+
+<p><a href="/QI/Photonics/movies/photongun.swf"><img src="/QI/Photonics/img/tmhsps.png" class="img-responsive pull-right" width="600" /></a></p>
+
+<h3 id="time-multiplexed-hsps">Time-Multiplexed HSPS</h3>
+
+<p>To address these main drawbacks of conventional HSPSs, we utilize a time-multiplexing technique. Each time-multiplexing cycle consists of pumping a SPDC crystal with a fixed number of low-energy pulses such that the multiple-pair probability is suppressed. So even though the corresponding probability of generating a single pair is low, there is a high probability that at least one of the pump pulses in the multiplexing cycle generated a photon pair.
+When a signal photon is detected within a multiplexing cycle, we know that its partner (the idler photon) has also been created. We then use the heralding signal to activate an optical switch to divert the idler photon into a variable-length storage loop. Since SPDC is a probabilistic process, the photon will appear at different times within each multiplexing cycle. With a variable-length storage loop, we can adjust the photon storage time so that the photon is always released at the end of each time-multiplexing cycle. This yields a high probability of producing a single photon at a predetermined time while simultaneously minimizing the probability of producing more than one photon - a photon gun that can be fired at will.</p>
+
+<p>We have demonstrated up to 66.7 +/- 2.4% presence probability of single-photon states collected into a single-mode optical fiber by multiplexing 40 periodic pumping events, a 10x enhancement over a non-multiplexed HSPS. We are currently focusing on enhancing the performance of our source by increasing the multiplexing repetition rate with faster optical switches and improving heralding performance with high-efficiency superconducting nanowire single photon detectors. We have also begun developing auxiliary hardware for demultiplexing the single photons from our source (which are collected in a single spatial mode) into individual spatial modes for quantum information processing applications.</p>
 
 				
 				</div>
@@ -447,12 +476,11 @@
 				<div class="container">
 				<h2>Sources of Entanglement</h2>
 				
-					<p>﻿
-###Recent Publications</p>
+					<h3 id="recent-publications">Recent Publications</h3>
 
 <ul>
   <li><a href="https://doi.org/10.1117/12.2306532">K. Meier et al. at SPIE Commercial and Scientific Sensing and Imaging 2018</a></li>
-  <li><a href="/QI/Photonics/papers/My%20Collection.Data/PDF/Engineering%20of%20near-IR%20photon%20pairs%20to%20be%20factorable%20in%20space-time%20and%20entangled%20in%20polarization.pdf">K. Zielnicki, K. Garay-Palmett, R. Dirks, A. B. U’Ren, and P. G. Kwiat, Optics Express (2015)</a></li>
+  <li><a href="/QI/Photonics/papers/My%20Collection.Data/PDF/Engineering%20of%20near-IR%20photon%20pairs%20to%20be%20factorable%20in%20space-time%20and%20entangled%20in%20polarization.pdf">K. Zielnicki, K. Garay-Palmett, R. Dirks, A. B. U&#8217;Ren, and P. G. Kwiat, Optics Express (2015)</a></li>
   <li>Kevin Zielnicki Ph.D. thesis: <a href="/QI/Photonics/theses/zielnicki-thesis.pdf">&#8220;Pure Sources and Efficient Detectors&#8221; (2014)</a></li>
 </ul>
 
@@ -605,9 +633,9 @@
 				</div>
 				
 				
-				<section id="quantum-communication">
+				<section id="superdense-teleportation">
 				<div class="container">
-				<h2>Quantum Communication</h2>
+				<h2>Superdense Teleportation</h2>
 				
 					<h3 id="recent-publications-and-news">Recent Publications and News</h3>
 <ul>
@@ -633,7 +661,26 @@
 
 <p>In the case of polarization and time bins, we see that system as a prime candidate for deployment in a space-to-earth channel. To that end, we characterized the protocol&#8217;s performance while simulating in the lab several conditions that would be experienced in the space-to-earth channel. The analysis showed that we should be able to successfully execute this protocol in a space-to-earth channel.</p>
 
-<h3 id="quantum-cryptography">Quantum Cryptography</h3>
+
+				
+				</div>
+				</section>				
+			
+		
+			
+				
+				
+				
+				<section id="quantum-cryptography">
+				<div class="container">
+				<h2>Quantum Cryptography</h2>
+				
+					<h3 id="recent-publications-and-news">Recent Publications and News</h3>
+
+<ul>
+  <li><a href="https://www.osapublishing.org/optica/abstract.cfm?uri=optica-4-9-1034">F. Kaneda, F. Xu, J. Chapman, and P. G. Kwiat, &#8220;Quantum-memory-assisted multi-photon generation for efficient quantum information processing&#8221;, Optica 4 (9), 1034-1037 (2017)</a></li>
+</ul>
+
 <p><a href="/QI/Photonics/movies/bb84.swf"><img src="/QI/Photonics/img/bb84.jpg" class="img-responsive pull-right movie-still" title="Click for movie" /></a></p>
 
 <p>Quantum cryptography uses entanglement to enable secure communication that immediately alerts its users to eavesdropping. Click on the figure to the right for an animation showing an example quantum cryptography protocol called BB84.</p>
@@ -648,8 +695,17 @@
 <h3 id="drone-to-drone-quantum-key-distribution">Drone to Drone Quantum Key Distribution</h3>
 <p>We are seeking to establish a quantum secure network between drones in flight using Quantum Key Distribution (QKD). The primary motivations include solving the &#8220;last mile&#8221; problem of long-distance quantum networks, as well as establishing practical wireless quantum networks, and extending quantum security to cover the emerging applications of drones. We view this research effort as a first step in providing more advanced quantum technology on drones such as entanglement generation and distribution via optical waveguides.</p>
 
+<p><img src="/QI/Photonics/img/mdiqkd.png" class="img-responsive pull-right" width="400px" /></p>
+
 <h3 id="measurement-device-independent-quantum-key-distribution">Measurement Device Independent Quantum Key Distribution</h3>
-<p>section currently under development</p>
+<p>While quantum cryptography in principle guarantees secure key transfer, practical implementations are often subject to various &#8220;side-channel&#8221; attacks that exploit various engineering and technical imperfections of QKD hardware. The detectors of a QKD system are particularly susceptible to attacks since many detectors have non-ideal properties such as deadtimes and sensitivity to blinding. As a solution, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.108.130503">measurement-device-independent QKD (MDI-QKD)</a> was introduced to as a version of QKD resistant to detector side-channel attacks.</p>
+
+<p>A general MDI-QKD implementation involves two individuals (Alice and Bob) who desire to share secure cryptographic keys with each other. Alice and Bob send qubit-encoded photons to a third party (Charlie) who identifies the correlation between Alice&#8217;s and Bob&#8217;s qubits via a Bell State Measurement (BSM) involving both photons. Since this requires Alice and Bob to generate photons simultaneously, implementing this with conventional SPDC-based heralded single photon sources is not very scalable due to the low probability of obtaining a coincident event between two random, non-deterministic sources which limits the key generation rate.</p>
+
+<p>To address this issue, we use a modified version of our <a href="http://research.physics.illinois.edu/QI/Photonics/research/#single-photon-sources">time-multiplexed heralded single photon source</a> to serve as a quantum memory, allowing Charlie to synchronize Alice&#8217;s and Bob&#8217;s HSPSs. Whenever Charlie receives an early-arrival photon from Alice (Bob), he stores it in the quantum memory. He releases it when Bob&#8217;s (Alice&#8217;s) late-arrival photon arrives such that Charlie now has two coincident photons and may make the Bell State Measurement.</p>
+
+<p>Using this configuration, we have demonstrated a factor of 30 enhancement for the rate of simultaneous photons from Alice and Bob. This enabled us to make the first demonstration of HSPS-based MDI-QKD where we achieved a secure key rate of 0.851 bit/s. This is a significant improvement over the no-memory case where we were unable to generate secure keys due to very low coincidence rates.</p>
+
 
 				
 				</div>
@@ -664,9 +720,7 @@
 				<div class="container">
 				<h2>Superdense Coding</h2>
 				
-					<h3 id="recent-publications">Recent Publications</h3>
-
-<p>We have also used hyperentanglement to encode a record amount of information on a binary property of a single photon, <a href="http://dx.doi.org/10.1038/nphys919">beating the channel capacity limit for linear photonic superdense coding</a>.</p>
+					<p>We have also used hyperentanglement to encode a record amount of information on a binary property of a single photon, <a href="http://dx.doi.org/10.1038/nphys919">beating the channel capacity limit for linear photonic superdense coding</a>.</p>
 
 
 				
@@ -682,7 +736,11 @@
 				<div class="container">
 				<h2>Superadditivity</h2>
 				
-					<p>section currently under development</p>
+					<p>In information theory, one of the defining properties of a noisy communication channel is its channel capacity, or the maximum rate at which information can be faithfully transmitted. Classically this is found via the mutual information of the channel, a measure of the information shared by source and receiver. The quantum analogue is the coherent information of the channel, which also takes into account entanglement effects.</p>
+
+<p>The coherent information of a quantum channel has the peculiar property of &#8220;superadditivity.&#8221; This is in stark contrast to classical communication, where mutual information is additive: if a source sends twice as much information though the channel, a receiver should be able to recover twice as much. Since the mutual information scales linearly with channel use, a single use of the channel defines its properties. However, for quantum channels, coherent information can scale nonlinearly. That is, the recoverable information from multiple channel uses can exceed - albeit only slightly - the amount we would expect in classical communication. This allows for better scaling of information transmission when only a finite number of channel uses is possible. In the extreme case, quantum channels can even exhibit &#8220;superactivation,&#8221; whereby repeated channel use allows information to be recovered from otherwise unusable channels.</p>
+
+<p>Superadditivity of coherent information has been established theoretically in the case of the dephrasure channel, which combines erasure and dephasing. The dephrasure channel exhibits superadditivity for as few as two channel uses; this, combined with the channel&#8217;s simple form, makes it a good candidate for experimental investigation. We are currently in the process of developing an optical system to simulate the <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.121.160501">dephrasure</a> channel and test its properties of superadditivity and superactivation.</p>
 
 				
 				</div>
