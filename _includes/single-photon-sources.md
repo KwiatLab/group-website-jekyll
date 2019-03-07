@@ -11,7 +11,7 @@ There are [about a hundred billion photons in a well-lit room](https://sciencebl
  
 Even better, and more challenging to build, is a photon gun that can be fired at will. We are engineering a high-efficiency source of single photons that can be used for quantum information applications including quantum cryptography and optical quantum computing.
 
-<a href="{{ site.baseurl }}/movies/photongun.swf"><img src="{{ site.baseurl }}/img/hsps.png" class="img-responsive pull-right" width="450"/></a>
+<img src="{{ site.baseurl }}/img/hsps.png" class="img-responsive pull-right" width="450"/>
 
 ###Heralded Single-Photon Sources
 
@@ -22,7 +22,7 @@ However, this technique has significant drawbacks that prevent its adoption for 
 This is further compounded by the fact that the probability of photon-pair generation is dependent on the pumping power. The harder one pumps a SPDC source, the more likely a photon pair is generated. However, this also increases the probability of creating multiple photon pairs at once. Since we only want single pairs, we suppress the multi-pair probability by pumping the crystal at lower powers. This limits the single-photon generation rate which prevents this technique from being deployed at large scales.
 
 
-<a href="{{ site.baseurl }}/movies/photongun.swf"><img src="{{ site.baseurl }}/img/tmhsps.png" class="img-responsive pull-right" width="600"/></a>
+<img src="{{ site.baseurl }}/img/tmhsps.png" class="img-responsive pull-right" width="600"/>
 
 ###Time-Multiplexed HSPS
 
