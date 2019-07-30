@@ -14,16 +14,24 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Kyle Herndon"
+      year: "2019"
+      thesis-type: "masters"
+      currently: "Center of the Universe, Software Engineer at Google"
     - name: "Alex Hill"
       year: "2018"
       thesis-type: "phd"
       thesis-file: "hill-thesis-phd.pdf"
       thesis-title: "Spatial Mode Control and Advanced Methods for Multi-Platform Quantum Communication"
+    - name: "Dalton Chaffee"
+      year: "2018"
+      currently: "Graduate Student in () group at University of Colorado, Boulder"
     - name: "Michael Wayne"
       year: "2017"
       thesis-type: "phd"
       thesis-file: "wayne-thesis-phd.pdf"
       thesis-title: "Optical Quantum Random Number Generation: Applications of Single-Photon Event Timing"
+      currently: "NRC Postdoctoral Fellow in the Quantum Optics Group at NIST Gaithersburg"
     - name: "Rebecca Holmes"
       year: "2017"
       thesis-type: "phd"
@@ -128,8 +136,6 @@
       
 - name: "Dedicated Undergrads"
   people:
-    - name: "Kyle Herndon"
-      currently: "Google"
     - name: "Brooke Polak"
     - name: "Henry Ando"
     - name: "Bruce Crabtree"
