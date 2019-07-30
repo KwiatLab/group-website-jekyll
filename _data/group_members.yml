@@ -41,14 +41,15 @@
     - name: "Andrew Conrad"
       image: "../img/andrew.png"
       netid: "aconrad5"  
+    - name: "Samantha Isaac"
+      image: "../img/bowtie_person.jpg"
+      netid: "isaac5"  
       
 - name: "Undergraduate Students"
   people:
     - name: "Annika Dugad"
     - name: "Brian Wilens"
-    - name: "Henry Ando"
     - name: "Ian Call"
-    - name: "Kyle Herndon (Masters in CS)"
 
 - name: "Honored Guests"
   people:
