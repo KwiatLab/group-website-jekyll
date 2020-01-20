@@ -41,14 +41,18 @@
     - name: "Andrew Conrad"
       image: "../img/andrew.png"
       netid: "aconrad5"  
+    - name: "Samantha Isaac"
+      image: "../img/headshot_sisaac.jpg"
+      netid: "isaac5"  
       
 - name: "Undergraduate Students"
   people:
     - name: "Annika Dugad"
     - name: "Brian Wilens"
-    - name: "Henry Ando"
     - name: "Ian Call"
-    - name: "Kyle Herndon (Masters in CS)"
+    - name: "Matthias Zajdela"
+    - name: "Maxim Lunin"
+    - name: "Ryan Yoseph"
 
 - name: "Honored Guests"
   people:
