@@ -10,13 +10,10 @@
   people:
     - name: "Bowtie Scientist"
       image: "../img/bowtie_person.jpg"
-      netid: "bowtie"
+      netid: "thiscouldbeyou"
 
 - name: "Graduate Students"
   people:
-    - name: "Courtney Krafczyk"
-      image: "../img/headshot_cbyard.jpg"
-      netid: "byard2"   
     - name: "Christopher Zeitler"
       image: "../img/headshot_czeitler.jpg"
       netid: "czeitle2"
@@ -34,10 +31,7 @@
       netid: "clualdi2"   
     - name: "Spencer Johnson"
       image: "../img/bowtie_person.jpg"
-      netid: "sjj3" 
-    - name: "Julia Spina"
-      image: "../img/julia.png"
-      netid: "jspina2"      
+      netid: "sjj3"   
     - name: "Andrew Conrad"
       image: "../img/andrew.png"
       netid: "aconrad5"  

@@ -15,6 +15,16 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Courtney Krafczyk"
+      year: "2019"
+      thesis-type: "phd"
+      thesis-file: "krafczyk-thesis.pdf"
+      thesis-title: "Investigations of Quantum Sensing Techniques for Deflection and Displacement Metrology"
+      currently: "Nursing Student at the University of Illinois at Chicago in Urbana"
+    - name: "Julia Spina"
+      year: "2019"
+      thesis-type: "masters"
+      currently: "TBA"
     - name: "Kyle Herndon"
       year: "2019"
       thesis-type: "masters"
@@ -133,7 +143,8 @@
       thesis-type: "phd"
       thesis-file: "peters-thesis.pdf"
       thesis-title: "One- And Two-Photon States for Quantum Information"
-      currently: "Applied Communication Sciences"
+      currently: "Quantum Communications Team Lead, Senior Research Scientist in The Quantum Information Science Group at Oak Ridge National Laboratory"
+      past: "Applied Communication Sciences"
       
 - name: "Dedicated Undergrads"
   people:

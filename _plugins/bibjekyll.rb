@@ -34,7 +34,7 @@ module Jekyll
 
   class BibtexTag < Liquid::Tag
     # The options that are passed to bibtex2html
-    Options = "-q --sort-by-date --reverse-sort -noabstract -noheader -nokeywords -nokeys -nodoc -dl -nobibsource"
+    Options = "-q -nf file pdf --sort-by-date --reverse-sort -noabstract -noheader -nokeywords -nokeys -nodoc -dl -nobibsource"
 
     def split_params(params)
       params.split(" ").map(&:strip)
