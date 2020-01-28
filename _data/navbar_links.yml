@@ -56,6 +56,9 @@
   
 - name: "Fun stuff"
   url: "fun/"
+
+- name: "Whys Guys"
+  url: "whysguys/"
   
 - name: "LabEscape"
   ext_url: "http://labescape.org/"
