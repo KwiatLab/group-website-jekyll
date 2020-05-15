@@ -1,8 +1,8 @@
 ###Recent Publications
-* [F. Kaneda and P. G. Kwiat, High-efficiency single-photon generation via large-scale active time multiplexing. arXiv:1803.04803 [quant-ph] (2018)](https://arxiv.org/abs/1803.04803)
-* [F. Kaneda, F. Xu, J. Chapman, and P. G. Kwiat, "Quantum-memory-assisted multi-photon generation for efficient quantum information processing", Optica 4 (9), 1034-1037 (2017)](https://www.osapublishing.org/optica/abstract.cfm?uri=optica-4-9-1034)
+* [F. Kaneda and P. G. Kwiat, High-eﬃciency single-photon generation via large-scale active time multiplexing, Science Advances 5 (2019)](https://advances.sciencemag.org/content/5/10/eaaw8586) 
+* [F. Kaneda, F. Xu, J. Chapman, and P. G. Kwiat, Quantum-memory-assisted multi-photon generation for efficient quantum information processing, Optica 4, 1034-1037 (2017)](https://www.osapublishing.org/optica/abstract.cfm?uri=optica-4-9-1034)
 * [F. Kaneda, K. Garay-Palmett, A.B. U'Ren, and P. G. Kwiat, Heralded single-photon source utilizing highly nondegenerate, spectrally factorable spontaneous parametric downconversion. Optics Express 24, 10733 (2016)](https://www.osapublishing.org/oe/abstract.cfm?uri=oe-24-10-10733)
-* [F. Kaneda et al. Time-multiplexed heralded single-photon source. Optica, OPTICA 2, 1010-1013 (2015)](https://www.osapublishing.org/optica/abstract.cfm?uri=optica-2-12-1010)
+* [F. Kaneda et al., Time-multiplexed heralded single-photon source. Optica 2, 1010-1013 (2015)](https://www.osapublishing.org/optica/abstract.cfm?uri=optica-2-12-1010)
 * Kevin McCusker Ph.D. thesis: ["Efficient Quantum Optical State Engineering and Applications" (2012)]({{ site.baseurl }}/theses/mccusker-thesis.pdf)
 * [K. T. McCusker and P. G. Kwiat, Efficient Optical Quantum State Engineering. Phys. Rev. Lett. 103, 163602 (2009)](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.103.163602)
 
