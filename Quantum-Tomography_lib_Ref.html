@@ -33,9 +33,27 @@ title: Tomography
 
 		function clearAllMethods() {
 			var childs = document.getElementById("Methods").childNodes;
-			for (var i = 0; i < childs.length; i++) {
-				if (childs[i].tagName == "DIV") {
+			for (var i = 0; i < childs.length; i++)
+			{
+				if (childs[i].tagName == "DIV")
+				{
 					childs[i].style.display = "none";
+				}
+			}
+
+			var childs = document.getElementById("TableOfContents").childNodes;
+			for (var i = 0; i < childs.length; i++)
+			{
+				if (childs[i].tagName == "UL")
+				{
+					var ulChilds = childs[i].childNodes;
+					for (var i = 0; i < ulChilds.length; i++)
+					{
+						if (ulChilds[i].tagName == "LI")
+						{
+							ulChilds[i].style.fontWeight = "";
+						}
+					}
 				}
 			}
 		}
@@ -50,72 +68,72 @@ title: Tomography
 				<h3 style="text-align:center;">Table of Contents</h3>
 				<h4>TomoClass</h4>
 				<ul>
-					<li style="font-weight:bold;" onclick="displayMethod(this.innerHTML)">Tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">bellsettings</li>
-					<li onclick="displayMethod(this.innerHTML)">bellsettings_range</li>
-					<li onclick="displayMethod(this.innerHTML)">bellsettings_range_init</li>
-					<li onclick="displayMethod(this.innerHTML)">conf</li>
-					<li onclick="displayMethod(this.innerHTML)">err_functions</li>
-					<li onclick="displayMethod(this.innerHTML)">err_n</li>
-					<li onclick="displayMethod(this.innerHTML)">fevel</li>
-					<li onclick="displayMethod(this.innerHTML)">filter_data</li>
-					<li onclick="displayMethod(this.innerHTML)">getBasisMeas</li>
-					<li onclick="displayMethod(this.innerHTML)">getCoincidences</li>
-					<li onclick="displayMethod(this.innerHTML)">getMeasurements</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumBits</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumCoinc</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumDetPerQubit</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumOfDetectors</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumSingles</li>
-					<li onclick="displayMethod(this.innerHTML)">getSingles</li>
-					<li onclick="displayMethod(this.innerHTML)">getTimes</li>
-					<li onclick="displayMethod(this.innerHTML)">getTomoInputTemplate</li>
-					<li onclick="displayMethod(this.innerHTML)">getproperties</li>
-					<li onclick="displayMethod(this.innerHTML)">importConf</li>
-					<li onclick="displayMethod(this.innerHTML)">importData</li>
-					<li onclick="displayMethod(this.innerHTML)">importEval</li>
-					<li onclick="displayMethod(this.innerHTML)">linear_tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">maximum_likelihood_tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness</li>
-					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness_der_d</li>
-					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness_hedged</li>
-					<li onclick="displayMethod(this.innerHTML)">setConfSetting</li>
-					<li onclick="displayMethod(this.innerHTML)">standardizeConf</li>
-					<li onclick="displayMethod(this.innerHTML)">state_tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">tomo_input</li>
-					<li onclick="displayMethod(this.innerHTML)">tomography_error</li>
-					<li onclick="displayMethod(this.innerHTML)">tomography_error_bell</li>
-					<li onclick="displayMethod(this.innerHTML)">tomography_error_states_generator</li>
+					<li style="font-weight:bold;" onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">Tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">bellsettings</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">bellsettings_range</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">bellsettings_range_init</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="conf_li_link">conf</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">err_functions</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">err_n</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">fevel</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">filter_data</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getBasisMeas</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getCoincidences</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getMeasurements</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumBits</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumCoinc</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumDetPerQubit</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumOfDetectors</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumSingles</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getSingles</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getTimes</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getTomoInputTemplate</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getproperties</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">importConf</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">importData</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">importEval</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">linear_tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maximum_likelihood_tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maxlike_fitness</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maxlike_fitness_der_d</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maxlike_fitness_hedged</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">setConfSetting</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">standardizeConf</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">state_tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomo_input</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomography_error</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomography_error_bell</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomography_error_states_generator</li>
 				</ul>
 				<h4>TomoFunctions</h4>
 				<ul>
-					<li onclick="displayMethod(this.innerHTML)">concurrence</li>
-					<li onclick="displayMethod(this.innerHTML)">density2t</li>
-					<li onclick="displayMethod(this.innerHTML)">density2tm</li>
-					<li onclick="displayMethod(this.innerHTML)">densityOperation</li>
-					<li onclick="displayMethod(this.innerHTML)">entanglement</li>
-					<li onclick="displayMethod(this.innerHTML)">entropy</li>
-					<li onclick="displayMethod(this.innerHTML)">fidelity</li>
-					<li onclick="displayMethod(this.innerHTML)">ketOperation</li>
-					<li onclick="displayMethod(this.innerHTML)">linear_entropy</li>
-					<li onclick="displayMethod(this.innerHTML)">make_positive</li>
-					<li onclick="displayMethod(this.innerHTML)">negativity</li>
-					<li onclick="displayMethod(this.innerHTML)">partial_transpose</li>
-					<li onclick="displayMethod(this.innerHTML)">partial_transpose_helper</li>
-					<li onclick="displayMethod(this.innerHTML)">performOperation</li>
-					<li onclick="displayMethod(this.innerHTML)">projVal</li>
-					<li onclick="displayMethod(this.innerHTML)">purity</li>
-					<li onclick="displayMethod(this.innerHTML)">rsquare</li>
-					<li onclick="displayMethod(this.innerHTML)">t_matrix</li>
-					<li onclick="displayMethod(this.innerHTML)">t_to_density</li>
-					<li onclick="displayMethod(this.innerHTML)">tangle</li>
-					<li onclick="displayMethod(this.innerHTML)">toDensity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">concurrence</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">density2t</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">density2tm</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">densityOperation</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">entanglement</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">entropy</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">fidelity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">ketOperation</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">linear_entropy</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">make_positive</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">negativity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose_helper</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">performOperation</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">projVal</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">purity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">rsquare</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">t_matrix</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">t_to_density</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tangle</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">toDensity</li>
 				</ul>
 				<h4>TomoDisplay</h4>
 				<ul>
-					<li onclick="displayMethod(this.innerHTML)">displayOutput</li>
-					<li onclick="displayMethod(this.innerHTML)">showRhoImages</li>
-					<li onclick="displayMethod(this.innerHTML)">outputErrorvalues</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">displayOutput</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">showRhoImages</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">outputErrorvalues</li>
 				</ul>
 			</div>
 			<div class="col-md-9">
@@ -127,38 +145,31 @@ title: Tomography
 						<h3 class="methodSyntax" style="display:inline;">Class </h3>
 						<h1 style="display:inline;" class="MethodTitle">Tomography</h1>
 						<h3 class="methodSyntax">Tomography()</h3>
-						<p class="methodShortDesc">returns Tomography</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<p class="methodShortDesc">This is the main tomography object that the library is built around.
+    				</p>
+						<p class="methodLongDesc">The goal is to only have one tomography object and edit the
+							configuration settings as you go. The conf settings are saved in the class however the input data and the output data are not stored in the object. <br>The constructor initalizes the conf settings with the default values below:
+						</p>
+						<code>
+							self.conf = {'NQubits': 2,<br>
+							            'NDetectors': 1,<br>
+							            'Crosstalk': np.array([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]),<br>
+							            'Bellstate': 0,<br>
+							            'DoDriftCorrection': 0,<br>
+							            'DoAccidentalCorrection' : 1,<br>
+							            'DoErrorEstimation': 0,<br>
+							            'Window': 0,<br>
+							            'Efficiency': 0,<br>
+							            'RhoStart': [],<br>
+							            'IntensityMap': [[1]],<br>
+							            'Beta': 0}
+						</code>
+						<div id="TableOfContents" style="padding-top:15px;">
+						<h4>See Also:</h4>
+						<ul>
+							<li onclick="document.getElementById('conf_li_link').click()">conf</li>
+						</ul>
+						</div>
 					</div>
 					<!--Tomography.bellsettings-->
 					<div style="display:none;" class="MethodInfo" id="bellsettings">
