@@ -3,109 +3,123 @@ layout: default
 title: Tomography
 ---
 <div class="jumbotron tomography">
-<div class="container">
-<h1>Guide to Quantum State Tomography</h1>
-</div>
-</div>
-
-<div class="container">
-
-<div class="intro-box">
-{% markdown tomography-intro.md %}
-</div>
-
-<div class="row">
-	<div class="col-md-12">
-		{% include tomography-theory.html %}
+	<div class="container">
+		<h1>Guide to Quantum State Tomography</h1>
 	</div>
 </div>
-<div class="row">
-	<div class="col-md-12">
-	<hr class="dashed">
-    <h2>Real-time tomography interface</h2>
-    <hr class="dashed">
 
-	<p>In order to implement the tomography techniques discussed above, we have written a group of MATLAB and (more recently) Python programs which perform the analysis necessary to reconstruct a quantum state from experimental data. You can download and run our code yourself, or use the web interface below.</p>
+<div class="container">
 
-	<p>The web interface currently uses the Python code. We are still verifying the interface functionality.</p>
+	<div class="intro-box">
+		{% markdown tomography-intro.md %}
+	</div>
 
-	<h3>READ ME: <a href="{{ site.baseurl }}/tomography-files/tutorial_for_tomography.pdf">Tutorial for the tomography interface</a></h3>
+	<div class="row">
+		<div class="col-md-12">
+			{% include tomography-theory.html %}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<hr class="dashed">
+			<h2>Real-time tomography interface</h2>
+			<hr class="dashed">
 
-<button onclick="myFunction()">Open tomography interface</button>
+			<p>We provide a web interface that implements the tomography techniques discussed above. For those who do not want to want to use the interface we also provide a python library and matlab code below.</p>
 
-<h3>Git hub for Python code</h3>
-<blockquote class="table"><table>
-	<tbody><tr>
-		<td class="top">
-			<a href="https://github.com/KwiatQIM/Quantum-Tomography">
-			Quantum-Tomography
-			</a>
-		</td>
-		</tr>
-	</tbody></table></blockquote>
+			<p>The web interface currently uses the Python code. We are still verifying the interface functionality.</p>
 
-<h3>MATLAB code for download</h3>
-<blockquote>
-<table>
-	<tbody><tr>
-		<td>
-			<a href="{{ site.baseurl }}/tomography-files/state_tomography.tar.gz">
-			state_tomography.tar.gz
-			</a>
-		</td>
-		<td width="40px"></td>
-		<td>
-		All of the MATLAB code, in tarred and gzipped.  In linux/Unix, the command <code>tar -xzf state_tomography.tar.gz</code> should unzip the files into their own directory. File Size: 20 KB.
-		</td>
-	</tr>
-	<tr height="10px"></tr>
-	<tr>
-		<td>
-			<a href="{{ site.baseurl }}/tomography-files/state_tomography.zip">
-			state_tomography.zip
-			</a>
-		</td>
-		<td width="40px"></td>
-		<td>
-		All of the MATLAB code in zip format.  Windows should be able to automatically unzip these files. File Size: 36 KB.
-		</td>
-	</tr>
+			<h3>READ ME: <a href="{{ site.baseurl }}/tomography-files/tutorial_for_tomography.pdf">Tutorial for the tomography interface</a></h3>
 
-		</tbody></table></blockquote>
+			<button onclick="myFunction()">Open tomography interface</button>
 
-<h3>Introduction to the MATLAB code</h3>
+			<hr class="dashed">
+			<h2>Tomography Code</h2>
+			<hr class="dashed">
 
-<p>
-The MATLAB code is contained within the following directories:
-</p>
-<ul>
-	<li><code>./state_tomography</code></li>
-	<li><code>./state_tomography/private</code></li>
-	<li><code>./quantum_logic</code></li>
-	<li><code>./quantum_logic/measures</code></li>
-	<li><code>./basic_math</code></li>
-	<li><code>./util</code></li>
-</ul>
-The function <code>state_tomography.m</code> is the top level tomography program, and the place you should start when looking through this code. Its function call looks like this:
-<blockquote>
-<code>[rho, intensity, fval]=state_tomography(raw_counts, intensities, conf)</code>
-</blockquote>
+			<p>We have written a group of MATLAB programs and a Python library which perform the analysis necessary to reconstruct a quantum state from experimental data. You can
+				download and run our code yourself with the links below.</p>
 
-<h3>Contact</h3>
-<p>
-Most functions included in the code contain commented documentation,
-but in case you have any further questions about the MATLAB or Python code, you should direct them
-to <a href="mailto://kadunga2@illinois.edu">Kristina Meier</a>.
-</p>
+			<h3>Git hub for Python code</h3>
+			<blockquote class="table">
+				<table>
+					<tbody>
+						<tr>
+							<td class="top">
+								<a href="https://github.com/KwiatQIM/Quantum-Tomography">
+									Quantum-Tomography
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</blockquote>
 
-<script>
-function myFunction() {
-    window.open("http://tomography.web.engr.illinois.edu/TomographyDemo.php");
-}
-</script>
-		<!-- <iframe src="http://tomography.web.engr.illinois.edu/TomographyDemo2.php" width="100%" height="100%" frameborder=0>
+			<h3>MATLAB code for download</h3>
+			<blockquote>
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<a href="{{ site.baseurl }}/tomography-files/state_tomography.tar.gz">
+									state_tomography.tar.gz
+								</a>
+							</td>
+							<td width="40px"></td>
+							<td>
+								All of the MATLAB code, in tarred and gzipped. In linux/Unix, the command <code>tar -xzf state_tomography.tar.gz</code> should unzip the files into their own directory. File Size: 20 KB.
+							</td>
+						</tr>
+						<tr height="10px"></tr>
+						<tr>
+							<td>
+								<a href="{{ site.baseurl }}/tomography-files/state_tomography.zip">
+									state_tomography.zip
+								</a>
+							</td>
+							<td width="40px"></td>
+							<td>
+								All of the MATLAB code in zip format. Windows should be able to automatically unzip these files. File Size: 36 KB.
+							</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</blockquote>
+
+			<h3>Introduction to the MATLAB code</h3>
+
+			<p>
+				The MATLAB code is contained within the following directories:
+			</p>
+			<ul>
+				<li><code>./state_tomography</code></li>
+				<li><code>./state_tomography/private</code></li>
+				<li><code>./quantum_logic</code></li>
+				<li><code>./quantum_logic/measures</code></li>
+				<li><code>./basic_math</code></li>
+				<li><code>./util</code></li>
+			</ul>
+			The function <code>state_tomography.m</code> is the top level tomography program, and the place you should start when looking through this code. Its function call looks like this:
+			<blockquote>
+				<code>[rho, intensity, fval]=state_tomography(raw_counts, intensities, conf)</code>
+			</blockquote>
+
+			<h3>Contact</h3>
+			<p>
+				Most functions included in the code contain commented documentation,
+				but in case you have any further questions about the MATLAB or Python code, you should direct them
+				to <a href="mailto://kadunga2@illinois.edu">Kristina Meier</a>.
+			</p>
+
+			<script>
+				function myFunction() {
+					window.open("http://tomography.web.engr.illinois.edu/TomographyDemo.php");
+				}
+			</script>
+			<!-- <iframe src="http://tomography.web.engr.illinois.edu/TomographyDemo2.php" width="100%" height="100%" frameborder=0>
 
 		</iframe> -->
+		</div>
 	</div>
-</div>
 </div>
