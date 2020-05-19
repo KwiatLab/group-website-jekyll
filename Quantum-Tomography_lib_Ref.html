@@ -1,0 +1,2370 @@
+---
+layout: default
+title: Tomography
+---
+<div class="jumbotron tomography">
+	<div class="container">
+		<h1>Quantum-Tomography Reference Guide</h1>
+	</div>
+</div>
+
+<div class="lib_Ref">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		jq_goToTop = null;
+		//jquery
+		$(function() {
+
+			function goToTop() {
+				$("html, body").animate({
+					scrollTop: $("#Methods").offset().top - 100
+				}, 'fast');
+			}
+			jq_goToTop = goToTop;
+		})
+
+		//javascript
+		function displayMethod(x) {
+			clearAllMethods();
+			var meth = document.getElementById(x);
+			meth.style.display = "";
+			jq_goToTop();
+		}
+
+		function clearAllMethods() {
+			var childs = document.getElementById("Methods").childNodes;
+			for (var i = 0; i < childs.length; i++) {
+				if (childs[i].tagName == "DIV") {
+					childs[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+	<div class="container">
+		<div class="intro-box">
+		</div>
+		<div class="row">
+
+			<!--BEGIN PYTHON PRINT-->
+			<div class="col-md-3" id="TableOfContents">
+				<h3 style="text-align:center;">Table of Contents</h3>
+				<h4>TomoClass</h4>
+				<ul>
+					<li style="font-weight:bold;" onclick="displayMethod(this.innerHTML)">Tomography</li>
+					<li onclick="displayMethod(this.innerHTML)">bellsettings</li>
+					<li onclick="displayMethod(this.innerHTML)">bellsettings_range</li>
+					<li onclick="displayMethod(this.innerHTML)">bellsettings_range_init</li>
+					<li onclick="displayMethod(this.innerHTML)">conf</li>
+					<li onclick="displayMethod(this.innerHTML)">err_functions</li>
+					<li onclick="displayMethod(this.innerHTML)">err_n</li>
+					<li onclick="displayMethod(this.innerHTML)">fevel</li>
+					<li onclick="displayMethod(this.innerHTML)">filter_data</li>
+					<li onclick="displayMethod(this.innerHTML)">getBasisMeas</li>
+					<li onclick="displayMethod(this.innerHTML)">getCoincidences</li>
+					<li onclick="displayMethod(this.innerHTML)">getMeasurements</li>
+					<li onclick="displayMethod(this.innerHTML)">getNumBits</li>
+					<li onclick="displayMethod(this.innerHTML)">getNumCoinc</li>
+					<li onclick="displayMethod(this.innerHTML)">getNumDetPerQubit</li>
+					<li onclick="displayMethod(this.innerHTML)">getNumOfDetectors</li>
+					<li onclick="displayMethod(this.innerHTML)">getNumSingles</li>
+					<li onclick="displayMethod(this.innerHTML)">getSingles</li>
+					<li onclick="displayMethod(this.innerHTML)">getTimes</li>
+					<li onclick="displayMethod(this.innerHTML)">getTomoInputTemplate</li>
+					<li onclick="displayMethod(this.innerHTML)">getproperties</li>
+					<li onclick="displayMethod(this.innerHTML)">importConf</li>
+					<li onclick="displayMethod(this.innerHTML)">importData</li>
+					<li onclick="displayMethod(this.innerHTML)">importEval</li>
+					<li onclick="displayMethod(this.innerHTML)">linear_tomography</li>
+					<li onclick="displayMethod(this.innerHTML)">maximum_likelihood_tomography</li>
+					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness</li>
+					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness_der_d</li>
+					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness_hedged</li>
+					<li onclick="displayMethod(this.innerHTML)">setConfSetting</li>
+					<li onclick="displayMethod(this.innerHTML)">standardizeConf</li>
+					<li onclick="displayMethod(this.innerHTML)">state_tomography</li>
+					<li onclick="displayMethod(this.innerHTML)">tomo_input</li>
+					<li onclick="displayMethod(this.innerHTML)">tomography_error</li>
+					<li onclick="displayMethod(this.innerHTML)">tomography_error_bell</li>
+					<li onclick="displayMethod(this.innerHTML)">tomography_error_states_generator</li>
+				</ul>
+				<h4>TomoFunctions</h4>
+				<ul>
+					<li onclick="displayMethod(this.innerHTML)">concurrence</li>
+					<li onclick="displayMethod(this.innerHTML)">density2t</li>
+					<li onclick="displayMethod(this.innerHTML)">density2tm</li>
+					<li onclick="displayMethod(this.innerHTML)">densityOperation</li>
+					<li onclick="displayMethod(this.innerHTML)">entanglement</li>
+					<li onclick="displayMethod(this.innerHTML)">entropy</li>
+					<li onclick="displayMethod(this.innerHTML)">fidelity</li>
+					<li onclick="displayMethod(this.innerHTML)">ketOperation</li>
+					<li onclick="displayMethod(this.innerHTML)">linear_entropy</li>
+					<li onclick="displayMethod(this.innerHTML)">make_positive</li>
+					<li onclick="displayMethod(this.innerHTML)">negativity</li>
+					<li onclick="displayMethod(this.innerHTML)">partial_transpose</li>
+					<li onclick="displayMethod(this.innerHTML)">partial_transpose_helper</li>
+					<li onclick="displayMethod(this.innerHTML)">performOperation</li>
+					<li onclick="displayMethod(this.innerHTML)">projVal</li>
+					<li onclick="displayMethod(this.innerHTML)">purity</li>
+					<li onclick="displayMethod(this.innerHTML)">rsquare</li>
+					<li onclick="displayMethod(this.innerHTML)">t_matrix</li>
+					<li onclick="displayMethod(this.innerHTML)">t_to_density</li>
+					<li onclick="displayMethod(this.innerHTML)">tangle</li>
+					<li onclick="displayMethod(this.innerHTML)">toDensity</li>
+				</ul>
+				<h4>TomoDisplay</h4>
+				<ul>
+					<li onclick="displayMethod(this.innerHTML)">displayOutput</li>
+					<li onclick="displayMethod(this.innerHTML)">showRhoImages</li>
+					<li onclick="displayMethod(this.innerHTML)">outputErrorvalues</li>
+				</ul>
+			</div>
+			<div class="col-md-9">
+				<div id="Methods">
+
+					<!-- BEGIN BIG LIST OF METHODS -->
+					<!--Tomography Class-->
+					<div class="MethodInfo" id="Tomography">
+						<h3 class="methodSyntax" style="display:inline;">Class </h3>
+						<h1 style="display:inline;" class="MethodTitle">Tomography</h1>
+						<h3 class="methodSyntax">Tomography()</h3>
+						<p class="methodShortDesc">returns Tomography</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.bellsettings-->
+					<div style="display:none;" class="MethodInfo" id="bellsettings">
+						<h1 class="MethodTitle">Tomography.bellsettings</h1>
+						<h3 class="methodSyntax">Tomography.bellsettings(int)</h3>
+						<p class="methodShortDesc">returns bellsettings</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.bellsettings_range-->
+					<div style="display:none;" class="MethodInfo" id="bellsettings_range">
+						<h1 class="MethodTitle">Tomography.bellsettings_range</h1>
+						<h3 class="methodSyntax">Tomography.bellsettings_range(int)</h3>
+						<p class="methodShortDesc">returns bellsettings_range</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.bellsettings_range_init-->
+					<div style="display:none;" class="MethodInfo" id="bellsettings_range_init">
+						<h1 class="MethodTitle">Tomography.bellsettings_range_init</h1>
+						<h3 class="methodSyntax">Tomography.bellsettings_range_init(int)</h3>
+						<p class="methodShortDesc">returns bellsettings_range_init</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.conf-->
+					<div style="display:none;" class="MethodInfo" id="conf">
+						<h1 class="MethodTitle">Tomography.conf</h1>
+						<h3 class="methodSyntax">Tomography.conf(int)</h3>
+						<p class="methodShortDesc">returns conf</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.err_functions-->
+					<div style="display:none;" class="MethodInfo" id="err_functions">
+						<h1 class="MethodTitle">Tomography.err_functions</h1>
+						<h3 class="methodSyntax">Tomography.err_functions(int)</h3>
+						<p class="methodShortDesc">returns err_functions</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.err_n-->
+					<div style="display:none;" class="MethodInfo" id="err_n">
+						<h1 class="MethodTitle">Tomography.err_n</h1>
+						<h3 class="methodSyntax">Tomography.err_n(int)</h3>
+						<p class="methodShortDesc">returns err_n</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.fevel-->
+					<div style="display:none;" class="MethodInfo" id="fevel">
+						<h1 class="MethodTitle">Tomography.fevel</h1>
+						<h3 class="methodSyntax">Tomography.fevel(int)</h3>
+						<p class="methodShortDesc">returns fevel</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.filter_data-->
+					<div style="display:none;" class="MethodInfo" id="filter_data">
+						<h1 class="MethodTitle">Tomography.filter_data</h1>
+						<h3 class="methodSyntax">Tomography.filter_data(int)</h3>
+						<p class="methodShortDesc">returns filter_data</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getBasisMeas-->
+					<div style="display:none;" class="MethodInfo" id="getBasisMeas">
+						<h1 class="MethodTitle">Tomography.getBasisMeas</h1>
+						<h3 class="methodSyntax">Tomography.getBasisMeas(int)</h3>
+						<p class="methodShortDesc">returns getBasisMeas</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getCoincidences-->
+					<div style="display:none;" class="MethodInfo" id="getCoincidences">
+						<h1 class="MethodTitle">Tomography.getCoincidences</h1>
+						<h3 class="methodSyntax">Tomography.getCoincidences(int)</h3>
+						<p class="methodShortDesc">returns getCoincidences</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getMeasurements-->
+					<div style="display:none;" class="MethodInfo" id="getMeasurements">
+						<h1 class="MethodTitle">Tomography.getMeasurements</h1>
+						<h3 class="methodSyntax">Tomography.getMeasurements(int)</h3>
+						<p class="methodShortDesc">returns getMeasurements</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getNumBits-->
+					<div style="display:none;" class="MethodInfo" id="getNumBits">
+						<h1 class="MethodTitle">Tomography.getNumBits</h1>
+						<h3 class="methodSyntax">Tomography.getNumBits(int)</h3>
+						<p class="methodShortDesc">returns getNumBits</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getNumCoinc-->
+					<div style="display:none;" class="MethodInfo" id="getNumCoinc">
+						<h1 class="MethodTitle">Tomography.getNumCoinc</h1>
+						<h3 class="methodSyntax">Tomography.getNumCoinc(int)</h3>
+						<p class="methodShortDesc">returns getNumCoinc</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getNumDetPerQubit-->
+					<div style="display:none;" class="MethodInfo" id="getNumDetPerQubit">
+						<h1 class="MethodTitle">Tomography.getNumDetPerQubit</h1>
+						<h3 class="methodSyntax">Tomography.getNumDetPerQubit(int)</h3>
+						<p class="methodShortDesc">returns getNumDetPerQubit</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getNumOfDetectors-->
+					<div style="display:none;" class="MethodInfo" id="getNumOfDetectors">
+						<h1 class="MethodTitle">Tomography.getNumOfDetectors</h1>
+						<h3 class="methodSyntax">Tomography.getNumOfDetectors(int)</h3>
+						<p class="methodShortDesc">returns getNumOfDetectors</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getNumSingles-->
+					<div style="display:none;" class="MethodInfo" id="getNumSingles">
+						<h1 class="MethodTitle">Tomography.getNumSingles</h1>
+						<h3 class="methodSyntax">Tomography.getNumSingles(int)</h3>
+						<p class="methodShortDesc">returns getNumSingles</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getSingles-->
+					<div style="display:none;" class="MethodInfo" id="getSingles">
+						<h1 class="MethodTitle">Tomography.getSingles</h1>
+						<h3 class="methodSyntax">Tomography.getSingles(int)</h3>
+						<p class="methodShortDesc">returns getSingles</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getTimes-->
+					<div style="display:none;" class="MethodInfo" id="getTimes">
+						<h1 class="MethodTitle">Tomography.getTimes</h1>
+						<h3 class="methodSyntax">Tomography.getTimes(int)</h3>
+						<p class="methodShortDesc">returns getTimes</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getTomoInputTemplate-->
+					<div style="display:none;" class="MethodInfo" id="getTomoInputTemplate">
+						<h1 class="MethodTitle">Tomography.getTomoInputTemplate</h1>
+						<h3 class="methodSyntax">Tomography.getTomoInputTemplate(int)</h3>
+						<p class="methodShortDesc">returns getTomoInputTemplate</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getproperties-->
+					<div style="display:none;" class="MethodInfo" id="getproperties">
+						<h1 class="MethodTitle">Tomography.getproperties</h1>
+						<h3 class="methodSyntax">Tomography.getproperties(int)</h3>
+						<p class="methodShortDesc">returns getproperties</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.importConf-->
+					<div style="display:none;" class="MethodInfo" id="importConf">
+						<h1 class="MethodTitle">Tomography.importConf</h1>
+						<h3 class="methodSyntax">Tomography.importConf(int)</h3>
+						<p class="methodShortDesc">returns importConf</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.importData-->
+					<div style="display:none;" class="MethodInfo" id="importData">
+						<h1 class="MethodTitle">Tomography.importData</h1>
+						<h3 class="methodSyntax">Tomography.importData(int)</h3>
+						<p class="methodShortDesc">returns importData</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.importEval-->
+					<div style="display:none;" class="MethodInfo" id="importEval">
+						<h1 class="MethodTitle">Tomography.importEval</h1>
+						<h3 class="methodSyntax">Tomography.importEval(int)</h3>
+						<p class="methodShortDesc">returns importEval</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.linear_tomography-->
+					<div style="display:none;" class="MethodInfo" id="linear_tomography">
+						<h1 class="MethodTitle">Tomography.linear_tomography</h1>
+						<h3 class="methodSyntax">Tomography.linear_tomography(int)</h3>
+						<p class="methodShortDesc">returns linear_tomography</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.maximum_likelihood_tomography-->
+					<div style="display:none;" class="MethodInfo" id="maximum_likelihood_tomography">
+						<h1 class="MethodTitle">Tomography.maximum_likelihood_tomography</h1>
+						<h3 class="methodSyntax">Tomography.maximum_likelihood_tomography(int)</h3>
+						<p class="methodShortDesc">returns maximum_likelihood_tomography</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.maxlike_fitness-->
+					<div style="display:none;" class="MethodInfo" id="maxlike_fitness">
+						<h1 class="MethodTitle">Tomography.maxlike_fitness</h1>
+						<h3 class="methodSyntax">Tomography.maxlike_fitness(int)</h3>
+						<p class="methodShortDesc">returns maxlike_fitness</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.maxlike_fitness_der_d-->
+					<div style="display:none;" class="MethodInfo" id="maxlike_fitness_der_d">
+						<h1 class="MethodTitle">Tomography.maxlike_fitness_der_d</h1>
+						<h3 class="methodSyntax">Tomography.maxlike_fitness_der_d(int)</h3>
+						<p class="methodShortDesc">returns maxlike_fitness_der_d</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.maxlike_fitness_hedged-->
+					<div style="display:none;" class="MethodInfo" id="maxlike_fitness_hedged">
+						<h1 class="MethodTitle">Tomography.maxlike_fitness_hedged</h1>
+						<h3 class="methodSyntax">Tomography.maxlike_fitness_hedged(int)</h3>
+						<p class="methodShortDesc">returns maxlike_fitness_hedged</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.setConfSetting-->
+					<div style="display:none;" class="MethodInfo" id="setConfSetting">
+						<h1 class="MethodTitle">Tomography.setConfSetting</h1>
+						<h3 class="methodSyntax">Tomography.setConfSetting(int)</h3>
+						<p class="methodShortDesc">returns setConfSetting</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.standardizeConf-->
+					<div style="display:none;" class="MethodInfo" id="standardizeConf">
+						<h1 class="MethodTitle">Tomography.standardizeConf</h1>
+						<h3 class="methodSyntax">Tomography.standardizeConf(int)</h3>
+						<p class="methodShortDesc">returns standardizeConf</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.state_tomography-->
+					<div style="display:none;" class="MethodInfo" id="state_tomography">
+						<h1 class="MethodTitle">Tomography.state_tomography</h1>
+						<h3 class="methodSyntax">Tomography.state_tomography(int)</h3>
+						<p class="methodShortDesc">returns state_tomography</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.tomo_input-->
+					<div style="display:none;" class="MethodInfo" id="tomo_input">
+						<h1 class="MethodTitle">Tomography.tomo_input</h1>
+						<h3 class="methodSyntax">Tomography.tomo_input(int)</h3>
+						<p class="methodShortDesc">returns tomo_input</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.tomography_error-->
+					<div style="display:none;" class="MethodInfo" id="tomography_error">
+						<h1 class="MethodTitle">Tomography.tomography_error</h1>
+						<h3 class="methodSyntax">Tomography.tomography_error(int)</h3>
+						<p class="methodShortDesc">returns tomography_error</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.tomography_error_bell-->
+					<div style="display:none;" class="MethodInfo" id="tomography_error_bell">
+						<h1 class="MethodTitle">Tomography.tomography_error_bell</h1>
+						<h3 class="methodSyntax">Tomography.tomography_error_bell(int)</h3>
+						<p class="methodShortDesc">returns tomography_error_bell</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.tomography_error_states_generator-->
+					<div style="display:none;" class="MethodInfo" id="tomography_error_states_generator">
+						<h1 class="MethodTitle">Tomography.tomography_error_states_generator</h1>
+						<h3 class="methodSyntax">Tomography.tomography_error_states_generator(int)</h3>
+						<p class="methodShortDesc">returns tomography_error_states_generator</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--concurrence-->
+					<div style="display:none;" class="MethodInfo" id="concurrence">
+						<h1 class="MethodTitle">concurrence</h1>
+						<h3 class="methodSyntax">concurrence(int)</h3>
+						<p class="methodShortDesc">returns concurrence</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--density2t-->
+					<div style="display:none;" class="MethodInfo" id="density2t">
+						<h1 class="MethodTitle">density2t</h1>
+						<h3 class="methodSyntax">density2t(int)</h3>
+						<p class="methodShortDesc">returns density2t</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--density2tm-->
+					<div style="display:none;" class="MethodInfo" id="density2tm">
+						<h1 class="MethodTitle">density2tm</h1>
+						<h3 class="methodSyntax">density2tm(int)</h3>
+						<p class="methodShortDesc">returns density2tm</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--densityOperation-->
+					<div style="display:none;" class="MethodInfo" id="densityOperation">
+						<h1 class="MethodTitle">densityOperation</h1>
+						<h3 class="methodSyntax">densityOperation(int)</h3>
+						<p class="methodShortDesc">returns densityOperation</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--entanglement-->
+					<div style="display:none;" class="MethodInfo" id="entanglement">
+						<h1 class="MethodTitle">entanglement</h1>
+						<h3 class="methodSyntax">entanglement(int)</h3>
+						<p class="methodShortDesc">returns entanglement</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--entropy-->
+					<div style="display:none;" class="MethodInfo" id="entropy">
+						<h1 class="MethodTitle">entropy</h1>
+						<h3 class="methodSyntax">entropy(int)</h3>
+						<p class="methodShortDesc">returns entropy</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--fidelity-->
+					<div style="display:none;" class="MethodInfo" id="fidelity">
+						<h1 class="MethodTitle">fidelity</h1>
+						<h3 class="methodSyntax">fidelity(int)</h3>
+						<p class="methodShortDesc">returns fidelity</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--ketOperation-->
+					<div style="display:none;" class="MethodInfo" id="ketOperation">
+						<h1 class="MethodTitle">ketOperation</h1>
+						<h3 class="methodSyntax">ketOperation(int)</h3>
+						<p class="methodShortDesc">returns ketOperation</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--linear_entropy-->
+					<div style="display:none;" class="MethodInfo" id="linear_entropy">
+						<h1 class="MethodTitle">linear_entropy</h1>
+						<h3 class="methodSyntax">linear_entropy(int)</h3>
+						<p class="methodShortDesc">returns linear_entropy</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--make_positive-->
+					<div style="display:none;" class="MethodInfo" id="make_positive">
+						<h1 class="MethodTitle">make_positive</h1>
+						<h3 class="methodSyntax">make_positive(int)</h3>
+						<p class="methodShortDesc">returns make_positive</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--negativity-->
+					<div style="display:none;" class="MethodInfo" id="negativity">
+						<h1 class="MethodTitle">negativity</h1>
+						<h3 class="methodSyntax">negativity(int)</h3>
+						<p class="methodShortDesc">returns negativity</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--partial_transpose-->
+					<div style="display:none;" class="MethodInfo" id="partial_transpose">
+						<h1 class="MethodTitle">partial_transpose</h1>
+						<h3 class="methodSyntax">partial_transpose(int)</h3>
+						<p class="methodShortDesc">returns partial_transpose</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--partial_transpose_helper-->
+					<div style="display:none;" class="MethodInfo" id="partial_transpose_helper">
+						<h1 class="MethodTitle">partial_transpose_helper</h1>
+						<h3 class="methodSyntax">partial_transpose_helper(int)</h3>
+						<p class="methodShortDesc">returns partial_transpose_helper</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--performOperation-->
+					<div style="display:none;" class="MethodInfo" id="performOperation">
+						<h1 class="MethodTitle">performOperation</h1>
+						<h3 class="methodSyntax">performOperation(int)</h3>
+						<p class="methodShortDesc">returns performOperation</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--projVal-->
+					<div style="display:none;" class="MethodInfo" id="projVal">
+						<h1 class="MethodTitle">projVal</h1>
+						<h3 class="methodSyntax">projVal(int)</h3>
+						<p class="methodShortDesc">returns projVal</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--purity-->
+					<div style="display:none;" class="MethodInfo" id="purity">
+						<h1 class="MethodTitle">purity</h1>
+						<h3 class="methodSyntax">purity(int)</h3>
+						<p class="methodShortDesc">returns purity</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--rsquare-->
+					<div style="display:none;" class="MethodInfo" id="rsquare">
+						<h1 class="MethodTitle">rsquare</h1>
+						<h3 class="methodSyntax">rsquare(int)</h3>
+						<p class="methodShortDesc">returns rsquare</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--t_matrix-->
+					<div style="display:none;" class="MethodInfo" id="t_matrix">
+						<h1 class="MethodTitle">t_matrix</h1>
+						<h3 class="methodSyntax">t_matrix(int)</h3>
+						<p class="methodShortDesc">returns t_matrix</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--t_to_density-->
+					<div style="display:none;" class="MethodInfo" id="t_to_density">
+						<h1 class="MethodTitle">t_to_density</h1>
+						<h3 class="methodSyntax">t_to_density(int)</h3>
+						<p class="methodShortDesc">returns t_to_density</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--tangle-->
+					<div style="display:none;" class="MethodInfo" id="tangle">
+						<h1 class="MethodTitle">tangle</h1>
+						<h3 class="methodSyntax">tangle(int)</h3>
+						<p class="methodShortDesc">returns tangle</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--toDensity-->
+					<div style="display:none;" class="MethodInfo" id="toDensity">
+						<h1 class="MethodTitle">toDensity</h1>
+						<h3 class="methodSyntax">toDensity(int)</h3>
+						<p class="methodShortDesc">returns toDensity</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--displayOutput-->
+					<div style="display:none;" class="MethodInfo" id="displayOutput">
+						<h1 class="MethodTitle">displayOutput</h1>
+						<h3 class="methodSyntax">displayOutput(int)</h3>
+						<p class="methodShortDesc">returns displayOutput</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--showRhoImages-->
+					<div style="display:none;" class="MethodInfo" id="showRhoImages">
+						<h1 class="MethodTitle">showRhoImages</h1>
+						<h3 class="methodSyntax">showRhoImages(int)</h3>
+						<p class="methodShortDesc">returns showRhoImages</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--outputErrorvalues-->
+					<div style="display:none;" class="MethodInfo" id="outputErrorvalues">
+						<h1 class="MethodTitle">outputErrorvalues</h1>
+						<h3 class="methodSyntax">outputErrorvalues(int)</h3>
+						<p class="methodShortDesc">returns outputErrorvalues</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- End BIG LIST OF METHODS -->
+				</div>
+
+
+				<!--END PYTHON PRINT-->
+				<h3>Contact</h3>
+				<p>
+					Most functions included in the code contain commented documentation,
+					but in case you have any further questions about the MATLAB or Python code, you should direct them
+					to <a href="mailto://kadunga2@illinois.edu">Kristina Meier</a>.
+				</p>
+
+				<script>
+					function myFunction() {
+						window.open("http://tomography.web.engr.illinois.edu/TomographyDemo.php");
+					}
+				</script>
+				<!-- <iframe src="http://tomography.web.engr.illinois.edu/TomographyDemo2.php" width="100%" height="100%" frameborder=0>
+
+			</iframe> -->
+			</div>
+		</div>
+	</div>
+</div>
