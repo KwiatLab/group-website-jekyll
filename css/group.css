@@ -50,7 +50,7 @@ h6,
 }
 
 section {
-    padding-top: 50px; 
+    padding-top: 50px;
     margin-top: -50px; /* For proper linking to locations on page with 50 px fixed navbar. Use .anchor where section is not appropriate. */
 }
 
@@ -399,7 +399,7 @@ hr.dashed {
 }
 
 .current-past {
-  font-style:italic; 
+  font-style:italic;
 }
 
 /* This helps the automatically generated rows of pictures on about.html stack properly when the screen size is smaller than the row width */
@@ -554,4 +554,51 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 		color: #a799e6;
 		background-color: #47165a;
 	}
+}
+
+.lib_Ref div#TableOfContents li{
+    color:rebeccapurple;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.lib_Ref div#Methods
+{
+	padding-bottom:70px;
+	border-bottom:solid lightgrey;
+}
+.lib_Ref div.MethodInfo h1
+{
+	font-weight:bold;
+	color:rebeccapurple;
+}
+.lib_Ref div.MethodInfo p.methodShortDesc
+{
+	padding-left:40px;
+}
+.lib_Ref div.MethodInfo table
+{
+	border-left:5px lightgrey solid;
+	border-radius:15px;
+	margin:10px;
+	table-layout: fixed;
+}
+.lib_Ref div.MethodInfo td.header h6
+{
+	background-color:lightgrey;
+	margin-top:0px;
+	padding:2px;
+	padding-right:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.lib_Ref div.MethodInfo td.header
+{
+	display:table-caption;
+	width: 100px;
+}
+.lib_Ref div#TableOfContents h3{
+	font-size:26px;
+	font-weight:bold;
+	padding-bottom:10px;
+	border-bottom:solid 2px rebeccapurple;
 }
