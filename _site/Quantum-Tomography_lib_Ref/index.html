@@ -352,6 +352,22 @@
 					childs[i].style.display = "none";
 				}
 			}
+
+			var childs = document.getElementById("TableOfContents").childNodes;
+			for (var i = 5; i < childs.length; i+=4)
+			{
+				if (childs[i].tagName == "UL")
+				{
+					var ulChilds = childs[i].childNodes;
+					for (var j = 0; j < ulChilds.length; j++)
+					{
+						if (ulChilds[j].tagName == "LI")
+						{
+							ulChilds[j].style.fontWeight = "";
+						}
+					}
+				}
+			}
 		}
 	</script>
 	<div class="container">
@@ -364,72 +380,77 @@
 				<h3 style="text-align:center;">Table of Contents</h3>
 				<h4>TomoClass</h4>
 				<ul>
-					<li style="font-weight:bold;" onclick="displayMethod(this.innerHTML)">Tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">bellsettings</li>
-					<li onclick="displayMethod(this.innerHTML)">bellsettings_range</li>
-					<li onclick="displayMethod(this.innerHTML)">bellsettings_range_init</li>
-					<li onclick="displayMethod(this.innerHTML)">conf</li>
-					<li onclick="displayMethod(this.innerHTML)">err_functions</li>
-					<li onclick="displayMethod(this.innerHTML)">err_n</li>
-					<li onclick="displayMethod(this.innerHTML)">fevel</li>
-					<li onclick="displayMethod(this.innerHTML)">filter_data</li>
-					<li onclick="displayMethod(this.innerHTML)">getBasisMeas</li>
-					<li onclick="displayMethod(this.innerHTML)">getCoincidences</li>
-					<li onclick="displayMethod(this.innerHTML)">getMeasurements</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumBits</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumCoinc</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumDetPerQubit</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumOfDetectors</li>
-					<li onclick="displayMethod(this.innerHTML)">getNumSingles</li>
-					<li onclick="displayMethod(this.innerHTML)">getSingles</li>
-					<li onclick="displayMethod(this.innerHTML)">getTimes</li>
-					<li onclick="displayMethod(this.innerHTML)">getTomoInputTemplate</li>
-					<li onclick="displayMethod(this.innerHTML)">getproperties</li>
-					<li onclick="displayMethod(this.innerHTML)">importConf</li>
-					<li onclick="displayMethod(this.innerHTML)">importData</li>
-					<li onclick="displayMethod(this.innerHTML)">importEval</li>
-					<li onclick="displayMethod(this.innerHTML)">linear_tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">maximum_likelihood_tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness</li>
-					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness_der_d</li>
-					<li onclick="displayMethod(this.innerHTML)">maxlike_fitness_hedged</li>
-					<li onclick="displayMethod(this.innerHTML)">setConfSetting</li>
-					<li onclick="displayMethod(this.innerHTML)">standardizeConf</li>
-					<li onclick="displayMethod(this.innerHTML)">state_tomography</li>
-					<li onclick="displayMethod(this.innerHTML)">tomo_input</li>
-					<li onclick="displayMethod(this.innerHTML)">tomography_error</li>
-					<li onclick="displayMethod(this.innerHTML)">tomography_error_bell</li>
-					<li onclick="displayMethod(this.innerHTML)">tomography_error_states_generator</li>
+					<li style="font-weight:bold;" onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">Tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">bellsettings</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">bellsettings_range</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">bellsettings_range_init</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="conf_li_link">conf</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="err_functions_li_link">err_functions</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">err_n</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">fevel</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">filter_data</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getAllproperties</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getBasisMeas</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getCoincidences</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getMeasurements</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumBits</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumCoinc</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumDetPerQubit</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumOfDetectorsTotal</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getNumSingles</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getSingles</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getTimes</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getTomoInputTemplate</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">getproperties</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">importConf</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">importData</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">importEval</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">linear_tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maximum_likelihood_tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maxlike_fitness</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">maxlike_fitness_hedged</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">setConfSetting</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">state_tomography</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomo_input</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomography_error</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomography_error_bell</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tomography_error_states_generator</li>
 				</ul>
 				<h4>TomoFunctions</h4>
 				<ul>
-					<li onclick="displayMethod(this.innerHTML)">concurrence</li>
-					<li onclick="displayMethod(this.innerHTML)">density2t</li>
-					<li onclick="displayMethod(this.innerHTML)">density2tm</li>
-					<li onclick="displayMethod(this.innerHTML)">densityOperation</li>
-					<li onclick="displayMethod(this.innerHTML)">entanglement</li>
-					<li onclick="displayMethod(this.innerHTML)">entropy</li>
-					<li onclick="displayMethod(this.innerHTML)">fidelity</li>
-					<li onclick="displayMethod(this.innerHTML)">ketOperation</li>
-					<li onclick="displayMethod(this.innerHTML)">linear_entropy</li>
-					<li onclick="displayMethod(this.innerHTML)">make_positive</li>
-					<li onclick="displayMethod(this.innerHTML)">negativity</li>
-					<li onclick="displayMethod(this.innerHTML)">partial_transpose</li>
-					<li onclick="displayMethod(this.innerHTML)">partial_transpose_helper</li>
-					<li onclick="displayMethod(this.innerHTML)">performOperation</li>
-					<li onclick="displayMethod(this.innerHTML)">projVal</li>
-					<li onclick="displayMethod(this.innerHTML)">purity</li>
-					<li onclick="displayMethod(this.innerHTML)">rsquare</li>
-					<li onclick="displayMethod(this.innerHTML)">t_matrix</li>
-					<li onclick="displayMethod(this.innerHTML)">t_to_density</li>
-					<li onclick="displayMethod(this.innerHTML)">tangle</li>
-					<li onclick="displayMethod(this.innerHTML)">toDensity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">concurrence</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">density2t</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">density2tm</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">densityOperation</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">entanglement</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">entropy</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">fidelity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">ketOperation</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">linear_entropy</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">make_positive</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">negativity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose_helper</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">performOperation</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">projVal</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">purity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">rsquare</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">t_matrix</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">t_to_density</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tangle</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">toDensity</li>
 				</ul>
 				<h4>TomoDisplay</h4>
 				<ul>
-					<li onclick="displayMethod(this.innerHTML)">displayOutput</li>
-					<li onclick="displayMethod(this.innerHTML)">showRhoImages</li>
-					<li onclick="displayMethod(this.innerHTML)">outputErrorvalues</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">displayOutput</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">showRhoImages</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">outputErrorvalues</li>
+				</ul>
+				<h4>Other Files</h4>
+				<ul>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="Conf_File_li_link">Conf File</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="Data_File_li_link">Data File</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="Eval_File_li_link">Eval File</li>
 				</ul>
 			</div>
 			<div class="col-md-9">
@@ -441,38 +462,33 @@
 						<h3 class="methodSyntax" style="display:inline;">Class </h3>
 						<h1 style="display:inline;" class="MethodTitle">Tomography</h1>
 						<h3 class="methodSyntax">Tomography()</h3>
-						<p class="methodShortDesc">returns Tomography</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<p class="methodShortDesc">This is the main tomography object that the library is built around.
+						</p>
+						<p class="methodLongDesc">The goal is to only have one tomography object and edit the
+							configuration settings as you go. The conf settings and input data are saved in the class however the output data is not stored. <br>The constructor initalizes the conf settings and error functions with the default values below:
+						</p>
+						<code>
+							self.conf = {'NQubits': 2,<br>
+							'NDetectors': 1,<br>
+							'Crosstalk': np.array([[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]),<br>
+							'Bellstate': 0,<br>
+							'DoDriftCorrection': 0,<br>
+							'DoAccidentalCorrection' : 1,<br>
+							'DoErrorEstimation': 0,<br>
+							'Window': 0,<br>
+							'Efficiency': 0,<br>
+							'RhoStart': [],<br>
+							'IntensityMap': [[1]],<br>
+							'Beta': 0}<br>
+							self.err_functions = ['concurrence','tangle','entanglement','entropy','linear_entropy','negativity','purity']
+						</code>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('conf_li_link').click()">conf</li>
+									<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+							</ul>
+						</div>
 					</div>
 					<!--Tomography.bellsettings-->
 					<div style="display:none;" class="MethodInfo" id="bellsettings">
@@ -736,9 +752,8 @@
 					<!--Tomography.filter_data-->
 					<div style="display:none;" class="MethodInfo" id="filter_data">
 						<h1 class="MethodTitle">Tomography.filter_data</h1>
-						<h3 class="methodSyntax">Tomography.filter_data(int)</h3>
-						<p class="methodShortDesc">returns filter_data</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.filter_data(raw_counts, intensities)</h3>
+						<p class="methodShortDesc">filters the data into separate arrays</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -747,8 +762,12 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>raw_counts : ndarray</h4>
+											<p>The input data for the current tomography.</p>
+										</li>
+										<li>
+											<h4>intensities : ndarray with length = number of measurements</h4>
+											<p>Relative pump power (arb. units) during measurement; used for drift correction.</p>
 										</li>
 									</ul>
 								</td>
@@ -762,8 +781,60 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The counts of the tomography.</p>
+										</li>
+										<li>
+											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements) </h4>
+											<p>The measurements of the tomography in density matrix form.</p>
+										</li>
+										<li>
+											<h4>m2 : ndarray with size = (number of measurements,2*numQubits) </h4>
+											<p>The measurements of the tomography in pure state form.</p>
+										</li>
+										<li>
+											<h4>acc : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The singles values of the tomography. Used for accidental correction.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Tomography.getAllProperties-->
+					<div style="display:none;" class="MethodInfo" id="getAllproperties">
+						<h1 class="MethodTitle">Tomography.getAllProperties</h1>
+						<h3 class="methodSyntax">Tomography.getAllProperties(rho,bounds)</h3>
+						<p class="methodShortDesc">returns the properties of the given density matrix. </p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>rho : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<p>The density matrix you would like to know the properties of.</p>
+										</li>
+										<li>
+											<h4>bounds : boolean </h4>
+											<p>Set this to true if you want error bounds on your estimated property values. Default is False.<br>These are determined with monte carlo simulation.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>err_list : ndarray with size = (length of self.err_functions,2)</h4>
+											<p>The first row is the value of the property and the second is the error bound on the property.</p>
 										</li>
 									</ul>
 								</td>
@@ -773,9 +844,8 @@
 					<!--Tomography.getBasisMeas-->
 					<div style="display:none;" class="MethodInfo" id="getBasisMeas">
 						<h1 class="MethodTitle">Tomography.getBasisMeas</h1>
-						<h3 class="methodSyntax">Tomography.getBasisMeas(int)</h3>
-						<p class="methodShortDesc">returns getBasisMeas</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.getBasisMeas(numBits)</h3>
+						<p class="methodShortDesc">Returns an array of standard measurments in pure state form for the given number of qubits.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -784,23 +854,8 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>numBits : int</h4>
+											<p>number of qubits you want for each measurement. Default will use the number of qubits in the current configurations.</p>
 										</li>
 									</ul>
 								</td>
@@ -810,342 +865,62 @@
 					<!--Tomography.getCoincidences-->
 					<div style="display:none;" class="MethodInfo" id="getCoincidences">
 						<h1 class="MethodTitle">Tomography.getCoincidences</h1>
-						<h3 class="methodSyntax">Tomography.getCoincidences(int)</h3>
-						<p class="methodShortDesc">returns getCoincidences</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getCoincidences()</h3>
+						<p class="methodShortDesc">Returns an array of counts for all the measurments.</p>
 					</div>
 					<!--Tomography.getMeasurements-->
 					<div style="display:none;" class="MethodInfo" id="getMeasurements">
 						<h1 class="MethodTitle">Tomography.getMeasurements</h1>
-						<h3 class="methodSyntax">Tomography.getMeasurements(int)</h3>
-						<p class="methodShortDesc">returns getMeasurements</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getMeasurements()</h3>
+						<p class="methodShortDesc">Returns an array of measurements in pure state form for all the measurments.</p>
 					</div>
 					<!--Tomography.getNumBits-->
 					<div style="display:none;" class="MethodInfo" id="getNumBits">
 						<h1 class="MethodTitle">Tomography.getNumBits</h1>
-						<h3 class="methodSyntax">Tomography.getNumBits(int)</h3>
-						<p class="methodShortDesc">returns getNumBits</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getNumBits()</h3>
+						<p class="methodShortDesc">returns the number of qubits for the current configurations.</p>
 					</div>
 					<!--Tomography.getNumCoinc-->
 					<div style="display:none;" class="MethodInfo" id="getNumCoinc">
 						<h1 class="MethodTitle">Tomography.getNumCoinc</h1>
-						<h3 class="methodSyntax">Tomography.getNumCoinc(int)</h3>
-						<p class="methodShortDesc">returns getNumCoinc</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getNumCoinc()</h3>
+						<p class="methodShortDesc">Returns the number of coincidences per measurement for the current configurations.</p>
 					</div>
 					<!--Tomography.getNumDetPerQubit-->
 					<div style="display:none;" class="MethodInfo" id="getNumDetPerQubit">
 						<h1 class="MethodTitle">Tomography.getNumDetPerQubit</h1>
-						<h3 class="methodSyntax">Tomography.getNumDetPerQubit(int)</h3>
-						<p class="methodShortDesc">returns getNumDetPerQubit</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getNumDetPerQubit()</h3>
+						<p class="methodShortDesc">returns the number of detectors per qubit for the current configurations.</p>
 					</div>
-					<!--Tomography.getNumOfDetectors-->
-					<div style="display:none;" class="MethodInfo" id="getNumOfDetectors">
-						<h1 class="MethodTitle">Tomography.getNumOfDetectors</h1>
-						<h3 class="methodSyntax">Tomography.getNumOfDetectors(int)</h3>
-						<p class="methodShortDesc">returns getNumOfDetectors</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+					<!--Tomography.getNumOfDetectorsTotal-->
+					<div style="display:none;" class="MethodInfo" id="getNumOfDetectorsTotal">
+						<h1 class="MethodTitle">Tomography.getNumOfDetectorsTotal</h1>
+						<h3 class="methodSyntax">Tomography.getNumOfDetectorsTotal()</h3>
+						<p class="methodShortDesc">Returns the total number of detectors for the given data.</p>
 					</div>
 					<!--Tomography.getNumSingles-->
 					<div style="display:none;" class="MethodInfo" id="getNumSingles">
 						<h1 class="MethodTitle">Tomography.getNumSingles</h1>
-						<h3 class="methodSyntax">Tomography.getNumSingles(int)</h3>
-						<p class="methodShortDesc">returns getNumSingles</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getNumSingles()</h3>
+						<p class="methodShortDesc">Returns the number of singles per measurement for the current configurations.</p>
 					</div>
 					<!--Tomography.getSingles-->
 					<div style="display:none;" class="MethodInfo" id="getSingles">
 						<h1 class="MethodTitle">Tomography.getSingles</h1>
-						<h3 class="methodSyntax">Tomography.getSingles(int)</h3>
-						<p class="methodShortDesc">returns getSingles</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getSingles()</h3>
+						<p class="methodShortDesc">Returns an array of singles for all the measurments.</p>
 					</div>
 					<!--Tomography.getTimes-->
 					<div style="display:none;" class="MethodInfo" id="getTimes">
 						<h1 class="MethodTitle">Tomography.getTimes</h1>
-						<h3 class="methodSyntax">Tomography.getTimes(int)</h3>
-						<p class="methodShortDesc">returns getTimes</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<h3 class="methodSyntax">Tomography.getTimes()</h3>
+						<p class="methodShortDesc">Returns an array of times for all the measurments.</p>
 					</div>
 					<!--Tomography.getTomoInputTemplate-->
 					<div style="display:none;" class="MethodInfo" id="getTomoInputTemplate">
 						<h1 class="MethodTitle">Tomography.getTomoInputTemplate</h1>
-						<h3 class="methodSyntax">Tomography.getTomoInputTemplate(int)</h3>
-						<p class="methodShortDesc">returns getTomoInputTemplate</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.getTomoInputTemplate(numBits)</h3>
+						<p class="methodShortDesc">returns a standard template for tomo_input for the given number of qubits.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1154,23 +929,8 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>numBits : int</h4>
+											<p>number of qubits you want for each measurement. Default will use the number of qubits in the current configurations.</p>
 										</li>
 									</ul>
 								</td>
@@ -1180,9 +940,9 @@
 					<!--Tomography.getproperties-->
 					<div style="display:none;" class="MethodInfo" id="getproperties">
 						<h1 class="MethodTitle">Tomography.getproperties</h1>
-						<h3 class="methodSyntax">Tomography.getproperties(int)</h3>
-						<p class="methodShortDesc">returns getproperties</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.getproperties(rho)</h3>
+						<p class="methodShortDesc">returns the properties of the given density matrix. </p>
+						<p class="methodLongDesc">What properties are returned is decided by self.err_functions.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1191,8 +951,8 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rho : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<p>The density matrix you would like to know the properties of.</p>
 										</li>
 									</ul>
 								</td>
@@ -1217,9 +977,9 @@
 					<!--Tomography.importConf-->
 					<div style="display:none;" class="MethodInfo" id="importConf">
 						<h1 class="MethodTitle">Tomography.importConf</h1>
-						<h3 class="methodSyntax">Tomography.importConf(int)</h3>
-						<p class="methodShortDesc">returns importConf</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.importConf(conftxt)</h3>
+						<p class="methodShortDesc">Import a text file containing the configuration settings. </p>
+						<p class="methodLongDesc">Details for the configuration file can be found in the reference for Conf File.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1228,35 +988,26 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>conftxt : string</h4>
+											<p>path to configuration file</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+						<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('Conf_File_li_link').click()">Conf File</li>
+							</ul>
+						</div>
 					</div>
 					<!--Tomography.importData-->
 					<div style="display:none;" class="MethodInfo" id="importData">
 						<h1 class="MethodTitle">Tomography.importData</h1>
-						<h3 class="methodSyntax">Tomography.importData(int)</h3>
-						<p class="methodShortDesc">returns importData</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.importData(datatxt)</h3>
+						<p class="methodShortDesc">Import a text file containing the tomography data and run tomography. </p>
+						<p class="methodLongDesc">Details for the data file can be found in the reference for Data File.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1265,35 +1016,27 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>datatxt : string</h4>
+											<p>path to data file</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+						<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('Data_File_li_link').click()">Data File</li>
+							</ul>
+						</div>
 					</div>
+
 					<!--Tomography.importEval-->
 					<div style="display:none;" class="MethodInfo" id="importEval">
 						<h1 class="MethodTitle">Tomography.importEval</h1>
-						<h3 class="methodSyntax">Tomography.importEval(int)</h3>
-						<p class="methodShortDesc">returns importEval</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.importEval(evaltxt)</h3>
+						<p class="methodShortDesc">Import a eval file containing the tomography data and the configuration setting, then run tomography.</p>
+						<p class="methodLongDesc">Details for the eval file can be found in the reference for Eval File.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1302,35 +1045,26 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>evaltxt : string</h4>
+											<p>path to eval file</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+						<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('Eval_File_li_link').click()">Eval File</li>
+							</ul>
+						</div>
 					</div>
+
 					<!--Tomography.linear_tomography-->
 					<div style="display:none;" class="MethodInfo" id="linear_tomography">
 						<h1 class="MethodTitle">Tomography.linear_tomography</h1>
-						<h3 class="methodSyntax">Tomography.linear_tomography(int)</h3>
-						<p class="methodShortDesc">returns linear_tomography</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.linear_tomography(data, measurements)</h3>
+						<p class="methodShortDesc">Uses linear techniques to find a starting state for maximum likelihood estimation.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1339,8 +1073,12 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The counts of the tomography.</p>
+										</li>
+										<li>
+											<h4>measurements : ndarray with size = (number of measurements,2*numQubits)</h4>
+											<p>The measurements of the tomography in density matrix form.</p>
 										</li>
 									</ul>
 								</td>
@@ -1354,8 +1092,12 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<p>The starting predicted state.</p>
+										</li>
+										<li>
+											<h4>intensity : float</h4>
+											<p>The predicted overall intensity used to normalize the state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1365,9 +1107,9 @@
 					<!--Tomography.maximum_likelihood_tomography-->
 					<div style="display:none;" class="MethodInfo" id="maximum_likelihood_tomography">
 						<h1 class="MethodTitle">Tomography.maximum_likelihood_tomography</h1>
-						<h3 class="methodSyntax">Tomography.maximum_likelihood_tomography(int)</h3>
-						<p class="methodShortDesc">returns maximum_likelihood_tomography</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.maximum_likelihood_tomography(rho0, data, m, acc)</h3>
+						<p class="methodShortDesc">Calculates the most likely state given the data.</p>
+						<p class="methodLongDesc">This function uses a least squares method to find the final predicted state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1376,8 +1118,20 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rho0 : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<p>The starting predicted state found with linear tomography.</p>
+										</li>
+										<li>
+											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The counts of the tomography.</p>
+										</li>
+										<li>
+											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements) </h4>
+											<p>The measurements of the tomography in density matrix form.</p>
+										</li>
+										<li>
+											<h4>acc : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The singles values of the tomography. Used for accidental correction.</p>
 										</li>
 									</ul>
 								</td>
@@ -1391,8 +1145,17 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<p>The predicted density matrix.</p>
+										</li>
+										<li>
+											<h4>intensity : float</h4>
+											<p>The predicted overall intensity used to normalize the state.</p>
+										</li>
+										<li>
+											<h4>fvalp : float</h4>
+											<p>Final value of the internal optimization function. Values greater than the number
+        							of measurements indicate poor agreement with a quantum state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1402,9 +1165,8 @@
 					<!--Tomography.maxlike_fitness-->
 					<div style="display:none;" class="MethodInfo" id="maxlike_fitness">
 						<h1 class="MethodTitle">Tomography.maxlike_fitness</h1>
-						<h3 class="methodSyntax">Tomography.maxlike_fitness(int)</h3>
-						<p class="methodShortDesc">returns maxlike_fitness</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.maxlike_fitness(t, data, accidentals, m, prediction)</h3>
+						<p class="methodShortDesc">Calculates the diffrence between the current predicted state data and the actual data.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1413,8 +1175,24 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>t : ndarray</h4>
+											<p>T values of the current predicted state.</p>
+										</li>
+										<li>
+											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The counts of the tomography.</p>
+										</li>
+										<li>
+											<h4>accidentals : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The singles values of the tomography. Used for accidental correction.</p>
+										</li>
+										<li>
+											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements)</h4>
+											<p>The measurements of the tomography in density matrix form.</p>
+										</li>
+										<li>
+											<h4>prediction : ndarray</h4>
+											<p>Predicted counts from the predicted state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1428,57 +1206,20 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>value of the optimization function.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
 					</div>
-					<!--Tomography.maxlike_fitness_der_d-->
-					<div style="display:none;" class="MethodInfo" id="maxlike_fitness_der_d">
-						<h1 class="MethodTitle">Tomography.maxlike_fitness_der_d</h1>
-						<h3 class="methodSyntax">Tomography.maxlike_fitness_der_d(int)</h3>
-						<p class="methodShortDesc">returns maxlike_fitness_der_d</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
+
 					<!--Tomography.maxlike_fitness_hedged-->
 					<div style="display:none;" class="MethodInfo" id="maxlike_fitness_hedged">
 						<h1 class="MethodTitle">Tomography.maxlike_fitness_hedged</h1>
-						<h3 class="methodSyntax">Tomography.maxlike_fitness_hedged(int)</h3>
-						<p class="methodShortDesc">returns maxlike_fitness_hedged</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.maxlike_fitness_hedged(t, data, accidentals, m, prediction,bet)</h3>
+						<p class="methodShortDesc">Calculates the diffrence between the current predicted state data and the actual data using hedged maximum likelihood.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1487,8 +1228,28 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>t : ndarray</h4>
+											<p>T values of the current predicted state.</p>
+										</li>
+										<li>
+											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The counts of the tomography.</p>
+										</li>
+										<li>
+											<h4>accidentals : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<p>The singles values of the tomography. Used for accidental correction.</p>
+										</li>
+										<li>
+											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements)</h4>
+											<p>The measurements of the tomography in density matrix form.</p>
+										</li>
+										<li>
+											<h4>prediction : ndarray</h4>
+											<p>Predicted counts from the predicted state.</p>
+										</li>
+										<li>
+											<h4>bet : float 0 to .5</h4>
+											<p>The beta value used.</p>
 										</li>
 									</ul>
 								</td>
@@ -1502,8 +1263,8 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>value of the optimization function.</p>
 										</li>
 									</ul>
 								</td>
@@ -1513,9 +1274,8 @@
 					<!--Tomography.setConfSetting-->
 					<div style="display:none;" class="MethodInfo" id="setConfSetting">
 						<h1 class="MethodTitle">Tomography.setConfSetting</h1>
-						<h3 class="methodSyntax">Tomography.setConfSetting(int)</h3>
-						<p class="methodShortDesc">returns setConfSetting</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.setConfSetting(setting,val)</h3>
+						<p class="methodShortDesc">Sets a specific self.conf setting</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1524,72 +1284,32 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>setting : string</h4>
+											<p>The setting you want to update.<br>
+								        Possible values are: ['NQubits', 'NDetectors', 'Crosstalk', 'Bellstate', 'DoDriftCorrection', 'DoAccidentalCorrection', 'DoErrorEstimation', 'Window', 'Efficiency', 'RhoStart', 'IntensityMap', 'Beta']
+								    	</p>
 										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val: array_like, int, or string</h4>
+											<p>The new value you want to the setting to be.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
-					</div>
-					<!--Tomography.standardizeConf-->
-					<div style="display:none;" class="MethodInfo" id="standardizeConf">
-						<h1 class="MethodTitle">Tomography.standardizeConf</h1>
-						<h3 class="methodSyntax">Tomography.standardizeConf(int)</h3>
-						<p class="methodShortDesc">returns standardizeConf</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+						<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('conf_li_link').click()">conf</li>
+							</ul>
+						</div>
 					</div>
 					<!--Tomography.state_tomography-->
 					<div style="display:none;" class="MethodInfo" id="state_tomography">
 						<h1 class="MethodTitle">Tomography.state_tomography</h1>
-						<h3 class="methodSyntax">Tomography.state_tomography(int)</h3>
-						<p class="methodShortDesc">returns state_tomography</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">Tomography.state_tomography(raw_counts, intensities)</h3>
+						<p class="methodShortDesc">Desc: Main function that runs tomography.</p>
+						<p class="methodLongDesc">This function first parses the data, then finds an approximate starting state. It then uses maximum likelihood to find the final predicted state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1598,8 +1318,12 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>raw_counts : ndarray</h4>
+											<p>The input data for the current tomography. This is what tomo_input will be set to.</p>
+										</li>
+										<li>
+											<h4>intensities : ndarray with length = number of measurements</h4>
+											<p>Relative pump power (arb. units) during measurement; used for drift correction.</p>
 										</li>
 									</ul>
 								</td>
@@ -1613,8 +1337,17 @@
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<p>The predicted density matrix.</p>
+										</li>
+										<li>
+											<h4>intensity : float</h4>
+											<p>The predicted overall intensity used to normalize the state.</p>
+										</li>
+										<li>
+											<h4>fvalp : float</h4>
+											<p>Final value of the internal optimization function. Values greater than the number
+        							of measurements indicate poor agreement with a quantum state.</p>
 										</li>
 									</ul>
 								</td>
@@ -2657,12 +2390,117 @@
 							</tr>
 						</table>
 					</div>
-
+					<!--Conf File-->
+					<div style="display:none;" class="MethodInfo" id="Conf File">
+						<h1 class="MethodTitle">Conf File</h1>
+						<p class="methodShortDesc">returns outputErrorvalues</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Data File-->
+					<div style="display:none;" class="MethodInfo" id="Data File">
+						<h1 class="MethodTitle">Data File</h1>
+						<p class="methodShortDesc">returns outputErrorvalues</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<!--Eval File-->
+					<div style="display:none;" class="MethodInfo" id="Eval File">
+						<h1 class="MethodTitle">Eval File</h1>
+						<p class="methodShortDesc">returns outputErrorvalues</p>
+						<p class="methodLongDesc">Extra notes and description</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Param1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>Return1 : array_like</h4>
+											<p>Short Desc</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</div>
 					<!-- End BIG LIST OF METHODS -->
 				</div>
 
-
-				<!--END PYTHON PRINT-->
 				<h3>Contact</h3>
 				<p>
 					Most functions included in the code contain commented documentation,

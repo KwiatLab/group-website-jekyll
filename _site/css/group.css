@@ -7,6 +7,7 @@ body  {
   color:#484848;
   padding-top: 50px;
   padding-bottom: 20px; /* Proper positioning of content below fixed navbar */
+  overflow-x: hidden;
 }
 
 a {
@@ -595,4 +596,10 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 {
 	display:table-caption;
 	width: 100px;
+}
+.lib_Ref div#TableOfContents h3{
+	font-size:26px;
+	font-weight:bold;
+	padding-bottom:10px;
+	border-bottom:solid 2px rebeccapurple;
 }
