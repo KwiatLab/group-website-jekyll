@@ -98,32 +98,27 @@ title: Tomography
 				</ul>
 				<h4>TomoFunctions</h4>
 				<ul>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">concurrence</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="density2t">density2t</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="density2tm">density2tm</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">densityOperation</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">entropy</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">fidelity</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">ketOperation</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">linear_entropy</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="concurrence_li_link">concurrence</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="density2t_li_link">density2t</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="density2tm_li_link">density2tm</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="entropy_li_link">entropy</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="fidelity_li_link">fidelity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="linear_entropy_li_link">linear_entropy</li>
 					<!--<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">make_positive</li>-->
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">negativity</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose_helper</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="negativity_li_link">negativity</li>
+					<!-- <li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">partial_transpose</li> -->
 					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">performOperation</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">projVal</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">purity</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">rsquare</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">t_matrix</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">t_to_density</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">tangle</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="purity_li_link">purity</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="t_matrix_li_link">t_matrix</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="t_to_density_li_link">t_to_density</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="tangle_li_link">tangle</li>
 					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">toDensity</li>
 				</ul>
 				<h4>TomoDisplay</h4>
 				<ul>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">displayOutput</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">showRhoImages</li>
-					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">outputErrorvalues</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">printLastOutput</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="makeRhoImages_li_link">makeRhoImages</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="saveRhoImages_li_link">saveRhoImages</li>
 				</ul>
 				<h4>Other Files</h4>
 				<ul>
@@ -187,7 +182,19 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="err_functions">
 						<h1 class="MethodTitle">Tomography.err_functions</h1>
 						<h3 class="methodSyntax">Tomography.err_functions</h3>
-						<p class="methodShortDesc">These are the properties that you want to be calculated when getProperties is called.</p>
+						<p class="methodShortDesc">An array of properties that you want to be calculated when getProperties is called.</p>
+						<p class="methodLongDesc">The array contains strings of the function names for the desired properties with no parentheses. Default will contain all the properties.</p>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Possible Values:</h4>
+							<ul>
+								<li onclick="document.getElementById('concurrence_li_link').click()">concurrence</li>
+								<li onclick="document.getElementById('entropy_li_link').click()">entropy</li>
+								<li onclick="document.getElementById('linear_entropy_li_link').click()">linear_entropy</li>
+								<li onclick="document.getElementById('negativity_li_link').click()">negativity</li>
+								<li onclick="document.getElementById('purity_li_link').click()">purity</li>
+								<li onclick="document.getElementById('tangle_li_link').click()">tangle</li>
+							</ul>
+						</div>
 						<div id="TableOfContents" style="padding-top:15px;">
 							<h4>See Also:</h4>
 							<ul>
@@ -792,7 +799,7 @@ title: Tomography
 						<h1 class="MethodTitle">Tomography.mont_carl_states</h1>
 						<h3 class="methodSyntax">Tomography.mont_carl_states</h3>
 						<p class="methodShortDesc">The generated monte carlo states.</p>
-						<p class="methodLongDesc">0 if no states have been generated yet.</p>
+						<p class="methodLongDesc">Value is 0 if no states have been generated yet.</p>
 
 					</div>
 					<!--Tomography.setConfSetting-->
@@ -981,9 +988,8 @@ title: Tomography
 					<!--concurrence-->
 					<div style="display:none;" class="MethodInfo" id="concurrence">
 						<h1 class="MethodTitle">concurrence</h1>
-						<h3 class="methodSyntax">concurrence(int)</h3>
-						<p class="methodShortDesc">Returns concurrence</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">concurrence(rhog)</h3>
+						<p class="methodShortDesc">Calculates the concurrence of the input state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -992,8 +998,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1007,20 +1013,36 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated concurrence.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Other Properties:</h4>
+							<ul>
+								<li onclick="document.getElementById('entropy_li_link').click()">entropy</li>
+								<li onclick="document.getElementById('linear_entropy_li_link').click()">linear_entropy</li>
+								<li onclick="document.getElementById('negativity_li_link').click()">negativity</li>
+								<li onclick="document.getElementById('purity_li_link').click()">purity</li>
+								<li onclick="document.getElementById('tangle_li_link').click()">tangle</li>
+							</ul>
+						</div>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+								<li onclick="document.getElementById('getProperties_li_link').click()">getProperties</li>
+							</ul>
+						</div>
 					</div>
 					<!--density2t-->
 					<div style="display:none;" class="MethodInfo" id="density2t">
 						<h1 class="MethodTitle">density2t</h1>
-						<h3 class="methodSyntax">density2t(int)</h3>
-						<p class="methodShortDesc">Returns density2t</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">density2t(rhog)</h3>
+						<p class="methodShortDesc">Converts a density matrix into a list of t values</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1029,8 +1051,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Array to be converted.</p>
 										</li>
 									</ul>
 								</td>
@@ -1044,8 +1066,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>t : ndarray</h4>
+											<p>List of t values defining the input matrix.</p>
 										</li>
 									</ul>
 								</td>
@@ -1055,9 +1077,8 @@ title: Tomography
 					<!--density2tm-->
 					<div style="display:none;" class="MethodInfo" id="density2tm">
 						<h1 class="MethodTitle">density2tm</h1>
-						<h3 class="methodSyntax">density2tm(int)</h3>
-						<p class="methodShortDesc">Returns density2tm</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">density2tm(rhog)</h3>
+						<p class="methodShortDesc">Converts a density matrix into a lower t matrix.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1066,8 +1087,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Array to be converted.</p>
 										</li>
 									</ul>
 								</td>
@@ -1081,82 +1102,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<!--densityOperation-->
-					<div style="display:none;" class="MethodInfo" id="densityOperation">
-						<h1 class="MethodTitle">densityOperation</h1>
-						<h3 class="methodSyntax">densityOperation(int)</h3>
-						<p class="methodShortDesc">Returns densityOperation</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<!--entanglement-->
-					<div style="display:none;" class="MethodInfo" id="entanglement">
-						<h1 class="MethodTitle">entanglement</h1>
-						<h3 class="methodSyntax">entanglement(int)</h3>
-						<p class="methodShortDesc">Returns entanglement</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>tm : ndarray</h4>
+											<p>Lower t matrix defining the input matrix.</p>
 										</li>
 									</ul>
 								</td>
@@ -1166,9 +1113,8 @@ title: Tomography
 					<!--entropy-->
 					<div style="display:none;" class="MethodInfo" id="entropy">
 						<h1 class="MethodTitle">entropy</h1>
-						<h3 class="methodSyntax">entropy(int)</h3>
-						<p class="methodShortDesc">Returns entropy</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">entropy(rhog)</h3>
+						<p class="methodShortDesc">Calculates the entropy of the input state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1177,8 +1123,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1192,20 +1138,36 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated entropy.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Other Properties:</h4>
+							<ul>
+								<li onclick="document.getElementById('concurrence_li_link').click()">concurrence</li>
+								<li onclick="document.getElementById('linear_entropy_li_link').click()">linear_entropy</li>
+								<li onclick="document.getElementById('negativity_li_link').click()">negativity</li>
+								<li onclick="document.getElementById('purity_li_link').click()">purity</li>
+								<li onclick="document.getElementById('tangle_li_link').click()">tangle</li>
+							</ul>
+						</div>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+								<li onclick="document.getElementById('getProperties_li_link').click()">getProperties</li>
+							</ul>
+						</div>
 					</div>
 					<!--fidelity-->
 					<div style="display:none;" class="MethodInfo" id="fidelity">
 						<h1 class="MethodTitle">fidelity</h1>
-						<h3 class="methodSyntax">fidelity(int)</h3>
-						<p class="methodShortDesc">Returns fidelity</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">fidelity(state1, state2)</h3>
+						<p class="methodShortDesc">Calculates the fidelity between the two input states.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1214,8 +1176,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>state1, state2 : ndarray</h4>
+											<p>Input arrays to calculate the fidelity between. Can be pure states or density matrices.</p>
 										</li>
 									</ul>
 								</td>
@@ -1229,45 +1191,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<!--ketOperation-->
-					<div style="display:none;" class="MethodInfo" id="ketOperation">
-						<h1 class="MethodTitle">ketOperation</h1>
-						<h3 class="methodSyntax">ketOperation(int)</h3>
-						<p class="methodShortDesc">Returns ketOperation</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated fidelity.</p>
 										</li>
 									</ul>
 								</td>
@@ -1277,9 +1202,8 @@ title: Tomography
 					<!--linear_entropy-->
 					<div style="display:none;" class="MethodInfo" id="linear_entropy">
 						<h1 class="MethodTitle">linear_entropy</h1>
-						<h3 class="methodSyntax">linear_entropy(int)</h3>
-						<p class="methodShortDesc">Returns linear_entropy</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">linear_entropy(rhog)</h3>
+						<p class="methodShortDesc">Calculates the linear entropy of the input state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1288,8 +1212,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1303,13 +1227,30 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated linear entropy.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Other Properties:</h4>
+							<ul>
+								<li onclick="document.getElementById('concurrence_li_link').click()">concurrence</li>
+								<li onclick="document.getElementById('entropy_li_link').click()">entropy</li>
+								<li onclick="document.getElementById('negativity_li_link').click()">negativity</li>
+								<li onclick="document.getElementById('purity_li_link').click()">purity</li>
+								<li onclick="document.getElementById('tangle_li_link').click()">tangle</li>
+							</ul>
+						</div>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+								<li onclick="document.getElementById('getProperties_li_link').click()">getProperties</li>
+							</ul>
+						</div>
 					</div>
 					<!--make_positive-->
 					<!--<div style="display:none;" class="MethodInfo" id="make_positive">
@@ -1352,9 +1293,8 @@ title: Tomography
 					<!--negativity-->
 					<div style="display:none;" class="MethodInfo" id="negativity">
 						<h1 class="MethodTitle">negativity</h1>
-						<h3 class="methodSyntax">negativity(int)</h3>
-						<p class="methodShortDesc">Returns negativity</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">negativity(rhog)</h3>
+						<p class="methodShortDesc">Calculates the negativity of the input state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1363,8 +1303,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1378,13 +1318,30 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated negativity.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Other Properties:</h4>
+							<ul>
+								<li onclick="document.getElementById('concurrence_li_link').click()">concurrence</li>
+								<li onclick="document.getElementById('entropy_li_link').click()">entropy</li>
+								<li onclick="document.getElementById('linear_entropy_li_link').click()">linear_entropy</li>
+								<li onclick="document.getElementById('purity_li_link').click()">purity</li>
+								<li onclick="document.getElementById('tangle_li_link').click()">tangle</li>
+							</ul>
+						</div>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+								<li onclick="document.getElementById('getProperties_li_link').click()">getProperties</li>
+							</ul>
+						</div>
 					</div>
 					<!--partial_transpose-->
 					<div style="display:none;" class="MethodInfo" id="partial_transpose">
@@ -1423,49 +1380,11 @@ title: Tomography
 							</tr>
 						</table>
 					</div>
-					<!--partial_transpose_helper-->
-					<div style="display:none;" class="MethodInfo" id="partial_transpose_helper">
-						<h1 class="MethodTitle">partial_transpose_helper</h1>
-						<h3 class="methodSyntax">partial_transpose_helper(int)</h3>
-						<p class="methodShortDesc">Returns partial_transpose_helper</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
 					<!--performOperation-->
 					<div style="display:none;" class="MethodInfo" id="performOperation">
 						<h1 class="MethodTitle">performOperation</h1>
-						<h3 class="methodSyntax">performOperation(int)</h3>
-						<p class="methodShortDesc">Returns performOperation</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">performOperation(psi, g)</h3>
+						<p class="methodShortDesc">Performs the operations on the input State.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1474,8 +1393,12 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>psi : ndarray</h4>
+											<p>The input state to do the operation on. Can be a pure state or a density matrix.</p>
+										</li>
+										<li>
+											<h4>g : ndarray with shape = (num operations,2^numQubits,2^numQubits) </h4>
+											<p>The operations you would like to be done. Can be one operation or an array of operations.</p>
 										</li>
 									</ul>
 								</td>
@@ -1489,45 +1412,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<!--projVal-->
-					<div style="display:none;" class="MethodInfo" id="projVal">
-						<h1 class="MethodTitle">projVal</h1>
-						<h3 class="methodSyntax">projVal(int)</h3>
-						<p class="methodShortDesc">Returns projVal</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>p : ndarray</h4>
+											<p>The output state after the operations. Will retain the input form.</p>
 										</li>
 									</ul>
 								</td>
@@ -1537,9 +1423,8 @@ title: Tomography
 					<!--purity-->
 					<div style="display:none;" class="MethodInfo" id="purity">
 						<h1 class="MethodTitle">purity</h1>
-						<h3 class="methodSyntax">purity(int)</h3>
-						<p class="methodShortDesc">Returns purity</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">purity(rhog)</h3>
+						<p class="methodShortDesc">Calculates the purity of the input state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1548,8 +1433,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1563,57 +1448,36 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated purity.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
-					</div>
-					<!--rsquare-->
-					<div style="display:none;" class="MethodInfo" id="rsquare">
-						<h1 class="MethodTitle">rsquare</h1>
-						<h3 class="methodSyntax">rsquare(int)</h3>
-						<p class="methodShortDesc">Returns rsquare</p>
-						<p class="methodLongDesc">Extra notes and description</p>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Paramaters:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
-										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
-										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Other Properties:</h4>
+							<ul>
+								<li onclick="document.getElementById('concurrence_li_link').click()">concurrence</li>
+								<li onclick="document.getElementById('entropy_li_link').click()">entropy</li>
+								<li onclick="document.getElementById('linear_entropy_li_link').click()">linear_entropy</li>
+								<li onclick="document.getElementById('negativity_li_link').click()">negativity</li>
+								<li onclick="document.getElementById('tangle_li_link').click()">tangle</li>
+							</ul>
+						</div>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+								<li onclick="document.getElementById('getProperties_li_link').click()">getProperties</li>
+							</ul>
+						</div>
 					</div>
 					<!--t_matrix-->
 					<div style="display:none;" class="MethodInfo" id="t_matrix">
 						<h1 class="MethodTitle">t_matrix</h1>
-						<h3 class="methodSyntax">t_matrix(int)</h3>
-						<p class="methodShortDesc">Returns t_matrix</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">t_matrix(t)</h3>
+						<p class="methodShortDesc">Converts a list of t values to an lower t matrix.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1622,8 +1486,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>t : ndarray</h4>
+											<p>List of t values converted.</p>
 										</li>
 									</ul>
 								</td>
@@ -1637,8 +1501,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>tm : ndarray</h4>
+											<p>Lower t matrix.</p>
 										</li>
 									</ul>
 								</td>
@@ -1648,9 +1512,8 @@ title: Tomography
 					<!--t_to_density-->
 					<div style="display:none;" class="MethodInfo" id="t_to_density">
 						<h1 class="MethodTitle">t_to_density</h1>
-						<h3 class="methodSyntax">t_to_density(int)</h3>
-						<p class="methodShortDesc">Returns t_to_density</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">t_to_density(t)</h3>
+						<p class="methodShortDesc">Converts a list of t values to a density matrix.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1659,8 +1522,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>t : ndarray</h4>
+											<p>List of t values converted.</p>
 										</li>
 									</ul>
 								</td>
@@ -1674,8 +1537,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix.</p>
 										</li>
 									</ul>
 								</td>
@@ -1685,9 +1548,8 @@ title: Tomography
 					<!--tangle-->
 					<div style="display:none;" class="MethodInfo" id="tangle">
 						<h1 class="MethodTitle">tangle</h1>
-						<h3 class="methodSyntax">tangle(int)</h3>
-						<p class="methodShortDesc">Returns tangle</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">tangle(rhog)</h3>
+						<p class="methodShortDesc">Calculates the tangle of the input state.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1696,8 +1558,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog : ndarray</h4>
+											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1711,20 +1573,36 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>val : float</h4>
+											<p>The calculated tangle.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>Other Properties:</h4>
+							<ul>
+								<li onclick="document.getElementById('concurrence_li_link').click()">concurrence</li>
+								<li onclick="document.getElementById('entropy_li_link').click()">entropy</li>
+								<li onclick="document.getElementById('linear_entropy_li_link').click()">linear_entropy</li>
+								<li onclick="document.getElementById('negativity_li_link').click()">negativity</li>
+								<li onclick="document.getElementById('purity_li_link').click()">purity</li>
+							</ul>
+						</div>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('err_functions_li_link').click()">err_functions</li>
+								<li onclick="document.getElementById('getProperties_li_link').click()">getProperties</li>
+							</ul>
+						</div>
 					</div>
 					<!--toDensity-->
 					<div style="display:none;" class="MethodInfo" id="toDensity">
 						<h1 class="MethodTitle">toDensity</h1>
-						<h3 class="methodSyntax">toDensity(int)</h3>
-						<p class="methodShortDesc">Returns toDensity</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+						<h3 class="methodSyntax">toDensity(psiMat)</h3>
+						<p class="methodShortDesc">Converts a pure state into a density matrix.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1733,8 +1611,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>psiMat : ndarray</h4>
+											<p>Pure state to be converted.</p>
 										</li>
 									</ul>
 								</td>
@@ -1748,20 +1626,20 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>rhog: ndarray</h4>
+											<p>Density Matrix of the input state.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
 					</div>
-					<!--displayOutput-->
-					<div style="display:none;" class="MethodInfo" id="displayOutput">
-						<h1 class="MethodTitle">displayOutput</h1>
-						<h3 class="methodSyntax">displayOutput(int)</h3>
-						<p class="methodShortDesc">Returns displayOutput</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+					<!--printLastOutput-->
+					<div style="display:none;" class="MethodInfo" id="printLastOutput">
+						<h1 class="MethodTitle">printLastOutput</h1>
+						<h3 class="methodSyntax">printLastOutput(tomo,bounds)</h3>
+						<p class="methodShortDesc">Prints the properties of the last tomography to the console.</p>
+						<p class="methodLongDesc">Using bounds will not change the conf settings. The calculated properties are determined by self.err_functions.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1770,8 +1648,8 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>tomo : Tomography() Object</h4>
+											<p>This is the main tomography object. It will get the data from it's last tomography and print it. </p>
 										</li>
 									</ul>
 								</td>
@@ -1785,20 +1663,20 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>bounds : boolean</h4>
+											<p>Set this to true if you want error bounds on your estimated property values. Default is False.
+        								These are determined with monte carlo simulation and the states are saved under self.mont_carl_states.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
 					</div>
-					<!--showRhoImages-->
-					<div style="display:none;" class="MethodInfo" id="showRhoImages">
-						<h1 class="MethodTitle">showRhoImages</h1>
-						<h3 class="methodSyntax">showRhoImages(int)</h3>
-						<p class="methodShortDesc">Returns showRhoImages</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+					<!--makeRhoImages-->
+					<div style="display:none;" class="MethodInfo" id="makeRhoImages">
+						<h1 class="MethodTitle">makeRhoImages</h1>
+						<h3 class="methodSyntax">makeRhoImages(p,plt_given,customColor)</h3>
+						<p class="methodShortDesc">Creates matlab plots of the density matrix.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1807,35 +1685,33 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>p : ndarray with shape = (n,2^numQubits,2^numQubits) </h4>
+											<p>The density matrix you want to create plots of.</p>
 										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>plt_given : matplotlib.pyplot</h4>
+											<p>Input pyplot for which the figures will be saved on to.</p>
+										</li>
+										<li>
+											<h4>customColor : boolean</h4>
+											<p>Specify if you want our custom colorMap. Default is true.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('saveRhoImages_li_link').click()">saveRhoImages</li>
+							</ul>
+						</div>
 					</div>
-					<!--outputErrorvalues-->
-					<div style="display:none;" class="MethodInfo" id="outputErrorvalues">
-						<h1 class="MethodTitle">outputErrorvalues</h1>
-						<h3 class="methodSyntax">outputErrorvalues(int)</h3>
-						<p class="methodShortDesc">Returns outputErrorvalues</p>
-						<p class="methodLongDesc">Extra notes and description</p>
+					<!--saveRhoImages-->
+					<div style="display:none;" class="MethodInfo" id="saveRhoImages">
+						<h1 class="MethodTitle">saveRhoImages</h1>
+						<h3 class="methodSyntax">saveRhoImages(p,pathToDirectory,customColor)</h3>
+						<p class="methodShortDesc">Creates and saves matlab plots of the density matrix.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1844,28 +1720,27 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>Param1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>p : ndarray with shape = (n,2^numQubits,2^numQubits) </h4>
+											<p>The density matrix you want to create plots of.</p>
 										</li>
-									</ul>
-								</td>
-							</tr>
-						</table>
-						<table class="paramReturn">
-							<tr>
-								<td class="header">
-									<h6>Returns:</h6>
-								</td>
-								<td class="list">
-									<ul>
 										<li>
-											<h4>Return1 : array_like</h4>
-											<p>Short Desc</p>
+											<h4>pathToDirectory : string</h4>
+											<p>Path to where you ant your images to be saved.</p>
+										</li>
+										<li>
+											<h4>customColor : boolean</h4>
+											<p>Specify if you want our custom colorMap. Default is true.</p>
 										</li>
 									</ul>
 								</td>
 							</tr>
 						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('makeRhoImages_li_link').click()">makeRhoImages</li>
+							</ul>
+						</div>
 					</div>
 
 					<!--Conf File-->
