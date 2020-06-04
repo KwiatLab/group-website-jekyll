@@ -215,11 +215,11 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>raw_counts : ndarray</h4>
+											<h4>raw_counts : 2d numpy array</h4>
 											<p>The input data for the current tomography.</p>
 										</li>
 										<li>
-											<h4>intensities : ndarray with length = number of measurements</h4>
+											<h4>intensities : 1d numpy array with length = number of measurements</h4>
 											<p>Relative pump power (arb. units) during measurement; used for drift correction.</p>
 										</li>
 									</ul>
@@ -234,19 +234,19 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>data : 1d numpy array with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The counts of the tomography.</p>
 										</li>
 										<li>
-											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements) </h4>
+											<h4>m : 3d numpy array with size = (2^numQubits,2^numQubits,number of measurements) </h4>
 											<p>The measurements of the tomography in density matrix form.</p>
 										</li>
 										<li>
-											<h4>m2 : ndarray with size = (number of measurements,2*numQubits) </h4>
+											<h4>m2 : 2d numpy array with size = (number of measurements,2*numQubits) </h4>
 											<p>The measurements of the tomography in pure state form.</p>
 										</li>
 										<li>
-											<h4>acc : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>acc : 1d numpy array with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The singles values of the tomography. Used for accidental correction.</p>
 										</li>
 									</ul>
@@ -268,7 +268,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rho : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<h4>rho : 2d numpy array with size = (2^numQubits,2^numQubits) </h4>
 											<p>The density matrix you would like to know the properties of.</p>
 										</li>
 										<li>
@@ -288,7 +288,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>vals : ndarray with size = (length of self.err_functions,2)</h4>
+											<h4>vals : 2d numpy array with size = (length of self.err_functions,2)</h4>
 											<p>The first col is the name of the property.<br>The second col is the value of the property.<br>The third col is the error bound on the property.</p>
 										</li>
 									</ul>
@@ -584,11 +584,11 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>data : 1d numpy array with length = number of measurements or 1d numpy array with size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The counts of the tomography.</p>
 										</li>
 										<li>
-											<h4>measurements : ndarray with size = (number of measurements,2*numQubits)</h4>
+											<h4>measurements : 2d numpy array with size = (number of measurements,2*numQubits)</h4>
 											<p>The measurements of the tomography in density matrix form.</p>
 										</li>
 									</ul>
@@ -603,7 +603,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits) </h4>
 											<p>The starting predicted state.</p>
 										</li>
 										<li>
@@ -629,19 +629,19 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rho0 : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<h4>rho0 : 2d numpy array with size = (2^numQubits,2^numQubits) </h4>
 											<p>The starting predicted state found with linear tomography.</p>
 										</li>
 										<li>
-											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>data : 1d numpy array with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The counts of the tomography.</p>
 										</li>
 										<li>
-											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements) </h4>
+											<h4>m : 3d numpy array with size = (2^numQubits,2^numQubits,number of measurements) </h4>
 											<p>The measurements of the tomography in density matrix form.</p>
 										</li>
 										<li>
-											<h4>acc : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>acc : 1d numpy array with length = number of measurements or 2d numpy array with size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The singles values of the tomography. Used for accidental correction.</p>
 										</li>
 									</ul>
@@ -656,7 +656,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits) </h4>
 											<p>The predicted density matrix.</p>
 										</li>
 										<li>
@@ -686,23 +686,23 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>t : ndarray</h4>
+											<h4>t : 1d numpy array</h4>
 											<p>T values of the current predicted state.</p>
 										</li>
 										<li>
-											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>data : 1d numpy array with length = number of measurements or 2d numpy array with size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The counts of the tomography.</p>
 										</li>
 										<li>
-											<h4>accidentals : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>accidentals : 1d numpy array with length = number of measurements or 2d numpy array with size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The singles values of the tomography. Used for accidental correction.</p>
 										</li>
 										<li>
-											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements)</h4>
+											<h4>m : 2d numpy array with size = (2^numQubits,2^numQubits,number of measurements)</h4>
 											<p>The measurements of the tomography in density matrix form.</p>
 										</li>
 										<li>
-											<h4>prediction : ndarray</h4>
+											<h4>prediction : 1d numpy array</h4>
 											<p>Predicted counts from the predicted state.</p>
 										</li>
 									</ul>
@@ -745,23 +745,23 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>t : ndarray</h4>
+											<h4>t : 2d numpy array</h4>
 											<p>T values of the current predicted state.</p>
 										</li>
 										<li>
-											<h4>data : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>data : 1d numpy array with length = number of measurements or 2d numpy array with size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
 											<p>The counts of the tomography.</p>
 										</li>
 										<li>
-											<h4>accidentals : ndarray with length = number of measurements or size =(number of measurements,2^numQubits) for 2 det/qubit</h4>
+											<h4>accidentals : 1d numpy array with length = number of measurements or 2d numpy array with size =(number of measurements,2^numQubits)for 2 det/qubit</h4>
 											<p>The singles values of the tomography. Used for accidental correction.</p>
 										</li>
 										<li>
-											<h4>m : ndarray with size = (2^numQubits,2^numQubits,number of measurements)</h4>
+											<h4>m : 3d numpy array with size = (2^numQubits,2^numQubits,number of measurements)</h4>
 											<p>The measurements of the tomography in density matrix form.</p>
 										</li>
 										<li>
-											<h4>prediction : ndarray</h4>
+											<h4>prediction : 1d numpy array</h4>
 											<p>Predicted counts from the predicted state.</p>
 										</li>
 										<li>
@@ -821,7 +821,7 @@ title: Tomography
 											</p>
 										</li>
 										<li>
-											<h4>val: array_like, int, or string</h4>
+											<h4>val: ndarray, int, or string</h4>
 											<p>The new value you want to the setting to be.</p>
 										</li>
 									</ul>
@@ -849,11 +849,11 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>raw_counts : ndarray</h4>
+											<h4>raw_counts : 2d numpy array</h4>
 											<p>The input data for the current tomography. This is what tomo_input will be set to.</p>
 										</li>
 										<li>
-											<h4>intensities : ndarray with length = number of measurements</h4>
+											<h4>intensities : 1d numpy array with length = number of measurements</h4>
 											<p>Relative pump power (arb. units) during measurement; used for drift correction.</p>
 										</li>
 									</ul>
@@ -868,7 +868,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits) </h4>
 											<p>The predicted density matrix.</p>
 										</li>
 										<li>
@@ -912,7 +912,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rho : ndarray with size = (2^numQubits,2^numQubits) </h4>
+											<h4>rho : 2d numpy array with size = (2^numQubits,2^numQubits) </h4>
 											<p>The density matrix you would like to know the optimal bell measurment settings of.</p>
 										</li>
 										<li>
@@ -931,7 +931,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>vals : ndarray with size = (length of self.err_functions,2 or 3)</h4>
+											<h4>vals : 2d numpy array with size = (length of self.err_functions,2 or 3)</h4>
 											<p>The first col is the associated side<br>The second col is the detector settings on the associated side.<br>The third col is the error bound on the detector settings.</p>
 										</li>
 									</ul>
@@ -969,15 +969,15 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhop : ndarray with shape = (n,2^numQubits,2^numQubits) </h4>
+											<h4>rhop : 3d numpy array with shape = (n,2^numQubits,2^numQubits) </h4>
 											<p>The approximate density matrices.</p>
 										</li>
 										<li>
-											<h4>intenp : ndarray with length = n</h4>
+											<h4>intenp : 1d numpy array with length = n</h4>
 											<p>The intensity of each approximate density matrices.</p>
 										</li>
 										<li>
-											<h4>fvalp : ndarray with length = n</h4>
+											<h4>fvalp : 1d numpy array with length = n</h4>
 											<p>The fval of the regression associated with each approximate density matrices.</p>
 										</li>
 									</ul>
@@ -998,7 +998,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
@@ -1051,7 +1051,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Array to be converted.</p>
 										</li>
 									</ul>
@@ -1066,7 +1066,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>t : ndarray</h4>
+											<h4>t : 1d numpy array</h4>
 											<p>List of t values defining the input matrix.</p>
 										</li>
 									</ul>
@@ -1087,7 +1087,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Array to be converted.</p>
 										</li>
 									</ul>
@@ -1102,7 +1102,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>tm : ndarray</h4>
+											<h4>tm : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Lower t matrix defining the input matrix.</p>
 										</li>
 									</ul>
@@ -1123,7 +1123,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
@@ -1176,7 +1176,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>state1, state2 : ndarray</h4>
+											<h4>state1, state2 : 2d numpy array with equal sizes = (2^numQubits,2^numQubits)</h4>
 											<p>Input arrays to calculate the fidelity between. Can be pure states or density matrices.</p>
 										</li>
 									</ul>
@@ -1212,7 +1212,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
@@ -1303,7 +1303,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with size = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
@@ -1344,7 +1344,7 @@ title: Tomography
 						</div>
 					</div>
 					<!--partial_transpose-->
-					<div style="display:none;" class="MethodInfo" id="partial_transpose">
+					<!--<div style="display:none;" class="MethodInfo" id="partial_transpose">
 						<h1 class="MethodTitle">partial_transpose</h1>
 						<h3 class="methodSyntax">partial_transpose(int)</h3>
 						<p class="methodShortDesc">Returns partial_transpose</p>
@@ -1379,7 +1379,7 @@ title: Tomography
 								</td>
 							</tr>
 						</table>
-					</div>
+					</div> -->
 					<!--performOperation-->
 					<div style="display:none;" class="MethodInfo" id="performOperation">
 						<h1 class="MethodTitle">performOperation</h1>
@@ -1397,7 +1397,7 @@ title: Tomography
 											<p>The input state to do the operation on. Can be a pure state or a density matrix.</p>
 										</li>
 										<li>
-											<h4>g : ndarray with shape = (num operations,2^numQubits,2^numQubits) </h4>
+											<h4>g : 3d numpy array with shape = (num operations,2^numQubits,2^numQubits) </h4>
 											<p>The operations you would like to be done. Can be one operation or an array of operations.</p>
 										</li>
 									</ul>
@@ -1433,7 +1433,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with shape = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
@@ -1486,7 +1486,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>t : ndarray</h4>
+											<h4>t : 1d numpy array</h4>
 											<p>List of t values converted.</p>
 										</li>
 									</ul>
@@ -1501,7 +1501,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>tm : ndarray</h4>
+											<h4>tm : 2d numpy array with shape = (2^numQubits,2^numQubits)</h4>
 											<p>Lower t matrix.</p>
 										</li>
 									</ul>
@@ -1522,7 +1522,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>t : ndarray</h4>
+											<h4>t : 1d numpy array</h4>
 											<p>List of t values converted.</p>
 										</li>
 									</ul>
@@ -1537,7 +1537,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with shape = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix.</p>
 										</li>
 									</ul>
@@ -1558,7 +1558,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog : ndarray</h4>
+											<h4>rhog : 2d numpy array with shape = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the desired state.</p>
 										</li>
 									</ul>
@@ -1611,7 +1611,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>psiMat : ndarray</h4>
+											<h4>psiMat : 1d numpy array with length = (2^numQubits)</h4>
 											<p>Pure state to be converted.</p>
 										</li>
 									</ul>
@@ -1626,7 +1626,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>rhog: ndarray</h4>
+											<h4>rhog: 2d numpy array with shape = (2^numQubits,2^numQubits)</h4>
 											<p>Density Matrix of the input state.</p>
 										</li>
 									</ul>
@@ -1685,7 +1685,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>p : ndarray with shape = (n,2^numQubits,2^numQubits) </h4>
+											<h4>p : 2d numpy array with shape = (n,2^numQubits,2^numQubits) </h4>
 											<p>The density matrix you want to create plots of.</p>
 										</li>
 										<li>
@@ -1720,7 +1720,7 @@ title: Tomography
 								<td class="list">
 									<ul>
 										<li>
-											<h4>p : ndarray with shape = (n,2^numQubits,2^numQubits) </h4>
+											<h4>p : 3d numpy array with shape = (n,2^numQubits,2^numQubits) </h4>
 											<p>The density matrix you want to create plots of.</p>
 										</li>
 										<li>
@@ -1835,7 +1835,7 @@ title: Tomography
 							<li>
 								<p>tomo_input</p>
 								<ul>
-									<li>Values : numpy array, dimension = 2</li>
+									<li>Values : 2d numpy array</li>
 									<li>Desc : Relative pump power (arb. units) during measurement; used for drift correction.</li>
 									<h4 id="for-n-detectors-">For n detectors:</h4>
 									<li>tomo_input[ :, 0 ]: times</li>
@@ -1850,7 +1850,7 @@ title: Tomography
 								</ul>
 							</li>
 							<li>intensity<ul>
-									<li>Values : numpy array</li>
+									<li>Values : 1d numpy array</li>
 									<li>Desc : Relative pump power (arb. units) during measurement; used for drift correction. </li>
 								</ul>
 							</li>
