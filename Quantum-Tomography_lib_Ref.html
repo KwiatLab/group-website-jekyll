@@ -989,7 +989,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="concurrence">
 						<h1 class="MethodTitle">concurrence</h1>
 						<h3 class="methodSyntax">concurrence(rhog)</h3>
-						<p class="methodShortDesc">Calculates the concurrence of the input state.</p>
+						<p class="methodShortDesc">Calculates the concurrence of the input state. Read more about concurrence: <a target="_blank" href="https://en.wikipedia.org/wiki/Concurrence_(quantum_computing)"> concurrence on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1114,7 +1114,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="entropy">
 						<h1 class="MethodTitle">entropy</h1>
 						<h3 class="methodSyntax">entropy(rhog)</h3>
-						<p class="methodShortDesc">Calculates the entropy of the input state.</p>
+						<p class="methodShortDesc">Calculates the Von Neumann entropy of the input state. Read more about entropy: <a target="_blank" href="https://en.wikipedia.org/wiki/Von_Neumann_entropy"> entropy on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1167,7 +1167,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="fidelity">
 						<h1 class="MethodTitle">fidelity</h1>
 						<h3 class="methodSyntax">fidelity(state1, state2)</h3>
-						<p class="methodShortDesc">Calculates the fidelity between the two input states.</p>
+						<p class="methodShortDesc">Calculates the fidelity between the two input states. Read more about fidelity: <a target="_blank" href="https://en.wikipedia.org/wiki/Fidelity_of_quantum_states"> fidelity on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1203,7 +1203,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="linear_entropy">
 						<h1 class="MethodTitle">linear_entropy</h1>
 						<h3 class="methodSyntax">linear_entropy(rhog)</h3>
-						<p class="methodShortDesc">Calculates the linear entropy of the input state.</p>
+						<p class="methodShortDesc">Calculates the linear entropy of the input state. Read more about linear entropy: <a target="_blank" href="https://en.wikipedia.org/wiki/Linear_entropy"> linear entropy on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1228,7 +1228,7 @@ title: Tomography
 									<ul>
 										<li>
 											<h4>val : float</h4>
-											<p>The calculated linear entropy.</p>
+											<p>The calculated linear entropy. ranging from 0 to 1/(2^numQubits).<br>A value of zero corresponds to a completly pure state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1294,7 +1294,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="negativity">
 						<h1 class="MethodTitle">negativity</h1>
 						<h3 class="methodSyntax">negativity(rhog)</h3>
-						<p class="methodShortDesc">Calculates the negativity of the input state.</p>
+						<p class="methodShortDesc">Calculates the negativity of the input state. Read more about negativity: <a target="_blank" href="https://en.wikipedia.org/wiki/Negativity_(quantum_mechanics)"> negativity on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1424,7 +1424,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="purity">
 						<h1 class="MethodTitle">purity</h1>
 						<h3 class="methodSyntax">purity(rhog)</h3>
-						<p class="methodShortDesc">Calculates the purity of the input state.</p>
+						<p class="methodShortDesc">Calculates the purity of the input state. Read more about purity: <a target="_blank" href="https://en.wikipedia.org/wiki/Purity_(quantum_mechanics)"> purity on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1449,7 +1449,7 @@ title: Tomography
 									<ul>
 										<li>
 											<h4>val : float</h4>
-											<p>The calculated purity.</p>
+											<p>The calculated purity ranging from 1/(2^numQubits) to 1.<br>A value of one corresponds to a completly pure state.</p>
 										</li>
 									</ul>
 								</td>
@@ -1549,7 +1549,7 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="tangle">
 						<h1 class="MethodTitle">tangle</h1>
 						<h3 class="methodSyntax">tangle(rhog)</h3>
-						<p class="methodShortDesc">Calculates the tangle of the input state.</p>
+						<p class="methodShortDesc">Calculates the tangle of the input state. Tangle is calculated by squaring the concurrence.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
