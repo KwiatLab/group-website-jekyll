@@ -991,7 +991,8 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="concurrence">
 						<h1 class="MethodTitle">concurrence</h1>
 						<h3 class="methodSyntax">concurrence(rhog)</h3>
-						<p class="methodShortDesc">Calculates the concurrence of the input state. Read more about concurrence: <a target="_blank" href="https://en.wikipedia.org/wiki/Concurrence_(quantum_computing)"> concurrence on wikipedia</a></p>
+						<p class="methodShortDesc">Calculates the concurrence of the input state.</p>
+						<p class="methodLongDesc">An entanglement monotone defined for a mixed state of two qubits. Where 1 corresponds to a completly entangled state. <br>Defined as max (0,&lambda;<sub>1</sub>-&lambda;<sub>2</sub>-&lambda;<sub>3</sub>-&lambda;<sub>4</sub>) where &lambda;<sub>i</sub> are the eigenvalues, in decreasing order.<br>Read more about concurrence: <a target="_blank" href="https://en.wikipedia.org/wiki/Concurrence_(quantum_computing)"> concurrence on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1116,7 +1117,8 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="entropy">
 						<h1 class="MethodTitle">entropy</h1>
 						<h3 class="methodSyntax">entropy(rhog)</h3>
-						<p class="methodShortDesc">Calculates the Von Neumann entropy of the input state. Read more about entropy: <a target="_blank" href="https://en.wikipedia.org/wiki/Von_Neumann_entropy"> entropy on wikipedia</a></p>
+						<p class="methodShortDesc">Calculates the Von Neumann entropy of the input state.</p>
+						<p class="methodLongDesc">Defined as -&Sigma; &lambda;<sub>i</sub>*ln(&lambda;<sub>i</sub>) Where &lambda;<sub>i</sub> are the eigenvalues.<br>Read more about entropy: <a target="_blank" href="https://en.wikipedia.org/wiki/Von_Neumann_entropy"> entropy on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1205,7 +1207,9 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="linear_entropy">
 						<h1 class="MethodTitle">linear_entropy</h1>
 						<h3 class="methodSyntax">linear_entropy(rhog)</h3>
-						<p class="methodShortDesc">Calculates the linear entropy of the input state. Read more about linear entropy: <a target="_blank" href="https://en.wikipedia.org/wiki/Linear_entropy"> linear entropy on wikipedia</a></p>
+						<p class="methodShortDesc">Calculates the linear entropy of the input state.</p>
+						<p class="methodLongDesc">Mixture measurement ranging from 0 to 1/(2^numQubits). Where 0 corresponds to a completly pure state and 1/(2^numQubits) corresponds to a completely mixed state. <br>Defined as 1-tr(rho^2). Read more about linear entropy: <a target="_blank" href="https://en.wikipedia.org/wiki/Linear_entropy"> linear entropy on wikipedia</a></p>
+
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1296,7 +1300,8 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="negativity">
 						<h1 class="MethodTitle">negativity</h1>
 						<h3 class="methodSyntax">negativity(rhog)</h3>
-						<p class="methodShortDesc">Calculates the negativity of the input state. Read more about negativity: <a target="_blank" href="https://en.wikipedia.org/wiki/Negativity_(quantum_mechanics)"> negativity on wikipedia</a></p>
+						<p class="methodShortDesc">Calculates the negativity of the input state.</p>
+						<p class="methodLongDesc">Defined as &Sigma; |&lambda;<sub>i</sub>| Where &lambda;<sub>i</sub> are the negative eigenvalues of the partial transpose of the matrix. <br>Read more about negativity: <a target="_blank" href="https://en.wikipedia.org/wiki/Negativity_(quantum_mechanics)"> negativity on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1426,7 +1431,8 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="purity">
 						<h1 class="MethodTitle">purity</h1>
 						<h3 class="methodSyntax">purity(rhog)</h3>
-						<p class="methodShortDesc">Calculates the purity of the input state. Read more about purity: <a target="_blank" href="https://en.wikipedia.org/wiki/Purity_(quantum_mechanics)"> purity on wikipedia</a></p>
+						<p class="methodShortDesc">Calculates the purity of the input state.</p>
+						<p class="methodShortDesc">Mixture measurement ranging from 0 to 1/(2^numQubits). Where 1/(2^numQubits) corresponds to a completely mixed state and 1 corresponds to a completly pure state. <br>Defined as tr(rho^2)<br>Read more about purity: <a target="_blank" href="https://en.wikipedia.org/wiki/Purity_(quantum_mechanics)"> purity on wikipedia</a></p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
@@ -1551,7 +1557,8 @@ title: Tomography
 					<div style="display:none;" class="MethodInfo" id="tangle">
 						<h1 class="MethodTitle">tangle</h1>
 						<h3 class="methodSyntax">tangle(rhog)</h3>
-						<p class="methodShortDesc">Calculates the tangle of the input state. Tangle is calculated by squaring the concurrence.</p>
+						<p class="methodShortDesc">Calculates the tangle of the input state. </p>
+						<p class="methodLongDesc">Entanglement Measure ranging from (0,1) where 1 corresponds to a completly entangled state. <br> Defined as the square of concurrence.</p>
 						<table class="paramReturn">
 							<tr>
 								<td class="header">
