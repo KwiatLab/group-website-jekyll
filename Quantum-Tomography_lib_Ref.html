@@ -119,6 +119,8 @@ title: Tomography
 					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'">printLastOutput</li>
 					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="makeRhoImages_li_link">makeRhoImages</li>
 					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="saveRhoImages_li_link">saveRhoImages</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="matrixToHTML_li_link">matrixToHTML</li>
+					<li onclick="displayMethod(this.innerHTML); this.style.fontWeight = 'bold'" id="propertiesToHTML_li_link">propertiesToHTML</li>
 				</ul>
 				<h4>Other Files</h4>
 				<ul>
@@ -1742,7 +1744,94 @@ title: Tomography
 							</ul>
 						</div>
 					</div>
-
+					<!--matrixToHTML-->
+					<div style="display:none;" class="MethodInfo" id="matrixToHTML">
+						<h1 class="MethodTitle">matrixToHTML</h1>
+						<h3 class="methodSyntax">matrixToHTML(M)</h3>
+						<p class="methodShortDesc">Creates an HTML table based on the given matrix.</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>M : 2d numpy array with shape = (2^numQubits,2^numQubits) </h4>
+											<p>Matrix you would like to display on your html page.</p>
+										</li>
+										<li>
+											<h4>printEigenVals : boolean</h4>
+											<p>Specify if you want eigen values to be calculated and displayed at the bottom of the table.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>res : string</h4>
+											<p>HTML code of the created table.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('propertiesToHTML_li_link').click()">propertiesToHTML</li>
+							</ul>
+						</div>
+					</div>
+					<!--propertiesToHTML-->
+					<div style="display:none;" class="MethodInfo" id="propertiesToHTML">
+						<h1 class="MethodTitle">propertiesToHTML</h1>
+						<h3 class="methodSyntax">propertiesToHTML(vals)</h3>
+						<p class="methodShortDesc">Creates an HTML table based on the given property values.</p>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Paramaters:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>vals : 2d numpy array with size = (length of self.err_functions,2)</h4>
+											<p>The first col is the name of the property.<br>The second col is the value of the property.<br>The third col is the error bound on the property.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<table class="paramReturn">
+							<tr>
+								<td class="header">
+									<h6>Returns:</h6>
+								</td>
+								<td class="list">
+									<ul>
+										<li>
+											<h4>res : string</h4>
+											<p>HTML code of the created table.</p>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+						<div id="TableOfContents" style="padding-top:15px;">
+							<h4>See Also:</h4>
+							<ul>
+								<li onclick="document.getElementById('matrixToHTML_li_link').click()">matrixToHTML</li>
+							</ul>
+						</div>
+					</div>
 					<!--Conf File-->
 					<div style="display:none;" class="MethodInfo" id="Conf File">
 						<h1 class="MethodTitle">Conf File</h1>
