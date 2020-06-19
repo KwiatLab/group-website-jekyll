@@ -339,6 +339,13 @@
 			<hr class="dashed">
 <h2>Tomography theory</h2>
 <hr class="dashed">
+<h3>Videos</h3>
+<h4>
+  <a href="https://youtu.be/-T_GiHE4VGg"><b>State Tomography</b></a> and <a href="https://youtu.be/-T_GiHE4VGg"><b>Process Tomography</b></a> tutorial presented by Spencer Johnson.
+</h4>
+  <p>
+    These youtube videos will focuses on basic theory of quantum tomography and the application of the tomography of photon polarization qubits.
+  </p>
 <h3>Books and book chapters</h3>
 <p>
 <h4>Start here: <a href="/QI/Photonics/tomography-files/amo_tomo_chapter.pdf"><b>Photonic State Tomography</b></a></h4>
@@ -405,95 +412,147 @@ For more Kwiat group publications, see our <a href="/QI/Photonics/publications/"
 	</div>
 	<div class="row">
 		<div class="col-md-12">
+
 			<hr class="dashed">
-			<h2>Real-time tomography interface</h2>
+			<h2>Python Code</h2>
+			<hr class="dashed">
+			<h5>You can install the package via the pip command shown below. The code is stored on github where you can expand upon it and make it your own.</h5>
+
+			<div class="row" style="text-align: center;">
+				<table style = "width:100%;text-align:center;table-layout: fixed;margin-top: 18px;">
+					<tr>
+						<td>
+							<img src="/QI/Photonics/img/pypi_fullLogo.png" style ="height: 70px;display: inline;width: auto;">
+						</td>
+						<td>
+							<img src="/QI/Photonics/img/GitHub-Mark-64px.png" style ="height: 55px;display: inline;width: auto;">
+							<img src="/QI/Photonics/img/GitHub_Logo.png" style ="height: 50px;display: inline;width: auto;">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://pypi.org/project/Quantum-Tomography/" style = "display: block;margin-top: 10px;">
+								pypi.org/project/Quantum-Tomography
+							</a>
+						</td>
+						<td>
+							<a href="https://github.com/KwiatQIM/Quantum-Tomography" style = "display: block;margin-top: 10px;">
+								github.com/KwiatQIM/Quantum-Tomography
+							</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="row" style="text-align: center;margin-top:20px;">
+				<h3>Make sure to checkout our <a href="/QI/Photonics/Quantum-Tomography_lib_Ref/" target="_blank">Reference Guide</a>!</h3>
+			</div>
+
+			<hr class="dashed">
+			<h2>MATLAB Code</h2>
+			<hr class="dashed">
+			<h5>You can download and run our code yourself with the links below.</h5>
+			<div class="row">
+				<table style = "width:100%;text-align:center;table-layout: fixed;">
+					<tr>
+						<td>
+							<h2>TAR</h2>
+						</td>
+						<td>
+							<h2>ZIP</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="/QI/Photonics/tomography-files/state_tomography.tar.gz">
+								state_tomography.tar.gz
+							</a>
+						</td>
+						<td>
+							<a href="/QI/Photonics/tomography-files/state_tomography.zip">
+								state_tomography.zip
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 10px;">
+							All of the MATLAB code, in tarred and gzipped. In linux/Unix, the command <code>tar -xzf state_tomography.tar.gz</code> should unzip the files into their own directory.
+						</td>
+						<td style="padding: 10px">
+							All of the MATLAB code in zip format. Windows should be able to automatically unzip these files.
+						</td>
+					</tr>
+					<tr>
+						<td>
+							File Size: 20 KB.
+						</td>
+						<td>
+							File Size: 36 KB.
+						</td>
+					</tr>
+				</table>
+			</div>
+			<script type="text/javascript">
+				function showMoreMatLabInfo()
+				{
+					info = document.getElementById("moreMatLabInfoContent");
+					link = document.getElementById("moreMatLabInfoLink");
+					if(info.style.display == "none")
+					{
+						info.style.display = "";
+						link.innerHTML = "Less Info";
+					}
+					else
+					{
+						info.style.display = "none";
+						link.innerHTML = "More Info";
+					}
+				}
+			</script>
+
+			<div class="row" style="text-align: center;margin-top:20px;">
+				<h3>Click me for <a onclick="showMoreMatLabInfo()" id="moreMatLabInfoLink">More Info</a>!</h3>
+				<div style="text-align: initial;display:none;" id="moreMatLabInfoContent">
+					<h3>Introduction to the MATLAB code</h3>
+
+					<p>
+						The MATLAB code is contained within the following directories:
+					</p>
+					<ul>
+						<li><code>./state_tomography</code></li>
+						<li><code>./state_tomography/private</code></li>
+						<li><code>./quantum_logic</code></li>
+						<li><code>./quantum_logic/measures</code></li>
+						<li><code>./basic_math</code></li>
+						<li><code>./util</code></li>
+					</ul>
+					The function <code>state_tomography.m</code> is the top level tomography program, and the place you should start when looking through this code. Its function call looks like this:
+					<blockquote>
+						<code>[rho, intensity, fval]=state_tomography(raw_counts, intensities, conf)</code>
+					</blockquote>
+				</div>
+			</div>
+			<hr class="dashed">
+			<h2>Online Interface</h2>
 			<hr class="dashed">
 
-			<p>We provide a web interface that implements the tomography techniques discussed above. For those who do not want to want to use the interface we also provide a python library and matlab code below.</p>
-
+			<p>We provide a web interface that implements the tomography techniques discussed above.</p>
 			<p>The web interface currently uses the Python code. We are still verifying the interface functionality.</p>
-
-			<h3>READ ME: <a href="/QI/Photonics/tomography-files/tutorial_for_tomography.pdf">Tutorial for the tomography interface</a></h3>
-
-			<button onclick="myFunction()">Open tomography interface</button>
-
-			<hr class="dashed">
-			<h2>Tomography Code</h2>
-			<hr class="dashed">
-
-			<p>We have written a group of MATLAB programs and a Python library which perform the analysis necessary to reconstruct a quantum state from experimental data. You can
-				download and run our code yourself with the links below.</p>
-
-			<h3>Git hub for Python code</h3>
-			<blockquote class="table">
-				<table>
-					<tbody>
-						<tr>
-							<td class="top">
-								<a href="https://github.com/KwiatQIM/Quantum-Tomography">
-									Quantum-Tomography
-								</a>
-							</td>
-						</tr>
-					</tbody>
+				<table style = "width:100%;text-align:center;table-layout: fixed;">
+					<tr>
+						<td>
+							<button onclick="myFunction()" style="border: none;border-radius: 8px;font-size: 36px;padding: 15px 75px;margin-top: 30px;margin-bottom: 20px;">Open Tomography Interface</button>
+						</td>
+					</tr>
 				</table>
-			</blockquote>
+			<div class="row" style="text-align: center;">
+				<h3>Check out our <a href="/QI/Photonics/tomography-files/tutorial_for_tomography2019.pdf" target="_blank">Tutorial for the tomography interface</a>!</h3>
+			</div>
 
-			<h3>MATLAB code for download</h3>
-			<blockquote>
-				<table>
-					<tbody>
-						<tr>
-							<td>
-								<a href="/QI/Photonics/tomography-files/state_tomography.tar.gz">
-									state_tomography.tar.gz
-								</a>
-							</td>
-							<td width="40px"></td>
-							<td>
-								All of the MATLAB code, in tarred and gzipped. In linux/Unix, the command <code>tar -xzf state_tomography.tar.gz</code> should unzip the files into their own directory. File Size: 20 KB.
-							</td>
-						</tr>
-						<tr height="10px"></tr>
-						<tr>
-							<td>
-								<a href="/QI/Photonics/tomography-files/state_tomography.zip">
-									state_tomography.zip
-								</a>
-							</td>
-							<td width="40px"></td>
-							<td>
-								All of the MATLAB code in zip format. Windows should be able to automatically unzip these files. File Size: 36 KB.
-							</td>
-						</tr>
-
-					</tbody>
-				</table>
-			</blockquote>
-
-			<h3>Introduction to the MATLAB code</h3>
-
-			<p>
-				The MATLAB code is contained within the following directories:
-			</p>
-			<ul>
-				<li><code>./state_tomography</code></li>
-				<li><code>./state_tomography/private</code></li>
-				<li><code>./quantum_logic</code></li>
-				<li><code>./quantum_logic/measures</code></li>
-				<li><code>./basic_math</code></li>
-				<li><code>./util</code></li>
-			</ul>
-			The function <code>state_tomography.m</code> is the top level tomography program, and the place you should start when looking through this code. Its function call looks like this:
-			<blockquote>
-				<code>[rho, intensity, fval]=state_tomography(raw_counts, intensities, conf)</code>
-			</blockquote>
-
-			<h3>Contact</h3>
+			<h3 style="margin-top:35px;">Contact</h3>
 			<p>
 				Most functions included in the code contain commented documentation,
 				but in case you have any further questions about the MATLAB or Python code, you should direct them
-				to <a href="mailto://turroscott@gmail.com">Scott Turro</a>.
+				to <a href="mailto:turroscott@gmail.com">Scott Turro</a>.
 			</p>
 
 			<script>
