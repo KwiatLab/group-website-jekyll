@@ -1,7 +1,0 @@
-conf.NQubits=2;
-conf.NDetectors=1;
-conf.Crosstalk=[[1,0,0,0];[0,1,0,0];[0,0,1,0];[0,0,0,1]];
-conf.UseDerivative=0;
-conf.DoDriftCorrection='no';
-conf.Window=10;
-conf.Efficiency=[1,1,1,1];
