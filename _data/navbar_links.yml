@@ -56,9 +56,9 @@
       header: "Learn"
     - name: "Reference Guide"
       url: "Quantum-Tomography_lib_Ref/"
-    # - name: "Developer Guide"
-    #   url: "DeveloperGuide/"
-    #   header: "Contribute"
+    - name: "Developer Guide"
+      url: "DeveloperGuide/"
+      header: "Maintain"
 
 - name: "Publications"
   url: "publications/"
