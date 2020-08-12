@@ -50,15 +50,6 @@
 
 - name: "Tomography"
   url: "tomography/"
-  child_links:
-    - name: "Overview"
-      url: "tomography/"
-      header: "Learn"
-    - name: "Reference Guide"
-      url: "Quantum-Tomography_lib_Ref/"
-    # - name: "Developer Guide"
-    #   url: "DeveloperGuide/"
-    #   header: "Contribute"
 
 - name: "Publications"
   url: "publications/"
