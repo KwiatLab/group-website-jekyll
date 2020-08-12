@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170700480-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-170700480-2');
+		</script>
+	<!-- ATTENTION: Do not edit these pages on the server! Your changes will be lost when the site is recompiled from source code. Contact Rebecca Holmes (rholmes4@illinois.edu) for instructions. -->
+
+	<!-- This site was built using Jekyll. The source code and documentation are freely available on GitHub at https://github.com/KwiatQIM/group-website-jekyll/ -->
+
+		<meta name="description" content="The Kwiat quantum information research group at the University of Illinois at Urbana-Champaign. Our research interests include fundamental studies of quantum mechanics, optical quantum information resources and applications, and the interaction of quantum states of light with biological systems." />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico">
+
+		<title>Kwiat Quantum Information Group: {{ page.title }}</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{{ site.baseurl }}/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+		<!-- Custom styles for this template -->
+		<link href="{{ site.baseurl }}/css/group.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+		<!--Google Analytics-->
+		{% include tracking.html %}
+	</head>
+<body>
+	{% include navbar.html %}
+
+	{{ content }}
+
+	{% include footer.html %}
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/bootstrap.js"></script>
+	</body>
+</html>
