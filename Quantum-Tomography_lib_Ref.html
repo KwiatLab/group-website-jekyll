@@ -212,7 +212,7 @@ title: Tomography
 									<ul>
 										<li>
 											<h4>raw_counts : 2d numpy array</h4>
-											<p>The input data for the current tomography.</p>
+											<p>The input data for the current tomography. This is what tomo_input will be set to. Example can be seen at top of page.<br>See getTomoInputTemplate() to get a template for this input.</p>
 										</li>
 										<li>
 											<h4>intensities : 1d numpy array with length = number of measurements</h4>
@@ -834,7 +834,7 @@ title: Tomography
 					<!--Tomography.state_tomography-->
 					<div style="display:none;" class="MethodInfo" id="state_tomography">
 						<h1 class="MethodTitle">Tomography.state_tomography</h1>
-						<h3 class="methodSyntax">Tomography.state_tomography(raw_counts, intensities)</h3>
+						<h3 class="methodSyntax">Tomography.state_tomography(raw_counts, intensities = -1)</h3>
 						<p class="methodShortDesc">Desc: Main function that runs tomography.</p>
 						<p class="methodLongDesc">This function first parses the data, then finds an approximate starting state. It then uses maximum likelihood to find the final predicted state.</p>
 						<table class="paramReturn">
@@ -846,11 +846,11 @@ title: Tomography
 									<ul>
 										<li>
 											<h4>raw_counts : 2d numpy array</h4>
-											<p>The input data for the current tomography. This is what tomo_input will be set to.</p>
+											<p>The input data for the current tomography. This is what tomo_input will be set to. Example can be seen at top of page.<br>See getTomoInputTemplate() to get a template for this input.</p>
 										</li>
 										<li>
 											<h4>intensities : 1d numpy array with length = number of measurements</h4>
-											<p>Relative pump power (arb. units) during measurement; used for drift correction.</p>
+											<p>The predicted overall intensity used to normalize the state. Default will be an array of ones</p>
 										</li>
 									</ul>
 								</td>
