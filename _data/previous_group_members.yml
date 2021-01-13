@@ -15,6 +15,18 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Joseph Chapman"
+      year: "2020"
+      thesis-type: "phd"
+      thesis-file: ""
+      thesis-title: "Towards Optical Quantum Communication in Space"
+      currently: "Postdoctoral Research Associate in Quantum Information Science at Oak Ridge National Laboratory" 
+    - name: "Michelle Victora"
+      year: "2020"
+      thesis-type: "phd"
+      thesis-file: "victora-thesis.pdf"
+      thesis-title: "New Opportunities for Photon Storage and Detection: An Exploration of a High-Efficiency Optical Quantum Memory and the Quantum Capabilities of the Human Eye"
+      currently: "Research Software Engineer at Aliro Quantum Technologies" 
     - name: "Courtney Krafczyk"
       year: "2019"
       thesis-type: "phd"
@@ -148,6 +160,10 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Annika Dugad"
+    - name: "Matthias Zajdela"
+    - name: "Maxim Lunin"
+    - name: "Ryan Yoseph"
     - name: "Brooke Polak"
     - name: "Henry Ando"
     - name: "Bruce Crabtree"

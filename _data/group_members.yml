@@ -8,29 +8,23 @@
 
 - name: "Postdocs"
   people:
-    - name: "Bowtie Scientist"
+    - name: "Tiphaine Kouadou"
       image: "../img/bowtie_person.jpg"
-      netid: "thiscouldbeyou"
+      netid: ""
 
 - name: "Graduate Students"
   people:
     - name: "Christopher Zeitler"
       image: "../img/headshot_czeitler.jpg"
       netid: "czeitle2"
-    - name: "Michelle Victora"
-      image: "../img/headshot_mvictora.jpg"
-      netid: "victora2"
     - name: "Kristina Meier"
       netid: "kadunga2"
       image: "../img/headshot_kmeier.jpg"
-    - name: "Joseph Chapman"
-      image: "../img/headshot_jchapman.jpg"
-      netid: "jchapmn2" 
     - name: "Colin Lualdi"
       image: "../img/headshot_clualdi.jpg"
       netid: "clualdi2"   
     - name: "Spencer Johnson"
-      image: "../img/bowtie_person.jpg"
+      image: "../img/headshot_sjohnson.jpg"
       netid: "sjj3"   
     - name: "Andrew Conrad"
       image: "../img/andrew.png"
@@ -41,12 +35,8 @@
       
 - name: "Undergraduate Students"
   people:
-    - name: "Annika Dugad"
     - name: "Brian Wilens"
     - name: "Ian Call"
-    - name: "Matthias Zajdela"
-    - name: "Maxim Lunin"
-    - name: "Ryan Yoseph"
 
 - name: "Honored Guests"
   people:
