@@ -8,9 +8,9 @@
 
 - name: "Postdocs"
   people:
-    - name: "Tiphaine Kouadou"
+    - name: "Tiphaine Kouadou (Coming April 2021!)"
       image: "../img/bowtie_person.jpg"
-      netid: ""
+      netid: "bowtie"
 
 - name: "Graduate Students"
   people:
@@ -21,7 +21,7 @@
       netid: "kadunga2"
       image: "../img/headshot_kmeier.jpg"
     - name: "Colin Lualdi"
-      image: "../img/headshot_clualdi.jpg"
+      image: "../img/headshot_colin.png"
       netid: "clualdi2"   
     - name: "Spencer Johnson"
       image: "../img/headshot_sjohnson.jpg"
@@ -32,11 +32,32 @@
     - name: "Samantha Isaac"
       image: "../img/headshot_sisaac.jpg"
       netid: "isaac5"  
-      
+    - name: "Tahereh “Tati” Rezaei"
+      image: "../img/bowtie_person.jpg"
+      netid: "trezaei" 
+    - name: "David Diaz"
+      image: "../img/bowtie_person.jpg"
+      netid: "davidd5" 
+    - name: "John Floyd"
+      image: "../img/bowtie_person.jpg"
+      netid: "johnf5" 
+    - name: "Ujaan Purakayastha"
+      image: "../img/headshot_ujaan.jpeg"
+      netid: "up2" 
+    - name: "Anthony John “AJ” Schroeder"
+      image: "../img/bowtie_person.jpg"
+      netid: "ajschro2"
+
 - name: "Undergraduate Students"
   people:
-    - name: "Brian Wilens"
     - name: "Ian Call"
+    - name: "Brian Wilens"
+    - name: "Scott Turro"
+    - name: "Hudson Jones"
+    - name: "Keshav Rakesh"
+    - name: "Leo Oshiro"
+    - name: "Joe Lian"
+    - name: "Joey Shallat"
 
 - name: "Honored Guests"
   people:
