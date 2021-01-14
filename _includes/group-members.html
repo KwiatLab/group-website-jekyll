@@ -112,9 +112,11 @@
 					<div class="row row-centered first-row">
 				{% else %}
 				{% endif %}
-
+ 
 				<div class="col-md-4 col-centered">
-					<div class="name"><center><h2>{{ person.name }}</h2></center></div>
+					<div class="name"><h2><center>{{ person.name }}</center></h2>
+					<h5 class="entry"><center>{{ person.entry }}</center></h5>
+					</div>
 				</div>
 				
 				{% if count >= 3 and forloop.last == false %} <!-- If we've reached a multiple of 3, end this row and start a new one, unless this is the last item -->
