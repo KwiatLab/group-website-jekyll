@@ -59,6 +59,10 @@
       entry: "Spring 2018"
     - name: "Scott Turro"
       entry: "Fall 2018"
+    - name: "Leo Oshiro"
+      entry: "Summer 2019"
+    - name: "Hudson Jones"
+      entry: "Fall 2019"
     - name: "Joe Lian"
       entry: "Fall 2020"
     - name: "Joey Shallat"
@@ -67,9 +71,8 @@
       entry: "Spring 2021"
     - name: "Pranav Kalinadhabhotla"
       entry: "Spring 2021"
-    - name: "Hudson Jones"
     - name: "Keshav Rakesh"
-    - name: "Leo Oshiro"
+
 
 
 - name: "Honored Guests"
