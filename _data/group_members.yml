@@ -8,9 +8,9 @@
 
 - name: "Postdocs"
   people:
-    - name: "Tiphaine Kouadou (Coming April 2021!)"
-      image: "../img/bowtie_person.jpg"
-      netid: "bowtie"
+    - name: "Tiphaine Kouadou"
+      image: "../img/headshot_tiphaine.jpg"
+      netid: "tiphaine"
 
 - name: "Graduate Students"
   people:
