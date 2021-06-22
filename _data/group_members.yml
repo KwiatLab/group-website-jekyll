@@ -50,6 +50,17 @@
     - name: "AJ Schroeder"
       image: "../img/headshot_aj.jpg"
       netid: "ajschro2"
+    - name: "Kelsey Ortiz"
+      image: "../img/headshot_kelsey.jpg"
+      netid: "kcortiz2"
+    - name: "Timur Javid"
+      image: "../img/headshot_timur.png"
+      netid: "tjavid2"
+    - name: "Benjamin Nussbaum"
+      image: "../img/headshot_benjamin.png"
+      netid: "bn9"
+      
+      
 
 - name: "Undergraduate Students"
   people:
@@ -73,6 +84,8 @@
       entry: "Spring 2021"
     - name: "Pranav Kalinadhabhotla"
       entry: "Spring 2021"
+    - name: "Grzegorz Golba"
+      entry: "Summer 2021"
 
 
 
