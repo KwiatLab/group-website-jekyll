@@ -22,39 +22,39 @@ title: Tomography
 	<div class="row">
 		<div class="col-md-12">
 
+
 			<hr class="dashed">
 			<h2>Open source Python Code</h2>
 			<hr class="dashed">
-			<h5>You can install the package via the pip command shown below. The code is stored on github where you can expand upon it and make it your own.</h5>
-			<h5>We have a youtube tutorial to learn about our <a href="https://www.youtube.com/watch?v=I-214P0LOfQ&list=PLJLHMKtk5Pqy9w9aCuyowUF1p7pl2JCI9&index=3">Tomography Package.</a> </h5>
-			<div class="row" style="text-align: center;">
-				<table style = "width:100%;text-align:center;table-layout: fixed;margin-top: 18px;">
+			<p>We have a seperate website all about our python tomography library. This includes online applications and a overview of the algorithm.</p>
+				<table style = "width:100%;text-align:center;table-layout: fixed;">
 					<tr>
 						<td>
-							<img src="{{ site.baseurl }}/img/pypi_fullLogo.png" style ="height: 70px;display: inline;width: auto;">
-						</td>
-						<td>
-							<img src="{{ site.baseurl }}/img/GitHub-Mark-64px.png" style ="height: 55px;display: inline;width: auto;">
-							<img src="{{ site.baseurl }}/img/GitHub_Logo.png" style ="height: 50px;display: inline;width: auto;">
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="https://pypi.org/project/Quantum-Tomography/" style = "display: block;margin-top: 10px;" target="_blank">
-								pypi.org/project/Quantum-Tomography
-							</a>
-						</td>
-						<td>
-							<a href="https://github.com/KwiatQIM/Quantum-Tomography" style = "display: block;margin-top: 10px;" target="_blank">
-								github.com/KwiatQIM/Quantum-Tomography
-							</a>
+							<button onclick="openTomographyWebsite()" style="border: none;border-radius: 8px;font-size: 36px;padding: 15px 75px;margin-top: 30px;margin-bottom: 20px;">Tomography Library Website</button>
 						</td>
 					</tr>
 				</table>
+			<div class="row" style="text-align: center;">
+				<h3>Make sure to checkout our <a href="https://quantumtomo.web.illinois.edu/Doc/" target="_blank">Documentation Page</a>!</h3>
 			</div>
-			<div class="row" style="text-align: center;margin-top:20px;">
-				<h3>Make sure to checkout our <a href="{{ site.baseurl }}/Quantum-Tomography_lib_Ref/" target="_blank">Reference Guide</a>!</h3>
+
+
+			<hr class="dashed">
+			<h2>Online Interface</h2>
+			<hr class="dashed">
+			<p>We provide a web interface that implements the tomography techniques discussed above.</p>
+			<p>The web interface currently uses the Python code.</p>
+				<table style = "width:100%;text-align:center;table-layout: fixed;">
+					<tr>
+						<td>
+							<button onclick="openTomographyInterface()" style="border: none;border-radius: 8px;font-size: 36px;padding: 15px 75px;margin-top: 30px;margin-bottom: 20px;">Open Tomography Interface</button>
+						</td>
+					</tr>
+				</table>
+			<div class="row" style="text-align: center;">
+				<h3>Check out our <a href="{{ site.baseurl }}/tomography-files/tutorial_for_tomography2019.pdf" target="_blank">Tutorial for the tomography interface</a>!</h3>
 			</div>
+
 
 			<hr class="dashed">
 			<h2>MATLAB Code</h2>
@@ -118,6 +118,7 @@ title: Tomography
 				}
 			</script>
 
+
 			<div class="row" style="text-align: center;margin-top:20px;">
 				<h3>Click me for <a onclick="showMoreMatLabInfo()" id="moreMatLabInfoLink">More Info</a>!</h3>
 				<div style="text-align: initial;display:none;" id="moreMatLabInfoContent">
@@ -140,33 +141,19 @@ title: Tomography
 					</blockquote>
 				</div>
 			</div>
-			<hr class="dashed">
-			<h2>Online Interface</h2>
-			<hr class="dashed">
-
-			<p>We provide a web interface that implements the tomography techniques discussed above.</p>
-			<p>The web interface currently uses the Python code.</p>
-				<table style = "width:100%;text-align:center;table-layout: fixed;">
-					<tr>
-						<td>
-							<button onclick="myFunction()" style="border: none;border-radius: 8px;font-size: 36px;padding: 15px 75px;margin-top: 30px;margin-bottom: 20px;">Open Tomography Interface</button>
-						</td>
-					</tr>
-				</table>
-			<div class="row" style="text-align: center;">
-				<h3>Check out our <a href="{{ site.baseurl }}/tomography-files/tutorial_for_tomography2019.pdf" target="_blank">Tutorial for the tomography interface</a>!</h3>
-			</div>
-
 			<h3 style="margin-top:35px;">Contact</h3>
 			<p>
-				Most functions included in the code contain commented documentation,
-				but in case you have any further questions about the MATLAB or Python code, you should direct them
-				to <a href="mailto:turroscott@gmail.com">Scott Turro</a>.
+				Most functions included commented documentation,
+				but in case you have any further questions about the MATLAB or Python code feel free
+				to <a href="mailto:turroscott@gmail.com,shallat3@illinois.edu,sjj3@illinois.edu">contact us</a>.
 			</p>
 
 			<script>
-				function myFunction() {
+				function openTomographyInterface() {
 					window.open("http://tomography.web.engr.illinois.edu/TomographyDemo.php");
+				}
+				function openTomographyWebsite(){
+					window.open("https://quantumtomo.web.illinois.edu/");
 				}
 			</script>
 			<!-- <iframe src="http://tomography.web.engr.illinois.edu/TomographyDemo2.php" width="100%" height="100%" frameborder=0>
