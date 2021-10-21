@@ -16,7 +16,7 @@
 - name: "Graduate Students"
   people:
     - name: "Kristina Meier"
-      year: "2020"
+      year: "2021"
       thesis-type: "phd"
       thesis-file: "meier-thesis.pdf"
       thesis-title: "Comparison, Optimization, and Apllication of Various Spontaneous Parametric Downconversion Sources of Polarization-Entangled Photon Pairs"
