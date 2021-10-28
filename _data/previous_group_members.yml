@@ -24,6 +24,8 @@
     - name: "Christopher Zeitler"
       year: "2021"
       thesis-type: "phd"
+      thesis-file: "zeitler-thesis.pdf"
+      thesis-title: "Characterization of Quantum States: Advances in Quantum Tomography and Tests of Nonlocality"
       currently: "TBA" 
     - name: "Joseph Chapman"
       year: "2020"
