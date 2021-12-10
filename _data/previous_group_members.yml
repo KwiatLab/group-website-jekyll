@@ -175,6 +175,11 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Leo Oshiro"
+    - name: "Max Shepherd"
+    - name: "Joe Lian"
+    - name: "Scott Turro"
+    - name: "Brian Wilens"
     - name: "Annika Dugad"
     - name: "Matthias Zajdela"
     - name: "Maxim Lunin"
