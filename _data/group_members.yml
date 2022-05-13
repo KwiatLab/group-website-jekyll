@@ -50,7 +50,9 @@
     - name: "Benjamin Nussbaum"
       image: "../img/headshot_benjamin.png"
       netid: "bn9"
-      
+    - name: "Liam Ramsey"
+      image: "../img/headshot_liam.jpg"
+      netid: "lramsey2"  
       
 - name: "Visiting Scholars"
   people:
