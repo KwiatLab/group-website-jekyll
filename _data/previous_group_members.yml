@@ -175,6 +175,7 @@
       
 - name: "Dedicated Undergrads"
   people:
+    - name: "Hudson Jones"    
     - name: "Leo Oshiro"
     - name: "Max Shepherd"
     - name: "Joe Lian"

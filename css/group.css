@@ -179,17 +179,33 @@ li .dropdown-header {
   }
 }
 
+
 .people .jumbotron {
-  background-image:url('../img/group-photo-large.jpg');
-  background-size:cover;
-  background-repeat:no-repeat;
+  background-image:  url('../img/group_photo_april2022_Main.jpg'), url('../img/boldbowtie.png');
+  background-size: contain, 440px;
+  background-repeat:no-repeat, repeat;
   background-color:#ecf0f1;
-  background-position:center;
-  height:110%;
+  background-position: center;
+  height:105%;
   padding-top:0;
   margin-bottom:0;
   position:relative;
+  opacity: 1;
+  transition: 800ms;
 }
+.people .jumbotron:hover {
+  background-image:url('../img/group_photo_april2022_Funny.jpg'),  url('../img/boldbowtie.png');
+  background-size: contain, 440px;
+  background-repeat:no-repeat, repeat;
+  background-color:#ecf0f1;
+  background-position: center;
+  height:105%;
+  padding-top:0;
+  margin-bottom:0;
+  position:relative;
+  opacity: 1;
+}
+
 
 .people .jumbotron h1 {
   top:auto;

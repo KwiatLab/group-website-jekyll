@@ -29,9 +29,6 @@
     - name: "Nathan Arnold"
       image: "../img/headshot_narnold.jpg"
       netid: "Narnold4" 
-    - name: "Tahereh “Tati” Rezaei"
-      image: "../img/headshot_tati.jpeg"
-      netid: "trezaei" 
     - name: "David Diaz"
       image: "../img/headshot_ddiaz.jpg"
       netid: "davidd5" 
@@ -55,13 +52,23 @@
       netid: "bn9"
       
       
-
+- name: "Visiting Scholars"
+  people:
+    
+    - name: "Mike Goggin"
+      image: "../img/headshot_mike.jpg"
+      emailid: "mgoggin@truman.edu"   
+    - name: "Tahereh “Tati” Rezaei"
+      image: "../img/headshot_tati.jpeg"
+      emailid: "trezaei@illinois.edu"   
+    - name: "Matteo Stefanini"
+      image: "../img/headshot_matteo.jpg"
+      emailid: "matteos2@illinois.edu"   
+    
 - name: "Undergraduate Students"
   people:
     - name: "Ian Call"
       entry: "Spring 2017"
-    - name: "Hudson Jones"
-      entry: "Fall 2019"
     - name: "Keshav Rakesh"
       entry: "Spring 2020"
     - name: "Joey Shallat"
@@ -84,7 +91,3 @@
       entry: "Spring 2022"
 
 
-
-- name: "Honored Guests"
-  people:
-    - name: "Mike Goggin"
