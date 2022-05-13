@@ -1,5 +1,5 @@
 ---
-title: Kelsey and Colin represent UIUC as Officers of Science
+title: Kelsey and Colin represent UIUC as Science Officers
 layout: default
 image: Star_Trek_Colin_Kelsey.jpg
 ---
