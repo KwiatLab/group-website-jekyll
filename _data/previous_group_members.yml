@@ -15,6 +15,10 @@
 
 - name: "Graduate Students"
   people:
+    - name: "AJ Schroeder"
+      year: "2022"
+      thesis-type: "masters"
+      currently: "RF-Microwave Design Engineer at Astranis" 
     - name: "Kristina Meier"
       year: "2021"
       thesis-type: "phd"
