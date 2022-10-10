@@ -53,7 +53,10 @@
     - name: "Liam Ramsey"
       image: "../img/headshot_liam.jpg"
       netid: "lramsey2"  
-      
+    - name: "Keshav Kapoor"
+      image: "../img/bowtie_person.jpg"
+      netid: "kkapoor2" 
+  
 - name: "Visiting Scholars"
   people:
     
@@ -69,8 +72,6 @@
     
 - name: "Undergraduate Students"
   people:
-    - name: "Ian Call"
-      entry: "Spring 2017"
     - name: "Keshav Rakesh"
       entry: "Spring 2020"
     - name: "Joey Shallat"
@@ -91,5 +92,9 @@
       entry: "Spring 2022"
     - name: "Brian Petro"
       entry: "Spring 2022"
+    - name: "Masha Kozlova"
+      entry: "Fall 2022"
+    - name: "Lakshman Goel"
+      entry: "Fall 2022"      
 
 
