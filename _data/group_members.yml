@@ -9,7 +9,7 @@
 - name: "Postdocs"
   people:
     - name: "Tiphaine Kouadou"
-      image: "../img/headshot_tiphaine.jpg"
+      image: "../img/headshot_tiphaine_2.png"
       netid: "tiphaine"
 
 - name: "Graduate Students"
@@ -51,7 +51,7 @@
       image: "../img/headshot_liam.jpg"
       netid: "lramsey2"  
     - name: "Keshav Kapoor"
-      image: "../img/bowtie_person.jpg"
+      image: "../img/headshot_keshav.jpg"
       netid: "kkapoor2" 
   
 - name: "Visiting Scholars"
