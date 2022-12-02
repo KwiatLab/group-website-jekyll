@@ -56,7 +56,9 @@
   
 - name: "Visiting Scholars"
   people:
-    
+    - name: "Jerzy Szuniewicz"
+      image: "../img/headshot_jerzy.jpg"
+      emailid: "j.szuniewicz@uw.edu.pl"
     - name: "Mike Goggin"
       image: "../img/headshot_mike.jpg"
       emailid: "mgoggin@truman.edu"   
