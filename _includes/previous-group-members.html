@@ -62,6 +62,19 @@
 		
 	</div>
 	<div class="col-md-3">
+		<h2>Visiting Scholars</h2>
+		<ul class="student-list">
+		  {% for category in site.data.previous_group_members %}
+			{% if category.name == "Visiting Scholars" %}
+				{% for person in category.people %}
+				<li><h4>{{ person.name }}</h4></li>
+				{% endfor %}
+			{% else %}
+			{% endif %}
+		  {% endfor %}
+		</ul>
+	</div>
+	<div class="col-md-3">
 		<h2>Outstanding Undergrads</h2>
 		<ul class="student-list">
 		  {% for category in site.data.previous_group_members %}

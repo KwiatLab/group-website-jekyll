@@ -62,23 +62,13 @@
     - name: "Mike Goggin"
       image: "../img/headshot_mike.jpg"
       emailid: "mgoggin@truman.edu"   
-    - name: "Tahereh “Tati” Rezaei"
-      image: "../img/headshot_tati.jpeg"
-      emailid: "trezaei@illinois.edu"   
-    - name: "Matteo Stefanini"
-      image: "../img/headshot_matteo.jpg"
-      emailid: "matteos2@illinois.edu"   
-    
+
 - name: "Undergraduate Students"
   people:
     - name: "Keshav Rakesh"
       entry: "Spring 2020"
-    - name: "Joey Shallat"
-      entry: "Fall 2020"
     - name: "Pranav Kalinadhabhotla"
       entry: "Spring 2021"
-    - name: "Grzegorz Golba"
-      entry: "Summer 2021"
     - name: "Oliver Johnson"
       entry: "Fall 2021"
     - name: "Michael Vayninger"
@@ -100,5 +90,7 @@
     - name: "Dmytro Papaianki"
       entry: "Spring 2023"        
     - name: "Aarya Mehta"
-      entry: "Spring 2023"  
+      entry: "Spring 2023"
+    - name: "Daniel O'Leary"
+      entry: "Spring 2023"      
 

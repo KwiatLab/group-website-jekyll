@@ -176,9 +176,18 @@
       thesis-title: "One- And Two-Photon States for Quantum Information"
       currently: "Quantum Communications Team Lead, Senior Research Scientist in The Quantum Information Science Group at Oak Ridge National Laboratory"
       past: "Applied Communication Sciences"
-      
+    
+- name: "Visiting Scholars"
+  people:
+  
+    - name: "Tahereh “Tati” Rezaei"
+    - name: "Matteo Stefanini"
+    
 - name: "Outstanding Undergrads"
   people:
+  
+    - name: "Grzegorz Golba"
+    - name: "Joey Shallat"
     - name: "Ian Call"
     - name: "Hudson Jones"    
     - name: "Leo Oshiro"
