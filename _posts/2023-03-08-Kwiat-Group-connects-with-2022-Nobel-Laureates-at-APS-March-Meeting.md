@@ -1,5 +1,5 @@
 ---
-title: Kwiat Group meets Nobel Laureates at APS March Meeting 
+title: Connecting with Nobel Laureates at the <a href="https://march.aps.org/"> <em><strong>APS March Meeting</strong></em> </a>
 layout: default
 image: Zeilinger_Photo.jpg
 ---
