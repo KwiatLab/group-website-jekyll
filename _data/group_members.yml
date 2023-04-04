@@ -65,10 +65,6 @@
 
 - name: "Undergraduate Students"
   people:
-    - name: "Keshav Rakesh"
-      entry: "Spring 2020"
-    - name: "Pranav Kalinadhabhotla"
-      entry: "Spring 2021"
     - name: "Oliver Johnson"
       entry: "Fall 2021"
     - name: "Michael Vayninger"
