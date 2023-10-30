@@ -65,18 +65,7 @@
 
 - name: "Undergraduate Students"
   people:
-    - name: "Oliver Johnson"
-      entry: "Fall 2021"
-    - name: "Michael Vayninger"
-      entry: "Fall 2021"
-    - name: "Derek Warner"
-      entry: "Spring 2022"
-    - name: "Emily Chen"
-      entry: "Spring 2022"
-    - name: "Shuen Wu"
-      entry: "Spring 2022"
-    - name: "Brian Petro"
-      entry: "Spring 2022"
+
     - name: "Masha Kozlova"
       entry: "Fall 2022"
     - name: "Lakshman Goel"
@@ -89,4 +78,5 @@
       entry: "Spring 2023"
     - name: "Daniel O'Leary"
       entry: "Spring 2023"      
-
+    - name: "John Benson"
+      entry: "Fall 2023"

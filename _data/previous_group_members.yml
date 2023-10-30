@@ -188,6 +188,12 @@
 - name: "Outstanding Undergrads"
   people:
   
+    - name: "Michael Vayninger"
+    - name: "Brian Petro"
+    - name: "Shuen Wu"
+    - name: "Emily Chen"
+    - name: "Derek Warner"
+    - name: "Oliver Johnson"
     - name: "Keshav Rakesh"
     - name: "Pranav Kalinadhabhotla"
     - name: "Grzegorz Golba"
