@@ -52,7 +52,10 @@
       netid: "lramsey2"  
     - name: "Keshav Kapoor"
       image: "../img/headshot_keshav.jpg"
-      netid: "kkapoor2" 
+      netid: "kkapoor2"
+    - name: " Brittany Conner-Karki"
+      image: "../img/headshot_brittany.png"
+      netid: "bckarki2"       
   
 - name: "Visiting Scholars"
   people:
