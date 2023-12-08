@@ -1,5 +1,5 @@
 ---
-title: World's first <a href="https://iquist.illinois.edu/pqn"> <em><strong>Public Quantum Network</strong></em> </a> launched at the Urbana Free Library.
+title: World's first <a href="https://iquist.illinois.edu/pqn"> <em><strong>Public Quantum Network</strong></em> </a> launched at the Urbana Free Library
 layout: default
 image: PQN.jpg
 ---
