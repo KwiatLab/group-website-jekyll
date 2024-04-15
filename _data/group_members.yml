@@ -53,10 +53,14 @@
     - name: "Keshav Kapoor"
       image: "../img/headshot_keshav.jpg"
       netid: "kkapoor2"
-    - name: " Brittany Conner-Karki"
+    - name: "Brittany Conner-Karki"
       image: "../img/headshot_brittany.png"
       netid: "bckarki2"       
-  
+    - name: "Ashish Samantaray"
+      image: "../img/headshot_ashish.jpeg"
+      netid: "ashishs4"
+
+      
 - name: "Visiting Scholars"
   people:
     - name: "Jerzy Szuniewicz"
