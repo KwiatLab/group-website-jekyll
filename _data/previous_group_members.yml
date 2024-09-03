@@ -15,6 +15,12 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Spencer Johnson"
+      year: "2024"
+      thesis-type: "phd"
+      thesis-file: ""
+      thesis-title: "Applications of Entanglement at Extreme Distance Scales"
+      currently: "Postdoctoral Research Fellow at NASA Jet Propulsion Laboratory"
     - name: "AJ Schroeder"
       year: "2022"
       thesis-type: "masters"
@@ -187,7 +193,9 @@
     
 - name: "Outstanding Undergrads"
   people:
-  
+    - name: Dmytro Papaianki
+    - name: "Masha Kozlova"
+    - name: "Daniel O'Leary"
     - name: "Michael Vayninger"
     - name: "Brian Petro"
     - name: "Shuen Wu"

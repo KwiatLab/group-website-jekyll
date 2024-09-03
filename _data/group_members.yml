@@ -11,15 +11,20 @@
     - name: "Tiphaine Kouadou"
       image: "../img/headshot_tiphaine_2.png"
       netid: "tiphaine"
+         
+    - name: "Sanjukta Kundu"
+      image: "../img/headshot_sanjukta.jpg"
+      netid: "skundu26"
+
+    - name: "Jaedok Park"
+      image: "../img/headshot_jaedok.jpg"
+      netid: "jaed23"
 
 - name: "Graduate Students"
   people:
     - name: "Colin Lualdi"
       image: "../img/headshot_colin.png"
-      netid: "clualdi2"   
-    - name: "Dr. Spencer Johnson"
-      image: "../img/headshot_sjohnson.jpg"
-      netid: "sjj3"   
+      netid: "clualdi2"     
     - name: "Andrew Conrad"
       image: "../img/andrew.png"
       netid: "aconrad5"  
@@ -39,7 +44,7 @@
       image: "../img/headshot_ujaan.jpeg"
       netid: "up2" 
     - name: "Kelsey Ortiz"
-      image: "../img/headshot_kelsey.jpg"
+      image: "../img/headshot_kelsey_2.png"
       netid: "kcortiz2"
     - name: "Timur Javid"
       image: "../img/headshot_timur.png"
@@ -59,7 +64,9 @@
     - name: "Ashish Samantaray"
       image: "../img/headshot_ashish.jpeg"
       netid: "ashishs4"
-
+    - name: "Aishi Guha"
+      image: "../img/headshot_aishi.jpg"
+      netid: "aishi2"
       
 - name: "Visiting Scholars"
   people:
@@ -73,18 +80,12 @@
 - name: "Undergraduate Students"
   people:
 
-    - name: "Masha Kozlova"
-      entry: "Fall 2022"
     - name: "Lakshman Goel"
       entry: "Fall 2022"
     - name: "James DiCarlo"
-      entry: "Fall 2022"
-    - name: "Dmytro Papaianki"
-      entry: "Spring 2023"        
+      entry: "Fall 2022"     
     - name: "Aarya Mehta"
-      entry: "Spring 2023"
-    - name: "Daniel O'Leary"
-      entry: "Spring 2023"      
+      entry: "Spring 2023"     
     - name: "John Benson"
       entry: "Fall 2023"
     - name: "Emily Kinnicutt"
