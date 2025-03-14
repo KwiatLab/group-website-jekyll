@@ -181,7 +181,7 @@ li .dropdown-header {
 
 
 .SEAQUE .jumbotron {
-  background-image:  url('../img/SEAQUE-launch.jpg'), url('../img/boldbowtie.png');
+  background-image:  url('../img/SEAQUE-launch-light.jpg'), url('../img/boldbowtie.png');
   background-size: contain, 440px;
   background-repeat:no-repeat, repeat;
   background-color:#ecf0f1;
@@ -201,13 +201,6 @@ li .dropdown-header {
   width:100%;
 }
 
-.SEAQUE .jumbotron h2 {
-  top:auto;
-  bottom:60px;
-  position:absolute;
-  text-align:right;
-  width:100%;
-}
 
 .people .jumbotron {
   background-image:  url('../img/group_photo_april2022_Main.jpg'), url('../img/boldbowtie.png');
