@@ -10,7 +10,7 @@
 
 - name: "Home"
   url: ""
-
+  
 - name: "People"
   url: "people/"
 
@@ -62,3 +62,6 @@
 
 - name: "LabEscape"
   ext_url: "http://labescape.org/"
+
+- name: "SEAQUE"
+  url: "SEAQUE/"
