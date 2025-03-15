@@ -194,9 +194,9 @@ li .dropdown-header {
 }
 
 .SEAQUE .jumbotron h1 {
-  top:auto;
-  bottom:60px;
-  position:absolute;
+  top:90%;
+  bottom:auto;
+  position:relative;
   text-align:center;
   width:100%;
 }
