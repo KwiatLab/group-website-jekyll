@@ -42,9 +42,7 @@ Pretty awesome, right? Thanks for taking part in SEAQUE-ing out quantum science 
 
 <strong>SEAQUE in the news:</strong> 
 
-SEAQUE has been featured on [Space Insider](https://spaceinsider.tech/2024/11/09/quantum-science-reaches-new-heights-with-seaque-mission-to-the-iss/),  
-[Science.NASA.gov](https://science.nasa.gov/biological-physical/investigations/seaque-space-entanglement-and-annealing-quantum-experiment/), and 
-[NASA.gov](https://www.nasa.gov/image-article/space-station-seaque-self-healing-quantum-technology/).
+SEAQUE has been featured on [Space Insider](https://spaceinsider.tech/2024/11/09/quantum-science-reaches-new-heights-with-seaque-mission-to-the-iss/), [Science.NASA.gov](https://science.nasa.gov/biological-physical/investigations/seaque-space-entanglement-and-annealing-quantum-experiment/), and [NASA.gov](https://www.nasa.gov/image-article/space-station-seaque-self-healing-quantum-technology/).
  
 <strong>The SEAQUE team would like to acknowledge:</strong>
  
