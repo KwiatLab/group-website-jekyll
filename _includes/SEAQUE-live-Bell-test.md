@@ -48,3 +48,10 @@ SEAQUE has been featured on [Space Insider](https://spaceinsider.tech/2024/11/09
  
 [Aegis Aerospace](https://aegisaero.com/), [UIUC Stu/dio](https://games.illinois.edu/), [University of Waterloo](https://uwaterloo.ca/institute-for-quantum-computing/profiles/thomas-jennewein), [National University of Singapore](https://www.cqt.sg/groups/alexander-ling/),
 [AdvR](https://advr-inc.com/), [UIUC LASSI](https://aerospace.illinois.edu/research/research-facilities/laboratory-advanced-space-systems-illinois-lassi), [JPL](https://scienceandtechnology.jpl.nasa.gov/quantum-sciences-and-technology-laboratories), and [Boeing](https://www.boeing.com/).
+
+<p align="center">
+  <img src="{{ site.baseurl }}/img/SEAQUE-launch-light.jpg" class="img-responsive" width="600px" />
+  <div class ="caption">
+		 SEAQUE being launched off of this planet in November 2025 from Kennedy Space Center. (photo credit: Liam Ramsey)
+		</div>
+</p> 
