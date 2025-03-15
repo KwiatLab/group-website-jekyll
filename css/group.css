@@ -180,15 +180,6 @@ li .dropdown-header {
 }
 
 
-
-.SEAQUE .jumbotron {
-  background-image:  url('../img/SEAQUE-launch-light.png'), url('../img/boldbowtie.png');
-  background-size: contain, contain;
-  background-repeat:no-repeat, repeat;
-  position:relative, relative;
-}
-
-/*
 .SEAQUE .jumbotron {
   background-image:  url('../img/SEAQUE-launch-light.jpg'), url('../img/boldbowtie.png');
   background-size: contain, contain;
@@ -196,15 +187,15 @@ li .dropdown-header {
   background-color:#ecf0f1;
   background-position: center;
   height:105%;
-  padding-top: 0, 0;
-  margin-bottom:0, 0;
-  position:relative, relative;
-  opacity: 1, 1;
+  padding-top: 0;
+  margin-bottom: 0;
+  position:relative;
+  opacity: 1;
 }
-*/
+
 
 .SEAQUE .jumbotron h1 {
-  top:90%;
+  top:70%;
   bottom:auto;
   position:relative;
   text-align:center;
