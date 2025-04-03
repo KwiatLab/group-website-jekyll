@@ -52,6 +52,6 @@ SEAQUE has been featured on [Space Insider](https://spaceinsider.tech/2024/11/09
 <p align="center">
   <img src="{{ site.baseurl }}/img/SEAQUE-launch-light.jpg" class="img-responsive" width="600px" />
   <div class ="caption">
-		 SEAQUE being launched off of this planet in November 2025 from Kennedy Space Center. (photo credit: Liam Ramsey)
+		 SEAQUE being launched off of this planet in November 2024 from Kennedy Space Center. (photo credit: Liam Ramsey)
 		</div>
 </p> 
