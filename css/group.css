@@ -179,7 +179,7 @@ li .dropdown-header {
   }
 }
 
-
+/*
 .SEAQUE .jumbotron {
   background-image:  url('../img/SEAQUE-launch-light.jpg'), url('../img/boldbowtie.png');
   background-size: contain, contain;
@@ -192,7 +192,7 @@ li .dropdown-header {
   position:relative;
   opacity: 1;
 }
-
+*/
 
 .SEAQUE .jumbotron h1 {
   top:70%;
