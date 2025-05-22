@@ -15,6 +15,12 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Andrew Conrad"
+      year: "2024"
+      thesis-type: "phd"
+      thesis-file: ""
+      thesis-title: "Drone and vehicle-based quantum communication and towards practical quantum position verification"
+      currently: "Quantum Cryptography Researcher at JPMorgan Chase"
     - name: "Spencer Johnson"
       year: "2024"
       thesis-type: "phd"
@@ -193,6 +199,7 @@
     
 - name: "Outstanding Undergrads"
   people:
+    - name: Javier Tort Serrataco
     - name: Dmytro Papaianki
     - name: "Masha Kozlova"
     - name: "Daniel O'Leary"
