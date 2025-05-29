@@ -73,7 +73,9 @@
     - name: "Mike Goggin"
       image: "../img/headshot_mike.jpg"
       emailid: "mgoggin@truman.edu"   
-
+    - name: "Madeline Dean"
+      image: "../img/headshot_madeline.jpeg"
+      emailid: "mzdean@smith.edu"
 - name: "Undergraduate Students"
   people:
 
@@ -95,3 +97,5 @@
       entry: "Fall 2024"  
     - name: "Benjamin Judd"
       entry: "Fall 2024"
+    - name: "Patrick Mugg"
+      entry: "Summer 2025"
