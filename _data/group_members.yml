@@ -64,7 +64,10 @@
     - name: "Aishi Guha"
       image: "../img/headshot_aishi.jpg"
       netid: "aishi2"
-      
+    - name: "Soroush Hoseini"
+      image: "../img/headshot_soroush.jpg"
+      netid: "shosei2"      
+
 - name: "Visiting Scholars"
   people:
     - name: "Jerzy Szuniewicz"
@@ -99,3 +102,6 @@
       entry: "Fall 2024"
     - name: "Patrick Mugg"
       entry: "Summer 2025"
+    - name: "Vanessa Zhang"
+      entry: "Summer 2025"
+    
