@@ -22,7 +22,7 @@
 
 - name: "Graduate Students"
   people:
-    - name: "Colin Lualdi"
+    - name: "Dr. Colin Lualdi"
       image: "../img/headshot_colin.png"
       netid: "clualdi2"       
     - name: "Samantha Isaac"
