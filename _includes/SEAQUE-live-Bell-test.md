@@ -1,7 +1,5 @@
 
-
-
-When you dodge deadly obstacles in the game Quantum Satellite, you're not just playing for fun—you're helping run experiments on a 
+When you dodge deadly obstacles in the game [<strong>Quantum Satellite</strong>](https://quantumsatellite.web.illinois.edu/), you're not just playing for fun—you're helping run experiments on a 
 special payload called the Space Entanglement and Annealing Quantum Experiment, or SEAQUE for short! 
 And it's currently orbiting around our planet on the International Space Station (ISS)!  
 
