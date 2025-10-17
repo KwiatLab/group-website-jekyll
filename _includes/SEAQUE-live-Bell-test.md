@@ -13,8 +13,8 @@ And it's currently orbiting around our planet on the International Space Station
 
 So, how does playing a game help SEAQUE with quantum space science? Well, every time you avoid the energy bar—whether it’s by veering left or right, 
 or up or down—you’re making a quick decision that generates a number 0 or 1! Keep playing, and you’re creating a whole string of these choices; these 
-in turn will be used in our experiment to determine what measurements are made on the entangled photons (The photons themselves determine what the 
-measurement outcomes will be!). 
+in turn will be used in our experiment to determine what measurements are made on the entangled photons.(The photons themselves determine what the 
+measurement outcomes will be!) 
 
 
 These random strings of choices are used as part of a test called the Bell Inequality Violation.
