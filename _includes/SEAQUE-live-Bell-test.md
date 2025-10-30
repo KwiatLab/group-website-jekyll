@@ -21,8 +21,10 @@ These random strings of choices are used as part of a test called the Bell Inequ
 This test helps us measure how well SEAQUE’s photons (the basic units of an electromagnetic field- or light!) are entangled. 
 Entanglement describes a pair of particles, in this case photons, with properties that are linked very strongly to each other even if they are very far apart.
 To prove that these photons have correlated properties, but do not have some common cause or hidden instructions telling them how to act, the measurement choices 
-made in the experiment should be as random as possible. In other words, every time you make a choice in the game, you're directly helping run a measurement 
-on the entangled photons in space! The more random your choices, the better.  
+made in the experiment should be as unpredictable as possible. In other words, every time you make a choice in the game, you're directly helping run a measurement 
+on the entangled photons in space! The more random your choices, the better.  (Want to know more about entanglement and Bell tests, for which the [2022 Nobel Prize 
+in Physics](https://www.nobelprize.org/prizes/physics/2022/summary/) was awarded? Check out some videos we’ve curated [here](https://iquist.illinois.edu/outreach/pqn/explore-more);
+go to the bottom of the page.) 
 
 Why would anyone WANT entangled photons in space? Well, really mostly we wouldn't - we'd prefer to use space as a convenient platform from which to distribute entangled
 photons to widely separated receive stations on the ground. Although SEAQUE doesn't do that - all its created photons are created and measured locally - SEAQUE is a critical
