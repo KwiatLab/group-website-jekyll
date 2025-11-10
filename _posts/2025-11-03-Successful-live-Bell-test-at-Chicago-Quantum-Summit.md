@@ -1,5 +1,5 @@
 ---
-title: SEAQUE public Bell test at the <a href = "https://chicagoquantum.org/events/chicago-quantum-summit-landing-pageChicago"> <em><strong> Chicago Quantum Summit</strong></em></a>
+title: SEAQUE public Bell test at <a href = "https://chicagoquantum.org/events/chicago-quantum-summit-landing-pageChicago"> <em><strong> Chicago Quantum Summit</strong></em></a>
 layout: default
 image: SEAQUE_logo.png
 ---
