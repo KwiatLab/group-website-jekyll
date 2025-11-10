@@ -1,5 +1,5 @@
 ---
-title: Colin awarded at the <a href = "https://chicagoquantum.org/events/chicago-quantum-summit-landing-pageChicago"> <em><strong> Chicago Quantum Summit</strong></em></a>
+title: Colin awarded at the <a href = "https://chicagoquantum.org/events/chicago-quantum-summit-landing-page"> <em><strong> Chicago Quantum Summit</strong></em></a>
 layout: default
 image: headshot_colin.png
 ---
