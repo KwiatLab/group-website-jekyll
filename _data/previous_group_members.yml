@@ -15,6 +15,12 @@
 
 - name: "Graduate Students"
   people:
+    - name: "Nathan Arnold"
+      year: "2025"
+      thesis-type: "phd"
+      thesis-file: ""
+      thesis-title: "Enhanced Free-Space Quantum Memory"
+      currently: "CEO at Photon Queue"
     - name: "Andrew Conrad"
       year: "2024"
       thesis-type: "phd"
@@ -47,7 +53,7 @@
     - name: "Joseph Chapman"
       year: "2020"
       thesis-type: "phd"
-      thesis-file: ""
+      thesis-file: "chapman-thesis.pdf"
       thesis-title: "Towards Optical Quantum Communication in Space"
       currently: "Research Scientist in Quantum Communications and Networking at Oak Ridge National Laboratory"
       past: "Postdoctoral Research Associate in Quantum Information Science at Oak Ridge National Laboratory"
@@ -196,6 +202,8 @@
   
     - name: "Tahereh “Tati” Rezaei"
     - name: "Matteo Stefanini"
+    - name: "Madeline Dean"
+    - name: "Jerzy Szuniewicz"
     
 - name: "Outstanding Undergrads"
   people:
