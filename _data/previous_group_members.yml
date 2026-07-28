@@ -2,6 +2,8 @@
 
 - name: "Postdocs"
   people:
+    - name: "Tiphaine Kouadou"
+      currently: "Senior Optical Scientist at Photon Queue"
     - name: "Fumihiro Kaneda"
       currently: "Assistant professor at Frontier Research Institute for Interdisciplinary Sciences in Tohoku University, Japan"
     - name: "Soyoung Baek"
@@ -153,7 +155,7 @@
       thesis-file: "hosten-thesis.pdf"
       thesis-title: "Applications of Quantum Measurement Techniques: Counterfactual Quantum Computation, Spin Hall Effect of Light, and Atomic-Vapor-Based Photon Detectors" 
       currently: "Assistant Professor at IST Austria in Klosterneuburg, Austria" 
-      past: "Research Scientist aat Stanford University; Postdoc with Dr. Mark Kasevich at Stanford University"
+      past: "Research Scientist at Stanford University; Postdoc with Dr. Mark Kasevich at Stanford University"
     - name: "Scott Jobling"
       year: "2009"
       thesis-type: "masters"
@@ -213,6 +215,7 @@
     
 - name: "Outstanding Undergrads"
   people:
+    - name: Lakshman Goel
     - name: Javier Tort Serrataco
     - name: Dmytro Papaianki
     - name: "Masha Kozlova"

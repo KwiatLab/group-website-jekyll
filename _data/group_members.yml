@@ -2,15 +2,13 @@
 
 - name: "Our Fearless Leader"
   people:
+  
     - name: "Paul Kwiat"
       image: "../img/headshot_pkwiat.jpg"
       netid: "kwiat"
 
 - name: "Postdocs"
   people:
-    - name: "Tiphaine Kouadou"
-      image: "../img/headshot_tiphaine_2.png"
-      netid: "tiphaine"
          
     - name: "Sanjukta Kundu"
       image: "../img/headshot_sanjukta.jpg"
@@ -64,7 +62,22 @@
       netid: "aishi2"
     - name: "Soroush Hoseini"
       image: "../img/headshot_soroush.jpg"
-      netid: "shosei2"      
+      netid: "shosei2"
+    - name: "Dixshant Shree Shreemal"
+      image: "../img/headshot_dixshant.jpg"
+      netid: "ds68"
+    - name: "Lauren Bell"
+      image: "../img/headshot_lauren.jpg"
+      netid: "lebell2"
+    - name: "John Benson"
+      image: "../img/headshot_blank.jpg"
+      netid: "johnjb4"
+    - name: "Victoria Su"
+      image: "../img/headshot_victoria.jpg"
+      netid: "vlsu2"
+    - name: "Jessica John Britto"
+      image: "../img/headshot_jessica.jpg"
+      netid: "jj69"      
 
 - name: "Visiting Scholars"
   people:
@@ -74,15 +87,10 @@
       
 - name: "Undergraduate Students"
   people:
-
-    - name: "Lakshman Goel"
-      entry: "Fall 2022"
     - name: "James DiCarlo"
       entry: "Fall 2022"     
     - name: "Aarya Mehta"
       entry: "Spring 2023"     
-    - name: "John Benson"
-      entry: "Fall 2023"
     - name: "Emily Kinnicutt"
       entry: "Spring 2024"
     - name: "George Huebner"
@@ -100,5 +108,12 @@
     - name: "Kareem Kader"
       entry: "Fall 2025"  
     - name: "Hannah Aly"
-      entry: "Fall 2025"  
-    
+      entry: "Fall 2025"
+    - name: "Frank Peng"
+      entry: "Summer 2026"
+    - name: "Maya Kannan"
+      entry: "Summer 2026"      
+    - name: "Jumana Schmidt"
+      entry: "Summer 2026"
+    - name: "Dhruvin Jatil Jinwala"
+      entry: "Summer 2026"
