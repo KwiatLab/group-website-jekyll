@@ -217,7 +217,7 @@ li .dropdown-header {
   transition: 500ms;
 }
 
-.people .jumbotron:active {
+.people .jumbotron:hover {
   background-image:url('../img/groupphotoaugust2024_funny.jpg'),  url('../img/boldbowtie.png');
   background-size: contain, 440px;
   background-repeat:no-repeat, repeat;
