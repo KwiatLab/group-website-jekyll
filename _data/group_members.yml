@@ -77,7 +77,13 @@
       netid: "vlsu2"
     - name: "Jessica John Britto"
       image: "../img/headshot_jessica.jpg"
-      netid: "jj69"      
+      netid: "jj69"
+    - name: "Ethan Levy"
+      image: "../img/headshot_ethan.jpg"
+      netid: "etlevy2"      
+    - name: "Ryan Rosenthal"
+      image: "../img/headshot_ryan.jpg"
+      netid: "ryanar4"            
 
 - name: "Visiting Scholars"
   people:
@@ -86,9 +92,7 @@
       emailid: "mgoggin@truman.edu"   
       
 - name: "Undergraduate Students"
-  people:
-    - name: "James DiCarlo"
-      entry: "Fall 2022"     
+  people:     
     - name: "Aarya Mehta"
       entry: "Spring 2023"     
     - name: "Emily Kinnicutt"

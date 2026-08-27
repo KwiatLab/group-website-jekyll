@@ -215,9 +215,10 @@
     
 - name: "Outstanding Undergrads"
   people:
-    - name: Lakshman Goel
-    - name: Javier Tort Serrataco
-    - name: Dmytro Papaianki
+    - name: "James DiCarlo"
+    - name: "Lakshman Goel"
+    - name: "Javier Tort Serrataco"
+    - name: "Dmytro Papaianki"
     - name: "Masha Kozlova"
     - name: "Daniel O'Leary"
     - name: "Michael Vayninger"

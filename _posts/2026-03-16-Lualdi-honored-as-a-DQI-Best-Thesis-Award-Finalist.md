@@ -4,4 +4,4 @@ layout: default
 image: colin-aps.jpg
 ---
 
-Colin Lualdi was among five finalists recognized at the [APS Global Physics Summit](https://summit.aps.org/).
+Colin Lualdi was among five finalists recognized at the [APS Global Physics Summit](https://summit.aps.org/). 
